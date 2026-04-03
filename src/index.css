@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: theme('colors.cream');
+    color: theme('colors.textDark');
+    font-family: theme('fontFamily.sans');
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center bg-gold text-white font-semibold uppercase tracking-widest text-sm transition-all duration-300 shadow-sm hover:shadow-md hover:bg-goldHover hover:-translate-y-0.5 rounded-sm;
+  }
+  
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto;
+  }
+}
