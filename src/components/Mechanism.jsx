@@ -103,22 +103,22 @@ export default function Mechanism() {
     >
       <div className="max-w-[1140px] mx-auto relative z-10 text-center">
         <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#060A12] mb-12 md:mb-16 font-bold leading-[1.1] tracking-tight">
-          Što dobivaš
+          Tvoj komplet za mirniji let
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 md:mb-20">
           {[
             { 
               title: "📖 Vodič", 
-              text: "Korak-po-korak razumijevanje straha, turbulencije i svakog zvuka u avionu. Čitaš unaprijed, letiš spremno." 
+              text: "Pročitaj prije leta kako bi točno razumio što se događa s avionom i tvojim tijelom." 
             },
             { 
               title: "🎧 Audio protokol", 
-              text: "Pusti večer prije leta dok zaspiš. Smiruje živčani sustav bez napora. Radi dok odmaraš." 
+              text: "Slušaj večer prije za miran san ili direktno u avionu čim sjedneš u sjedalo." 
             },
             { 
               title: "🫁 Vježbe disanja", 
-              text: "Aktiviraš u avionu čim krene nelagoda. 60 sekundi. Srce usporava odmah." 
+              text: "Tvoj SOS alat u trenutku turbulencije ili polijetanja koji smiruje srce u 60 sekundi." 
             }
           ].map((card, idx) => (
             <div key={idx} className="bg-white p-8 md:p-10 rounded-[32px] shadow-xl border border-gray-100 text-center lg:text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center lg:items-start">

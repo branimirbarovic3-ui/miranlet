@@ -35,9 +35,9 @@ export default function Hero() {
 
           <div className="flex flex-col gap-10 md:gap-12 max-w-3xl mx-auto text-center px-2">
             <h1 className="font-serif text-white text-3xl md:text-5xl lg:text-7xl font-bold leading-[1.3] md:leading-[1.15] tracking-tight drop-shadow-xl max-w-[320px] md:max-w-none mx-auto">
-              Strah od letenja te uhvati čim avion uzleti?<br />
+              Uđi u avion s osjećajem kontrole.<br />
               <span className="text-gold text-lg md:text-2xl font-light italic mt-8 md:mt-8 block tracking-wide normal-case drop-shadow-none leading-relaxed">
-                Evo kako ga smiriti u tom trenutku i preuzeti kontrolu.
+                Audio + PDF protokol za smirivanje tijela i misli prije i tokom leta.
               </span>
             </h1>
           </div>
