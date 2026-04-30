@@ -5,7 +5,7 @@ export default function Testimonials() {
     <section className="py-24 md:py-36 px-4 md:px-16 w-full bg-white" id="testimonials">
       <div className="max-w-[1140px] mx-auto text-left">
         <div className="text-center mb-16 md:mb-20">
-          <span className="text-[#D4AF37] uppercase tracking-[0.25em] text-[10px] font-bold mb-4 block">STVARNE PRIČE</span>
+          <span className="text-[#D4AF37] uppercase tracking-[0.25em] text-[10px] font-bold mb-4 block">ISKUSTVA</span>
           <h2 className="font-serif text-3xl md:text-[2.8rem] text-[#060A12] font-bold leading-[1.15]">
             Što ljudi primijete već<br /><span className="italic text-[#D4AF37]">na prvom letu.</span>
           </h2>
@@ -14,14 +14,14 @@ export default function Testimonials() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {[
             {
-              text: 'Prije sam nesvjesno stiskala rukohvate sjedala i pratila svaki pokret stjuardesa. Kad je avion poletio, pustila sam audio i pratila protokol, po prvi put nisam imala potrebu stalno gledati što se događa. Strah nije nestao, ali je bio pod kontrolom. Čak sam uspjela mirno sjediti i popiti kavu tijekom leta.',
+              text: 'Prije bih već na ukrcaju osjećala knedlu u grlu. Ovaj put sam pustila audio čim sam sjela i samo pratila korake. Nije nestao sav strah, ali prvi put nisam provela cijeli let u grču.',
               name: 'Ana P., Rijeka',
               sub: 'Pobjeda nad nelagodom',
               featured: false,
               img: '/avatars/ana.png'
             },
             {
-              text: 'Prije sam plakala već pri polijetanju i izbjegavala letove koliko sam mogla. Na letu za Berlin prvi put sam imala jasan plan što napraviti kad krene osjećaj. Nisam plakala. Osjećaj mira je bio potpun. Ostala sam mirna cijeli let.',
+              text: 'Najviše mi je pomoglo što nisam morala razmišljati što da radim. Kad su misli krenule, samo sam se vratila na glas i disanje. Let mi je i dalje bio izazov, ali sam imala osjećaj kontrole.',
               name: 'Ivana M., Zagreb',
               sub: 'Let bez iscrpljenosti',
               featured: false,
@@ -29,7 +29,7 @@ export default function Testimonials() {
               isGrayscale: true
             },
             {
-              text: 'Letim svaki tjedan i nelagoda me doslovno iscrpljivala. Sad čim krene turbulencija, koristim protokol bez razmišljanja. Nema više ustajanja, napetosti ni potrebe za kontroliranjem svega oko sebe. Samo odradim let i idem dalje.',
+              text: 'Koristio sam protokol prije polijetanja i tokom turbulencije. Nije bilo magično, ali je bilo dovoljno da ostanem miran i ne ulazim u onu spiralu kao ranije.',
               name: 'Mario L., Split',
               sub: 'Poslovni putnik',
               featured: true,

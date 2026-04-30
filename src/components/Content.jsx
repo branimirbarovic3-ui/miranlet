@@ -8,7 +8,7 @@ export default function Content() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/10 rounded-full -mr-32 -mt-32 blur-3xl opacity-50" />
           
           <div className="relative z-10">
-            <span className="text-[#D4AF37] uppercase tracking-[0.3em] text-[9px] font-bold mb-6 block text-center md:text-left">EKSKLUZIVNI DODACI</span>
+            <span className="text-[#D4AF37] uppercase tracking-[0.3em] text-[9px] font-bold mb-6 block text-center md:text-left">TU JE I BONUS</span>
             <h3 className="font-serif text-2xl md:text-5xl text-white mb-10 md:mb-14 font-bold leading-tight text-center md:text-left">
               Uz glavni protokol dobivaš i:<br />
               <span className="text-[#D4AF37] italic font-light">Tvoj "šalabahter" za krizne situacije.</span>

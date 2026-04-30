@@ -33,16 +33,16 @@ export default function FinalCTA() {
         className="relative z-10 w-full flex flex-col items-center max-w-2xl px-2 md:px-4"
       >
         <div className="w-10 md:w-12 h-[1px] bg-[#D4AF37] mb-8" />
-        <span className="text-[#D4AF37] uppercase tracking-[0.3em] text-[9px] md:text-[11px] font-bold mb-6 block">TVOJ SLJEDEĆI LET</span>
+        <span className="text-[#D4AF37] uppercase tracking-[0.3em] text-[9px] md:text-[11px] font-bold mb-6 block">VRIJEME JE ZA MIRNIJI LET</span>
         <h2 className="font-serif text-3xl md:text-5xl lg:text-7xl text-[#060A12] font-bold mb-8 md:mb-10 leading-[1.1] md:leading-[1.1] tracking-tight">
           Uđi u avion<br />
           <span className="text-[#D4AF37] italic underline decoration-1 underline-offset-8 font-light lowercase">s osjećajem kontrole.</span>
         </h2>
         <p className="text-[#060A12]/40 mb-10 text-sm md:text-base font-bold italic tracking-tight">
-          Sljedeći let će doći... Pitanje je samo hoćeš li ga opet proći isto.
+          Preuzmi audio + PDF protokol i imaj jasan plan prije i tokom leta.
         </p>
         <ButtonGold className="w-full sm:w-auto px-12 md:px-16 py-6 md:py-7 text-[14px] md:text-base tracking-widest font-extrabold uppercase" href="#kupi">
-          Želim miran let
+          Želim mirniji let
         </ButtonGold>
       </motion.div>
     </section>

@@ -23,7 +23,7 @@ export default function App() {
       {/* 3. MECHANISM (HOW IT WORKS) */}
       <Mechanism />
 
-      {/* 4. WHAT'S INSIDE (CONTENT) */}
+      {/* 4. WHAT'S INSIDE (CONTENT / BONUS) */}
       <Content />
 
       {/* 5. TESTIMONIALS / PROOF */}

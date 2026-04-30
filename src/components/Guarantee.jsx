@@ -21,10 +21,10 @@ export default function Guarantee() {
         </h2>
         
         <p className="text-[#060A12]/70 text-lg md:text-2xl leading-relaxed max-w-2xl mx-auto italic">
-          Ako ne osjetiš razliku već na prvom letu — vraćamo novac. Bez pitanja.
+          Probaj protokol na prvom letu. Ako ne osjetiš više smirenosti i kontrole, vraćamo novac. Bez pitanja.
         </p>
         <p className="text-[#060A12]/40 text-sm md:text-base mt-4 max-w-xl mx-auto">
-          Kupi danas, isprobaj na sljedećem letu. Ako protokol ne pomogne, napiši nam i vraćamo cijeli iznos.
+          Ne moraš biti potpuno bez straha. Dovoljno je da osjetiš da više nisi u tome bez podrške.
         </p>
         
         <div className="mt-10 flex items-center justify-center gap-2 text-gold font-bold uppercase tracking-[0.2em] text-[10px] md:text-xs">

@@ -27,29 +27,29 @@ export default function Problem() {
         {/* Text */}
         <div className="order-1 lg:order-2 text-center lg:text-left">
           <h2 className="font-serif text-3xl md:text-5xl text-[#060A12] mb-10 font-bold leading-[1.15] tracking-tight">
-            Ako te strah uhvati čim se vrata zatvore…
+            Ako te strah uhvati čim se vrata zatvore...
           </h2>
 
           <p className="text-[#060A12]/80 text-xl font-medium mb-12 italic border-l-0 lg:border-l-4 lg:pl-6 leading-relaxed">
-            "Ako tijekom turbulencije imaš osjećaj gubitka kontrole…"
+            Tijelo se napne, misli krenu ubrzano, a ti pokušavaš ostati smiren iako znaš da je let siguran.
           </p>
 
           <div className="space-y-8 flex flex-col items-center lg:items-start">
             <div className="w-full">
-              <span className="text-gold uppercase tracking-[0.25em] text-[11px] font-black mb-6 block text-center lg:text-left">VEĆINA LJUDI POKUŠAVA:</span>
+              <span className="text-gold uppercase tracking-[0.25em] text-[11px] font-black mb-6 block text-center lg:text-left">VJEROJATNO TI JE POZNATO:</span>
               <ul className="space-y-4 flex flex-col items-center lg:items-start">
-                {['ignorirati', 'distrakcijom preživjeti', 'uvjeravati se da je sve sigurno'].map((item, idx) => (
+                {['pratiš svaki zvuk u avionu', 'teško se opuštaš u sjedalu', 'stalno tražiš znak da je sve u redu', 'želiš samo da let što prije završi'].map((item, idx) => (
                   <li key={idx} className="flex gap-4 items-center text-[#060A12]/80 text-lg font-bold">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-400 shrink-0" />
-                    <span className="line-through decoration-red-400/50">{item}</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <p className="text-[#060A12] text-xl md:text-2xl leading-relaxed font-bold mt-12 bg-gold/10 p-8 rounded-2xl border border-gold/20 w-full text-center lg:text-left">
-              Ali to ne djeluje kad tijelo već reagira.<br />
-              <span className="text-gold italic underline decoration-1 underline-offset-8">Zato se strah uvijek vraća.</span>
+              Ali to nije znak slabosti.<br />
+              <span className="text-gold italic underline decoration-1 underline-offset-8">Znači da tvoje tijelo treba jasan signal sigurnosti u pravom trenutku.</span>
             </p>
           </div>
         </div>

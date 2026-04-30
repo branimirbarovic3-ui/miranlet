@@ -1,50 +1,50 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Wind, Zap, ShieldCheck, Brain, Plane, Users, UserCheck } from 'lucide-react';
+import { Wind, Zap, ShieldCheck, Brain, Plane, Users, UserCheck, UserCircle } from 'lucide-react';
 
 export default function Mechanism() {
   const steps = [
     {
-      title: "1. Smiriš tijelo",
-      desc: "Prva minuta je kritična. Specifična tehnika disanja signalizira mozgu da opasnosti nema. Srce usporava odmah.",
+      title: "Smiruješ tijelo",
+      desc: "Ne pokušavaš na silu smiriti sebe. Prvo spustaš fizičku napetost kroz disanje, ritam i vođeni fokus.",
       icon: Wind
     },
     {
-      title: "2. Prekineš spiralu misli",
-      desc: "Uključuješ audio protokol koji te 'vadi' iz crnih scenarija. Više ne nagađaš što je taj zvuk – znaš.",
+      title: "Prekidaš spiralu misli",
+      desc: "Kad krene \"\u0161to ako...\", protokol ti daje sljedeći konkretan korak umjesto da ostaneš zarobljen u vlastitim mislima.",
       icon: Zap
     },
     {
-      title: "3. Vratiš kontrolu",
-      desc: "Iz stanja jake nelagode prelaziš u stanje promatrača. Ti kontroliraš svoju reakciju, umjesto da ona kontrolira tebe.",
+      title: "Vraćaš kontrolu",
+      desc: "Dobivaš jednostavnu rutinu koju pratiš prije polijetanja, tokom leta i kad osjetiš da napetost raste.",
       icon: ShieldCheck
     }
   ];
 
   const pillars = [
     {
-      title: "Smiruje reakciju tijela u stvarnom trenutku",
-      desc: "(ne samo \"razmišljanje pozitivno\")",
-      icon: Brain,
-      tag: "BIOLOGIJA"
+      tag: "Biologija",
+      title: "Smiruješ tijelo u samom trenutku",
+      desc: "Prvo radiš s tijelom, ne logikom. Nema čekanja da te netko 'uvjeri' da je sve u redu.",
+      icon: Brain
     },
     {
-      title: "Daje ti realan osjećaj sigurnosti",
-      desc: "Umjesto nagađanja što se događa. Imaš točne podatke o letu.",
-      icon: Plane,
-      tag: "LOGIKA"
+      tag: "Logika",
+      title: "Imaš jasan i fiksan plan koraka",
+      desc: "Ne moraš improvizirati u avionu. Samo pratiš protokol i jasan plan korak po korak.",
+      icon: Plane
     },
     {
-      title: "Temeljeno na stvarnim situacijama",
-      desc: "Razvijeno u suradnji s pilotima i osobljem za realne uvjete leta.",
-      icon: Users,
-      tag: "PRAKSA"
+      tag: "Praksa",
+      title: "Koristiš posve nevidljive alate",
+      desc: "Kratke mentalne upute i disanje. Radiš ih na sjedalu, bez da itko išta primijeti.",
+      icon: UserCheck
     },
     {
-      title: "Testirano s osobama poput tebe",
-      desc: "Pristupi provjereni s ljudima koji su imali isti problem kao ti.",
-      icon: UserCheck,
-      tag: "REZULTAT"
+      tag: "Rezultat",
+      title: "Testirano u stvarnim letovima",
+      desc: "Sada te ništa ne može iznenaditi: od ukrcaja i polijetanja do turbulencije i rasta napetosti.",
+      icon: UserCircle
     }
   ];
 
@@ -66,7 +66,7 @@ export default function Mechanism() {
             Kako točno<br /><span className="text-gold italic font-light">funkcionira protokol</span>
           </h2>
           <p className="text-white/60 text-lg md:text-xl font-light max-w-2xl mx-auto italic">
-            Ne razmišljaš što trebaš napraviti. Imaš jasan slijed koji te vodi kroz najteže trenutke.
+            Ne moraš razmišljati što trebaš napraviti. Imaš jasan slijed koji te vodi.
           </p>
         </motion.div>
 
@@ -109,16 +109,16 @@ export default function Mechanism() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 md:mb-20">
           {[
             { 
-              title: "📖 Vodič", 
-              text: "Pročitaj prije leta kako bi točno razumio što se događa s avionom i tvojim tijelom." 
+              title: "📖 PDF vodič", 
+              text: "Razumiješ što se događa u tijelu kad krene strah i kako se pripremiti prije nego sjedneš u avion." 
             },
             { 
               title: "🎧 Audio protokol", 
-              text: "Slušaj večer prije za miran san ili direktno u avionu čim sjedneš u sjedalo." 
+              text: "Vođeno slušanje koje pratiš u avionu kad osjetiš napetost, ubrzane misli ili potrebu da se smiriš." 
             },
             { 
               title: "🫁 Vježbe disanja", 
-              text: "Tvoj SOS alat u trenutku turbulencije ili polijetanja koji smiruje srce u 60 sekundi." 
+              text: "Kratke tehnike koje možeš koristiti na sjedalu, bez da itko oko tebe primijeti." 
             }
           ].map((card, idx) => (
             <div key={idx} className="bg-white p-8 md:p-10 rounded-[32px] shadow-xl border border-gray-100 text-center lg:text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center lg:items-start">
@@ -133,12 +133,19 @@ export default function Mechanism() {
         </div>
 
         <div className="flex flex-col items-center">
-          <p className="text-[#060A12]/40 text-sm md:text-lg font-bold tracking-tight mb-10">
-            Sve ovo dobivaš za <span className="text-[#060A12]">47€</span> · Bez pretplate · Pristup odmah
+          <p className="text-[#060A12]/40 text-sm md:text-lg font-bold tracking-tight mb-8">
+            Dobivaš odmah nakon kupnje. Koristiš na mobitelu, prije i tokom leta.
           </p>
+
+          <div className="mb-10 flex flex-col items-center">
+            <span className="text-[#060A12] text-5xl md:text-6xl font-serif font-bold tracking-tighter">
+              47€
+            </span>
+            <span className="text-gold text-[10px] font-black tracking-[0.2em] uppercase mt-2">jednokratna uplata</span>
+          </div>
           
           <a href="#kupi" className="group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-14 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 text-[14px] md:text-base">
-            <span>Želim miran let</span>
+            <span>Želim mirniji let</span>
           </a>
         </div>
       </div>
@@ -156,13 +163,13 @@ export default function Mechanism() {
            viewport={{ once: true }}
            className="mb-12 md:mb-16"
         >
-          <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-black mb-4 block">TEMELJ METODE</span>
+          <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-black mb-4 block">ZAŠTO POMAŽE</span>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight tracking-tight">
-            Zašto ovaj protokol <span className="text-gold italic font-light">stvarno djeluje</span>
+            Zašto ovaj pristup <span className="text-gold italic font-light">stvarno pomaže</span>
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-center mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center mb-16 md:mb-20 items-stretch">
           {pillars.map((pillar, i) => (
             <motion.div
               key={`pillar-${i}`}
@@ -170,21 +177,21 @@ export default function Mechanism() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white/5 border border-white/10 p-10 rounded-[40px] relative group hover:bg-white/[0.08] transition-all duration-500 flex flex-col items-center"
+              className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-[40px] relative group hover:bg-white/[0.08] transition-all duration-500 flex flex-col items-center h-full"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <pillar.icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500 shrink-0">
+                <pillar.icon className="w-7 h-7 md:w-8 md:h-8 text-gold" strokeWidth={1.5} />
               </div>
               
               <span className="text-gold text-[10px] font-black tracking-[0.25em] uppercase mb-4 leading-none">
                 {pillar.tag}
               </span>
               
-              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-white">
+              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-white leading-tight">
                 {pillar.title}
               </h3>
               
-              <p className="text-white/50 text-sm md:text-base leading-relaxed">
+              <p className="text-white/50 text-sm md:text-base leading-relaxed mt-auto">
                 {pillar.desc}
               </p>
             </motion.div>
@@ -199,7 +206,7 @@ export default function Mechanism() {
            className="mt-8 md:mt-16 p-8 md:p-12 bg-gold/5 rounded-[40px] border border-gold/20 inline-block"
         >
           <p className="text-gold text-lg md:text-2xl font-bold italic leading-relaxed text-center">
-            Zato djeluje i kad je osjećaj već jak. Ne samo prije leta.
+            Zato djeluje i kada ti obični savjeti već ne pomažu.
           </p>
         </motion.div>
 

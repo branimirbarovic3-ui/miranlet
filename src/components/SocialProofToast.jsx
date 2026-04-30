@@ -4,20 +4,20 @@ import { Bell } from 'lucide-react';
 
 export default function SocialProofToast() {
   const [visible, setVisible] = useState(false);
-  const [name, setName] = useState('Marko, Split');
+  const [name, setName] = useState({ name: 'Marko', city: 'Splita', gender: 'm' });
   
   const buyers = [
-    { text: 'Ivana, Rijeka', gender: 'f' },
-    { text: 'Marko, Split', gender: 'm' },
-    { text: 'Marija, Zagreb', gender: 'f' },
-    { text: 'Hrvoje, Varaždin', gender: 'm' },
-    { text: 'Ana, Pula', gender: 'f' },
-    { text: 'Luka, Zadar', gender: 'm' },
-    { text: 'Maja, Rijeka', gender: 'f' },
-    { text: 'Ivan, Zagreb', gender: 'm' },
-    { text: 'Doris, Osijek', gender: 'f' },
-    { text: 'Petar, Varaždin', gender: 'm' },
-    { text: 'Elena, Pula', gender: 'f' }
+    { name: 'Ivana', city: 'Rijeke', gender: 'f' },
+    { name: 'Marko', city: 'Splita', gender: 'm' },
+    { name: 'Marija', city: 'Zagreba', gender: 'f' },
+    { name: 'Hrvoje', city: 'Varaždina', gender: 'm' },
+    { name: 'Ana', city: 'Pule', gender: 'f' },
+    { name: 'Luka', city: 'Zadra', gender: 'm' },
+    { name: 'Maja', city: 'Rijeke', gender: 'f' },
+    { name: 'Ivan', city: 'Zagreba', gender: 'm' },
+    { name: 'Doris', city: 'Osijeka', gender: 'f' },
+    { name: 'Petar', city: 'Varaždina', gender: 'm' },
+    { name: 'Elena', city: 'Pule', gender: 'f' }
   ];
 
   useEffect(() => {
@@ -48,10 +48,10 @@ export default function SocialProofToast() {
           </div>
           <div>
             <span className="block text-[10px] uppercase font-black tracking-widest text-[#060A12]/30 mb-0.5">
-              UPRAVO KUPLJENO
+              UPRAVO PREUZETO
             </span>
             <p className="text-[13px] font-bold text-[#060A12] leading-tight">
-              {typeof name === 'object' ? name.text : name} je {typeof name === 'object' && name.gender === 'f' ? 'preuzela' : 'preuzeo'} protokol
+              {name.name} iz {name.city} je {name.gender === 'f' ? 'preuzela' : 'preuzeo'} protokol
             </p>
           </div>
         </motion.div>
