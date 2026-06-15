@@ -2,7 +2,7 @@ import React from 'react';
 import { Check, ShieldCheck, Download, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const ButtonGold = ({ children, className = '', href = '#kupi' }) => (
+const ButtonGold = ({ children, className = '', href = 'https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97' }) => (
   <a href={href} className={`group inline-flex items-center justify-center bg-[#D4AF37] text-[#060A12] font-bold uppercase tracking-[0.1em] py-5 px-10 rounded-xl transition-all duration-500 shadow-xl shadow-gold/10 hover:shadow-gold/30 hover:bg-[#c5a133] hover:-translate-y-1 ${className}`}>
     <span>{children}</span>
   </a>
@@ -118,12 +118,15 @@ export default function Pricing() {
               
               <div className="flex flex-col sm:flex-row items-center gap-8 w-full">
                 <div className="flex flex-col items-center sm:items-start shrink-0">
-                  <span className="text-[#060A12]/30 text-[10px] font-black line-through tracking-widest uppercase mb-1">Cijena 97€</span>
-                  <span className="text-5xl md:text-6xl font-serif font-black text-gold tracking-tight">47€</span>
+                  <span className="bg-[#D4AF37]/10 text-[#c5a133] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 self-center sm:self-start">Rani Pristup (Early Bird)</span>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl md:text-3xl font-serif font-bold text-[#060A12]/30 line-through">47€</span>
+                    <span className="text-5xl md:text-6xl font-serif font-black text-gold tracking-tight">27€</span>
+                  </div>
                 </div>
                 <div className="flex-1 w-full">
-                  <ButtonGold className="w-full text-[13px] md:text-[15px] py-5 tracking-[0.2em] font-black mb-4" href="#kupi">
-                    ŽELIM MIRNIJI LET
+                  <ButtonGold className="w-full text-[13px] md:text-[15px] py-5 tracking-[0.2em] font-black mb-4" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
+                    Preuzmi Miran Let
                   </ButtonGold>
                   <p className="text-[#060A12]/40 text-[10px] font-bold tracking-widest uppercase text-center sm:text-left">
                     Bez pretplate. Bez dodatnih troškova.

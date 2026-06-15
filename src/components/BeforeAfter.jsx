@@ -67,10 +67,10 @@ export default function BeforeAfter() {
 
         <div className="mt-12 md:mt-20 flex flex-col items-center">
             <a 
-              href="#kupi" 
+              href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" 
               className="group inline-flex items-center justify-center bg-[#060A12] text-white font-bold uppercase tracking-[0.1em] py-6 px-12 md:px-20 rounded-xl transition-all duration-500 hover:bg-[#D4AF37] hover:-translate-y-1 shadow-2xl text-[14px]"
             >
-              PREUZMI KONTROLU U AVIONU →
+              PREUZMI MIRAN LET →
             </a>
             <p className="mt-6 text-[#060A12]/30 text-[10px] uppercase font-bold tracking-widest">
                 Pridruži se stotinama putnika koji su napokon prodisali

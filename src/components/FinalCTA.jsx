@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ButtonGold = ({ children, className = '', href = '#kupi' }) => (
+const ButtonGold = ({ children, className = '', href = 'https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97' }) => (
   <a href={href} className={`group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-14 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 ${className}`}>
     <span>{children}</span>
   </a>
@@ -41,8 +41,8 @@ export default function FinalCTA() {
         <p className="text-[#060A12]/40 mb-10 text-sm md:text-base font-bold italic tracking-tight">
           Preuzmi audio + PDF protokol i imaj jasan plan prije i tokom leta.
         </p>
-        <ButtonGold className="w-full sm:w-auto px-12 md:px-16 py-6 md:py-7 text-[14px] md:text-base tracking-widest font-extrabold uppercase" href="#kupi">
-          Želim mirniji let
+        <ButtonGold className="w-full sm:w-auto px-12 md:px-16 py-6 md:py-7 text-[14px] md:text-base tracking-widest font-extrabold uppercase" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
+          Preuzmi Miran Let
         </ButtonGold>
       </motion.div>
     </section>

@@ -137,15 +137,21 @@ export default function Mechanism() {
             Dobivaš odmah nakon kupnje. Koristiš na mobitelu, prije i tokom leta.
           </p>
 
-          <div className="mb-10 flex flex-col items-center">
-            <span className="text-[#060A12] text-5xl md:text-6xl font-serif font-bold tracking-tighter">
-              47€
+          <div className="mb-10 flex flex-col items-center gap-1.5">
+            <span className="bg-[#D4AF37]/10 text-[#c5a133] text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+              Rani Pristup (Early Bird)
             </span>
-            <span className="text-gold text-[10px] font-black tracking-[0.2em] uppercase mt-2">jednokratna uplata</span>
+            <div className="flex items-baseline gap-3 mt-1">
+              <span className="text-[#060A12]/30 text-2xl md:text-3xl font-serif font-bold line-through">47€</span>
+              <span className="text-[#060A12] text-5xl md:text-6xl font-serif font-black tracking-tight">
+                27€
+              </span>
+            </div>
+            <span className="text-[#c5a133] text-[10px] font-black tracking-[0.2em] uppercase mt-1">jednokratna uplata</span>
           </div>
           
-          <a href="#kupi" className="group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-14 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 text-[14px] md:text-base">
-            <span>Želim mirniji let</span>
+          <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" className="group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-14 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 text-[14px] md:text-base">
+            <span>Preuzmi Miran Let</span>
           </a>
         </div>
       </div>

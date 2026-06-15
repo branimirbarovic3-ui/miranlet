@@ -2,7 +2,7 @@ import React from 'react';
 import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const ButtonGold = ({ children, className = '', href = '#kupi' }) => (
+const ButtonGold = ({ children, className = '', href = 'https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97' }) => (
   <a href={href} className={`group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-12 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 ${className}`}>
     <span>{children}</span>
   </a>
@@ -45,8 +45,8 @@ export default function Hero() {
 
         {/* BOTTOM BLOCK */}
         <div className="flex flex-col items-center w-full max-w-[320px] md:max-w-none mt-12 md:mt-24">
-          <ButtonGold className="w-full sm:w-auto text-[14px] md:text-[16px] py-6 px-12 md:px-20 uppercase tracking-[0.2em] font-black" href="#kupi">
-            Želim mirniji let
+          <ButtonGold className="w-full sm:w-auto text-[14px] md:text-[16px] py-6 px-12 md:px-20 uppercase tracking-[0.2em] font-black" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
+            Preuzmi Miran Let
           </ButtonGold>
           
           <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-white/60 text-[10px] md:text-[11px] font-bold tracking-widest uppercase">
