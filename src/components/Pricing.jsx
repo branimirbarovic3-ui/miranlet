@@ -119,10 +119,7 @@ export default function Pricing() {
               <div className="flex flex-col sm:flex-row items-center gap-8 w-full">
                 <div className="flex flex-col items-center sm:items-start shrink-0">
                   <span className="bg-[#D4AF37]/10 text-[#c5a133] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 self-center sm:self-start">Rani Pristup (Early Bird)</span>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl md:text-3xl font-serif font-bold text-[#060A12]/30 line-through">47€</span>
-                    <span className="text-5xl md:text-6xl font-serif font-black text-gold tracking-tight">19.99€</span>
-                  </div>
+                  <span className="text-5xl md:text-6xl font-serif font-black text-gold tracking-tight mt-1">19.99€</span>
                 </div>
                 <div className="flex-1 w-full">
                   <ButtonGold className="w-full text-[13px] md:text-[15px] py-5 tracking-[0.2em] font-black mb-4" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
