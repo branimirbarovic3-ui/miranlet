@@ -8,6 +8,7 @@ import FinalCTA from './components/FinalCTA';
 import Guarantee from './components/Guarantee';
 import Footer from './components/Footer';
 import SocialProofToast from './components/SocialProofToast';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   React.useEffect(() => {
@@ -55,6 +56,7 @@ export default function App() {
 
       {/* 13. FLOATING TOASTS */}
       <SocialProofToast />
+      <Analytics />
     </div>
   );
 }
