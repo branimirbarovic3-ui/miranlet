@@ -144,7 +144,7 @@ export default function Mechanism() {
             <div className="flex items-baseline gap-3 mt-1">
               <span className="text-[#060A12]/30 text-2xl md:text-3xl font-serif font-bold line-through">47€</span>
               <span className="text-[#060A12] text-5xl md:text-6xl font-serif font-black tracking-tight">
-                27€
+                19.99€
               </span>
             </div>
             <span className="text-[#c5a133] text-[10px] font-black tracking-[0.2em] uppercase mt-1">jednokratna uplata</span>

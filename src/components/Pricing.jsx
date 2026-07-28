@@ -121,7 +121,7 @@ export default function Pricing() {
                   <span className="bg-[#D4AF37]/10 text-[#c5a133] text-[10px] font-black px-2.5 py-1 rounded-full uppercase tracking-wider mb-2 self-center sm:self-start">Rani Pristup (Early Bird)</span>
                   <div className="flex items-baseline gap-2">
                     <span className="text-2xl md:text-3xl font-serif font-bold text-[#060A12]/30 line-through">47€</span>
-                    <span className="text-5xl md:text-6xl font-serif font-black text-gold tracking-tight">27€</span>
+                    <span className="text-5xl md:text-6xl font-serif font-black text-gold tracking-tight">19.99€</span>
                   </div>
                 </div>
                 <div className="flex-1 w-full">
