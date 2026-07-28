@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Hero from './components/Hero';
 import Problem from './components/Problem';
 import Mechanism from './components/Mechanism';
@@ -55,6 +56,9 @@ export default function App() {
 
       {/* 13. FLOATING TOASTS */}
       <SocialProofToast />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
