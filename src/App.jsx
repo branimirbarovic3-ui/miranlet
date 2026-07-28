@@ -10,6 +10,21 @@ import Footer from './components/Footer';
 import SocialProofToast from './components/SocialProofToast';
 
 export default function App() {
+  React.useEffect(() => {
+    const handleGlobalClick = (e) => {
+      const anchor = e.target.closest('a');
+      if (anchor && anchor.href && anchor.href.includes('lemonsqueezy.com/checkout/buy')) {
+        if (window.fbq) {
+          window.fbq('track', 'InitiateCheckout');
+        }
+      }
+    };
+
+    document.addEventListener('click', handleGlobalClick);
+    return () => {
+      document.removeEventListener('click', handleGlobalClick);
+    };
+  }, []);
 
   return (
     <div className="bg-[#FAFAF8] min-h-screen font-sans text-[#060A12] antialiased selection:bg-[#D4AF37]/20 selection:text-navy relative overflow-x-hidden">
