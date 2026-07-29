@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
 
 function FaqItem({ question, answer, last = false }) {
   const [open, setOpen] = useState(false);
@@ -11,48 +10,68 @@ function FaqItem({ question, answer, last = false }) {
         onClick={() => setOpen(!open)}
       >
         <span className="font-serif text-[16px] md:text-[17px] text-[#060A12] group-hover:text-gold transition-colors pr-6 font-bold leading-snug">{question}</span>
-        <ChevronDown className={`w-5 h-5 text-[#D4AF37]/40 transition-transform duration-500 shrink-0 ${open ? 'rotate-180' : ''}`} />
+        <span className={`text-2xl text-[#D4AF37] font-light transition-transform duration-300 shrink-0 leading-none select-none ${open ? 'rotate-45' : ''}`}>
+          +
+        </span>
       </button>
       <div className={`overflow-hidden transition-all duration-500 ease-in-out ${open ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
-        <p className="text-[#060A12]/55 leading-relaxed font-light text-[15px] px-7 pr-12">{answer}</p>
+        <p className="text-[#060A12]/65 leading-relaxed font-light text-[15px] px-7 pr-12">{answer}</p>
       </div>
     </div>
   );
 }
 
 export default function FAQ() {
+  const questions = [
+    {
+      question: "Da li je audio na hrvatskom/srpskom/bosanskom?",
+      answer: "Da, cijeli audio protokol je snimljen na hrvatskom jeziku, razumljiv svim govornicima hrvatskog, srpskog i bosanskog."
+    },
+    {
+      question: "Treba li mi internet u avionu?",
+      answer: "Ne. Sve materijale preuzimaš prije leta — PDF vodič i audio protokol rade offline, bez interneta, bez WiFi-a."
+    },
+    {
+      question: "Koliko traje audio protokol?",
+      answer: "Glavni audio protokol traje oko 20 minuta, što odgovara duljini većine letova na Balkanu. Dodatni audio materijali pokrivaju specifične situacije (turbulencija, slijetanje, čekanje na pisti)."
+    },
+    {
+      question: "Pomaže li ovo kod teške fobije?",
+      answer: "Miran Let je dizajniran za ljude koji se boje letenja — od blage nelagode do izraženog straha. Nije zamjena za stručnu psihološku pomoć. Ako tvoj strah sprječava svakodnevno funkcioniranje, preporučujemo da se posavjetuješ s licenciranim terapeutom."
+    },
+    {
+      question: "Što ako ne pomogne?",
+      answer: "Postoji garancija povrata novca. Ako nakon sljedećeg leta ne osjećaš nikakvo poboljšanje, javi se i vraćamo ti novac — bez pitanja."
+    },
+    {
+      question: "Mogu li slušati s običnim slušalicama u avionu?",
+      answer: "Da. Bilo koje žične ili bežične slušalice rade savršeno. Preporučujemo slušalice koje pokrivaju uši za bolje izoliranje od buke motora."
+    },
+    {
+      question: "Radi li ovo za djecu?",
+      answer: "Audio protokol je namijenjen odraslima. Djeca mogu slušati uz pratnju roditelja, ali vodič je pisan jezikom i tonom prilagođenim odraslima."
+    }
+  ];
+
   return (
-    <section className="py-28 md:py-36 px-6 w-full bg-[#FAFAF8]">
+    <section className="py-24 md:py-32 px-6 w-full bg-[#FAFAF8]" id="faq">
       <div className="max-w-[720px] mx-auto text-left">
         <div className="text-center mb-14">
-          <span className="text-[#D4AF37] uppercase tracking-[0.25em] text-[10px] font-bold mb-5 block">PITANJA I ODGOVORI</span>
+          <span className="text-[#D4AF37] uppercase tracking-[0.25em] text-[10px] font-bold mb-5 block">ČESTA PITANJA</span>
           <h2 className="font-serif text-3xl md:text-4xl text-[#060A12] font-bold leading-[1.15]">
-            Brzi odgovori.
+            Često postavljana pitanja
           </h2>
         </div>
 
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-          <FaqItem
-            question="Imam nelagodu, ne pravi strah - je li ovo za mene?"
-            answer="Posebno je za tebe. Česti putnici s blagom nelagodom najviše profitiraju jer već lete - samo lošije nego što trebaju. Sve tehnike rade jednako dobro za nelagodu 3/10 kao i za strah 8/10."
-          />
-          <FaqItem
-            question="Kada čitati - tjedan dana prije ili tijekom leta?"
-            answer="Idealno tjedan dana prije - imaš dovoljno vremena da prođeš sve i da se vježbe usidre. Ali referentne kartice i brze tehnike funkcioniraju i u čekaonici i u zraku."
-          />
-          <FaqItem
-            question="Je li ovo zamjena za terapiju?"
-            answer="Nije. Ako strah od letenja ozbiljno narušava kvalitetu života, razgovor s CBT ili ACT terapeutom je vrijedno ulaganje. Miran Let je odlična osnova i mnogi ga koriste paralelno s terapijom."
-          />
-          <FaqItem
-            question="Mogu li koristiti ovo dok letim čak i bez interneta?"
-            answer="Da, i upravo za to je napravljeno. Poslije kupnje dobivaš instant download. MP3 datoteke i PDF možeš preuzeti na mobitel unaprijed. Sve radi offline, bez ikakve veze. Uključiš slušalice u trenutku kad počne napetost i pustiš audio vođenje. Radi na 10.000 metara jednako kao i u kauču kod kuće."
-          />
-          <FaqItem
-            question="Što ako mi ne pomogne? Postoji li jamstvo?"
-            answer="Da. Imamo 100% jamstvo povrata novca u prvih 30 dana. Ako osjećaš da metodologija ne radi za tebe, samo pošalji mail na podrska@miranlet.com i vraćamo puni iznos. Bez pitanja i bez komplikacija."
-            last
-          />
+        <div className="bg-white rounded-[24px] border border-gray-100 shadow-sm overflow-hidden">
+          {questions.map((q, idx) => (
+            <FaqItem
+              key={idx}
+              question={q.question}
+              answer={q.answer}
+              last={idx === questions.length - 1}
+            />
+          ))}
         </div>
       </div>
     </section>

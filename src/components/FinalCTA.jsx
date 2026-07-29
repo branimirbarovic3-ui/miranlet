@@ -41,8 +41,8 @@ export default function FinalCTA() {
         <p className="text-[#060A12]/40 mb-10 text-sm md:text-base font-bold italic tracking-tight">
           Preuzmi audio + PDF protokol i imaj jasan plan prije i tokom leta.
         </p>
-        <ButtonGold className="w-full sm:w-auto px-12 md:px-16 py-6 md:py-7 text-[14px] md:text-base tracking-widest font-extrabold uppercase" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
-          Preuzmi Miran Let
+        <ButtonGold className="w-full sm:w-auto px-12 md:px-16 py-6 md:py-7 text-[14px] md:text-base tracking-wider font-extrabold uppercase" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
+          PREUZMI MIRAN LET — 19.99€
         </ButtonGold>
       </motion.div>
     </section>

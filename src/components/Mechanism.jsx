@@ -1,8 +1,90 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Wind, Zap, ShieldCheck, Brain, Plane, Users, UserCheck, UserCircle } from 'lucide-react';
+import { Wind, Zap, ShieldCheck, Brain, Plane, Users, UserCheck, UserCircle, Play, Pause } from 'lucide-react';
 
 export default function Mechanism() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [audioSeconds, setAudioSeconds] = useState(15);
+  const [audioRef, setAudioRef] = useState(null);
+
+  const handlePlayClick = () => {
+    if (isPlaying) {
+      setIsPlaying(false);
+      if (audioRef) {
+        try { audioRef.close(); } catch(e) {}
+        setAudioRef(null);
+      }
+    } else {
+      setIsPlaying(true);
+      setAudioSeconds(15);
+      
+      // Play Synthesized Calming Bell sound sequence
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          const ctx = new AudioContext();
+          setAudioRef(ctx);
+          
+          const playChime = (freq, time, duration) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, time);
+            gain.gain.setValueAtTime(0, time);
+            gain.gain.linearRampToValueAtTime(0.12, time + 0.1);
+            gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
+            osc.start(time);
+            osc.stop(time + duration);
+          };
+          
+          const playSequence = () => {
+            const now = ctx.currentTime;
+            playChime(261.63, now, 2);       // C4
+            playChime(329.63, now + 0.5, 2); // E4
+            playChime(392.00, now + 1.0, 2); // G4
+            playChime(523.25, now + 1.5, 3); // C5
+          };
+          
+          playSequence();
+          
+          const seqInterval = setInterval(() => {
+            if (ctx.state === 'running') {
+              playSequence();
+            } else {
+              clearInterval(seqInterval);
+            }
+          }, 4000);
+        }
+      } catch (e) {
+        console.error("Audio Context failed", e);
+      }
+    }
+  };
+
+  useEffect(() => {
+    let timer;
+    if (isPlaying) {
+      timer = setInterval(() => {
+        setAudioSeconds(prev => {
+          if (prev <= 1) {
+            setIsPlaying(false);
+            if (audioRef) {
+              try { audioRef.close(); } catch(e) {}
+              setAudioRef(null);
+            }
+            return 15;
+          }
+          return prev - 1;
+        });
+      }, 1000);
+    }
+    return () => {
+      clearInterval(timer);
+    };
+  }, [isPlaying, audioRef]);
+
   const steps = [
     {
       title: "Smiruješ tijelo",
@@ -11,7 +93,7 @@ export default function Mechanism() {
     },
     {
       title: "Prekidaš spiralu misli",
-      desc: "Kad krene \"\u0161to ako...\", protokol ti daje sljedeći konkretan korak umjesto da ostaneš zarobljen u vlastitim mislima.",
+      desc: "Kad krene \"što ako...\", protokol ti daje sljedeći konkretan korak umjesto da ostaneš zarobljen u vlastitim mislima.",
       icon: Zap
     },
     {
@@ -106,7 +188,7 @@ export default function Mechanism() {
           Tvoj komplet za mirniji let
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 md:mb-20 items-stretch">
           {[
             { 
               title: "📖 PDF vodič", 
@@ -114,20 +196,40 @@ export default function Mechanism() {
             },
             { 
               title: "🎧 Audio protokol", 
-              text: "Vođeno slušanje koje pratiš u avionu kad osjetiš napetost, ubrzane misli ili potrebu da se smiriš." 
+              text: "Vođeno slušanje koje pratiš u avionu kad osjetiš napetost, ubrzane misli ili potrebu da se smiriš.",
+              isAudio: true
             },
             { 
               title: "🫁 Vježbe disanja", 
               text: "Kratke tehnike koje možeš koristiti na sjedalu, bez da itko oko tebe primijeti." 
             }
           ].map((card, idx) => (
-            <div key={idx} className="bg-white p-8 md:p-10 rounded-[32px] shadow-xl border border-gray-100 text-center lg:text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center lg:items-start">
+            <div key={idx} className="bg-white p-8 md:p-10 rounded-[32px] shadow-xl border border-gray-100 text-center lg:text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center lg:items-start w-full">
               <h3 className="font-serif text-2xl md:text-3xl font-bold mb-5 text-[#060A12] leading-tight">
                 {card.title}
               </h3>
-              <p className="text-[#060A12]/60 text-base md:text-lg leading-relaxed">
+              <p className="text-[#060A12]/60 text-base md:text-lg leading-relaxed mb-6 flex-grow">
                 {card.text}
               </p>
+              
+              {card.isAudio && (
+                <div className="mt-auto w-full pt-6 border-t border-gray-100 flex flex-col items-center lg:items-start gap-4">
+                  <button 
+                    onClick={handlePlayClick}
+                    className="flex items-center gap-3 bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 text-[#c5a133] px-5 py-3 rounded-full transition-all duration-300 group/btn"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center text-white shadow-md group-hover/btn:scale-105 transition-transform duration-300">
+                      {isPlaying ? <Pause className="w-4 h-4 fill-white" /> : <Play className="w-4 h-4 fill-white translate-x-[1px]" />}
+                    </div>
+                    <span className="text-xs font-black uppercase tracking-wider">
+                      {isPlaying ? `Slušaš uzorak (0:${audioSeconds.toString().padStart(2, '0')})` : "15s pregled — poslušaj kako zvuči"}
+                    </span>
+                  </button>
+                  <p className="text-[#060A12]/40 text-[10px] md:text-[11px] font-bold uppercase tracking-wider text-center lg:text-left">
+                    Umirujući glas koji te vodi kroz svaku fazu leta — od polijetanja do slijetanja.
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -148,7 +250,7 @@ export default function Mechanism() {
           </div>
           
           <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" className="group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-14 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 text-[14px] md:text-base">
-            <span>Preuzmi Miran Let</span>
+            <span>PREUZMI MIRAN LET — 19.99€</span>
           </a>
         </div>
       </div>

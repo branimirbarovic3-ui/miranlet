@@ -37,7 +37,7 @@ export default function Hero() {
             <h1 className="font-serif text-white text-3xl md:text-5xl lg:text-7xl font-bold leading-[1.3] md:leading-[1.15] tracking-tight drop-shadow-xl max-w-[320px] md:max-w-none mx-auto">
               Uđi u avion s osjećajem kontrole.<br />
               <span className="text-gold text-lg md:text-2xl font-light italic mt-8 md:mt-8 block tracking-wide normal-case drop-shadow-none leading-relaxed">
-                Audio + PDF protokol koji pratiš prije i tokom leta kad se tijelo napne, misli ubrzaju i treba ti jasan korak dalje.
+                Audio protokol i vodič koji ti normalno objašnjava što se događa u avionu — i daje alat koji koristiš u trenutku straha. Bez tableta. Bez terapije. Bez čekanja.
               </span>
             </h1>
           </div>
@@ -45,8 +45,12 @@ export default function Hero() {
 
         {/* BOTTOM BLOCK */}
         <div className="flex flex-col items-center w-full max-w-[320px] md:max-w-none mt-12 md:mt-24">
-          <ButtonGold className="w-full sm:w-auto text-[14px] md:text-[16px] py-6 px-12 md:px-20 uppercase tracking-[0.2em] font-black" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
-            Preuzmi Miran Let
+          {/* Urgency Bar */}
+          <div className="w-full sm:w-auto bg-[#D4AF37] text-[#060A12] text-[11px] md:text-xs font-bold py-3 px-6 md:px-10 rounded-lg mb-5 text-center shadow-lg uppercase tracking-wider">
+            Sljedeći let uskoro? Preuzmi protokol danas i pripremi se na vrijeme.
+          </div>
+          <ButtonGold className="w-full sm:w-auto text-[14px] md:text-[16px] py-6 px-12 md:px-20 uppercase tracking-[0.15em] font-black" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
+            PREUZMI MIRAN LET — 19.99€
           </ButtonGold>
           
           <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-white/60 text-[10px] md:text-[11px] font-bold tracking-widest uppercase">
