@@ -10,118 +10,140 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            var(--navy): #131E2B;
-            --navy: #131E2B;
-            --navy-light: #1D2A3A;
-            --navy-lighter: #27374C;
-            --navy-sos: #1F3047;
-            --gold: #D4AF37;
-            --gold-hover: #C5A133;
-            --gold-light: #E5C460;
-            --cream: #FAFAF7;
-            --white: #FFFFFF;
-            --serene-blue: #F0F6FD;
-            --serene-border: #D8E6F5;
-            --text-dark: #0C0E17;
-            --text-muted: #515B6E;
-            --text-light: #E2E8F0;
-            --text-muted-light: #A0AEC0;
-            --font-serif: 'Playfair Display', Georgia, serif;
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            --border-radius: 12px;
+            --sky-primary:    #4DA6F0;
+            --sky-light:      #A8D4F7;
+            --sky-wash:       #EAF4FD;
+            --cream:          #F7F5F0;
+            --gold:           #C8A84A;
+            --gold-hover:     #B8983A;
+            --gold-deep:      #A88832;
+            --ink:            #16232F;
+            --ink-soft:       #4A5A68;
+            --white:          #FFFFFF;
+            
+            --font-serif:     'Cormorant Garamond', Georgia, serif;
+            --font-sans:      'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --border-radius:  12px;
+            --transition:     all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); color: var(--text-dark); line-height: 1.7; background-color: var(--white); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 500; line-height: 1.25; color: var(--text-dark); }
-        p { font-size: 1.05rem; color: var(--text-muted); }
+        body { font-family: var(--font-sans); color: var(--ink); line-height: 1.7; background-color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 1.25; color: var(--ink); }
+        p { font-size: 1.05rem; color: var(--ink-soft); }
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        .section-padding { padding: 100px 0; }
-        @media (max-width: 768px) { .section-padding { padding: 70px 0; } }
+        .section-padding { padding: 130px 0; }
+        @media (max-width: 768px) { .section-padding { padding: 90px 0; } }
 
         .text-center { text-align: center; }
-        .text-gold { color: var(--gold); }
-        .bg-navy { background-color: var(--navy); color: var(--white); }
+        .text-gold { color: var(--gold-deep); }
         .bg-cream { background-color: var(--cream); }
+        .bg-sky-wash { background-color: var(--sky-wash); }
+        .bg-white { background-color: var(--white); }
+
+        .divider-gold { width: 60px; height: 1px; background-color: var(--gold); margin: 30px auto; border: none; }
 
         .btn {
             display: inline-flex; align-items: center; justify-content: center;
-            background-color: var(--gold); color: var(--navy) !important;
+            background-color: var(--gold); color: var(--ink) !important;
             padding: 18px 42px; border-radius: var(--border-radius);
-            text-decoration: none; font-weight: 800; font-size: 1.05rem;
+            text-decoration: none; font-weight: 700; font-size: 1.05rem;
             text-transform: uppercase; letter-spacing: 0.1em;
             transition: var(--transition); border: none; cursor: pointer;
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25); text-align: center; width: fit-content;
+            box-shadow: 0 8px 25px rgba(200, 168, 74, 0.3); text-align: center; width: fit-content;
         }
-        .btn:hover { background-color: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35); }
+        .btn:hover { background-color: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(200, 168, 74, 0.4); }
 
         #sticky-bar {
-            position: fixed; top: 0; left: 0; width: 100%; background-color: var(--navy);
-            padding: 12px 0; z-index: 1000; transform: translateY(-100%);
+            position: fixed; top: 0; left: 0; width: 100%; background-color: var(--white);
+            padding: 14px 0; z-index: 1000; transform: translateY(-100%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            border-bottom: 2px solid var(--gold); box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            border-bottom: 1px solid var(--sky-light); box-shadow: 0 4px 20px rgba(22, 35, 47, 0.06);
         }
         #sticky-bar.visible { transform: translateY(0); }
         #sticky-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-        #sticky-bar span { color: var(--white); font-weight: 600; font-size: 0.95rem; }
+        #sticky-bar span { color: var(--ink); font-weight: 600; font-size: 0.95rem; }
         #sticky-bar .btn { padding: 10px 24px; font-size: 0.85rem; border-radius: 6px; box-shadow: none; }
 
         .hero {
-            position: relative; padding: 140px 0 90px;
-            background-image: linear-gradient(to bottom, rgba(19, 30, 43, 0.88) 0%, rgba(19, 30, 43, 0.76) 50%, rgba(19, 30, 43, 0.96) 100%), url('/hero.png');
-            background-size: cover; background-position: center 30%; color: var(--white); text-align: center; overflow: hidden;
+            position: relative; padding: 160px 0 100px;
+            background: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-wash) 50%, var(--cream) 100%);
+            color: var(--ink); text-align: center; overflow: hidden;
         }
-        .hero h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.15; color: var(--white); margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .hero p.lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--text-light); max-width: 750px; margin: 0 auto 40px; font-weight: 300; line-height: 1.6; }
-        .trust-line { margin-top: 16px; font-size: 0.85rem; color: var(--text-muted-light); letter-spacing: 0.05em; }
-        .hero-image-container { max-width: 650px; margin: 60px auto 0; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(29, 42, 58, 0.5); backdrop-filter: blur(10px); }
-        .hero-image-container img { width: 100%; display: block; object-fit: cover; }
+        .hero-logo { position: absolute; top: 30px; left: 40px; display: flex; align-items: center; gap: 12px; }
+        .hero-logo img { height: 42px; width: auto; border-radius: 8px; }
+        @media (max-width: 768px) { .hero-logo { position: relative; top: 0; left: 0; justify-content: center; margin-bottom: 30px; } }
 
-        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
-        @media (min-width: 768px) { .grid-2 { grid-template-columns: 1.1fr 0.9fr; gap: 60px; } }
-        .section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 28px; line-height: 1.2; }
-        .section-subtitle { font-size: clamp(1.1rem, 2vw, 1.25rem); color: var(--text-muted); margin-bottom: 40px; max-width: 700px; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.15; color: var(--ink); margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto; }
+        .hero p.lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 750px; margin: 0 auto 40px; font-weight: 400; line-height: 1.65; }
+        .trust-line { margin-top: 18px; font-size: 0.88rem; color: var(--ink-soft); letter-spacing: 0.05em; }
 
-        .problem-body p { margin-bottom: 24px; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; }
+        .hero-image-container {
+            max-width: 650px; margin: 60px auto 0; border-radius: var(--border-radius);
+            overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08);
+            border: 1px solid var(--sky-light); background: var(--white); padding: 8px;
+        }
+        .hero-image-container img { width: 100%; display: block; object-fit: cover; border-radius: 8px; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 50px; align-items: center; }
+        @media (min-width: 768px) { .grid-2 { grid-template-columns: 1.1fr 0.9fr; gap: 70px; } }
+        .section-title { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 24px; line-height: 1.2; color: var(--ink); }
+
+        .problem-body p { margin-bottom: 24px; color: var(--ink-soft); font-size: 1.1rem; line-height: 1.8; }
         .bullet-list { list-style: none; margin-top: 32px; margin-bottom: 36px; display: flex; flex-direction: column; gap: 16px; }
-        .bullet-list li { position: relative; padding-left: 32px; font-weight: 600; font-size: 1.1rem; color: var(--text-dark); line-height: 1.5; }
-        .bullet-list li::before { content: ""; position: absolute; left: 8px; top: 10px; width: 9px; height: 9px; border-radius: 50%; background-color: var(--gold); }
-        .highlight-box { margin-top: 36px; background-color: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--gold); padding: 28px 32px; border-radius: 0 var(--border-radius) var(--border-radius) 0; font-weight: 600; font-size: 1.15rem; color: var(--text-dark); line-height: 1.7; }
-        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .problem-image-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .bullet-list li { position: relative; padding-left: 32px; font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.5; }
+        .bullet-list li::before { content: "✓"; position: absolute; left: 4px; top: -1px; color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+
+        .highlight-box {
+            margin-top: 36px; background-color: var(--sky-wash); border-left: 4px solid var(--gold);
+            padding: 28px 32px; border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-weight: 600; font-size: 1.15rem; color: var(--ink); line-height: 1.7;
+            border-top: 1px solid var(--sky-light); border-right: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);
+        }
+        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08); border: 1px solid var(--sky-light); background: var(--white); padding: 8px; }
+        .problem-image-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; border-radius: 8px; }
 
         .cards-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
         @media (min-width: 768px) { .cards-grid.col-3 { grid-template-columns: repeat(3, 1fr); } .cards-grid.col-2 { grid-template-columns: repeat(2, 1fr); } }
 
-        .dark-card { background: var(--navy-light); border: 1px solid rgba(255, 255, 255, 0.1); padding: 36px; border-radius: var(--border-radius); transition: var(--transition); position: relative; }
-        .dark-card:hover { border-color: rgba(212, 175, 55, 0.4); transform: translateY(-4px); background: var(--navy-lighter); }
-        .card-number { font-size: 2.2rem; font-family: var(--font-serif); color: var(--gold); font-weight: 600; margin-bottom: 20px; display: block; line-height: 1; }
-        .dark-card h3 { color: var(--white); font-size: 1.45rem; margin-bottom: 16px; }
-        .dark-card p { color: var(--text-light); font-size: 1rem; line-height: 1.6; opacity: 0.9; }
+        .card-bright {
+            background: var(--white); border: 1px solid var(--sky-light);
+            padding: 40px; border-radius: var(--border-radius); transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04); position: relative;
+        }
+        .card-bright:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 15px 35px rgba(22, 35, 47, 0.08); }
+        .card-number { font-size: 2.2rem; font-family: var(--font-serif); color: var(--gold-deep); font-weight: 600; margin-bottom: 20px; display: block; line-height: 1; }
+        .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 16px; }
+        .card-bright p { color: var(--ink-soft); font-size: 1rem; line-height: 1.65; }
 
-        .pricing-card-wrapper { max-width: 650px; margin: 50px auto 0; background: var(--cream); border: 1px solid var(--serene-border); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: 0 15px 40px rgba(0,0,0,0.03); }
-        .badge-promo { background-color: var(--gold); color: var(--navy); padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
-        .price-new { font-size: 4.5rem; color: var(--navy); font-weight: 700; font-family: var(--font-serif); line-height: 1; margin-bottom: 30px; }
+        .pricing-card-wrapper { max-width: 650px; margin: 50px auto 0; background: var(--white); border: 1px solid var(--sky-light); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); }
+        .badge-promo { background-color: var(--gold); color: var(--ink); padding: 6px 18px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
+        .price-new { font-size: 4.5rem; color: var(--ink); font-weight: 700; font-family: var(--font-serif); line-height: 1; margin-bottom: 30px; }
         .pricing-features-list { text-align: left; max-width: 350px; margin: 0 auto 35px; list-style: none; }
-        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 14px; font-weight: 600; color: var(--text-dark); font-size: 1.05rem; }
+        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 14px; font-weight: 600; color: var(--ink); font-size: 1.05rem; }
         .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 800; }
 
         .faq-accordion { max-width: 750px; margin: 40px auto 0; }
-        .faq-item { border-bottom: 1px solid var(--serene-border); padding: 24px 0; }
-        .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.15rem; color: var(--navy); cursor: pointer; user-select: none; gap: 20px; transition: var(--transition); }
-        .faq-question:hover { color: var(--gold); }
-        .faq-icon { font-size: 1.5rem; font-family: monospace; color: var(--gold); transition: transform 0.3s ease; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; color: var(--text-muted); font-size: 1.05rem; line-height: 1.65; padding-right: 30px; }
+        .faq-item { border-bottom: 1px solid var(--sky-light); padding: 24px 0; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.15rem; color: var(--ink); cursor: pointer; user-select: none; gap: 20px; transition: var(--transition); }
+        .faq-question:hover { color: var(--gold-deep); }
+        .faq-icon { font-size: 1.5rem; font-family: monospace; color: var(--gold-deep); transition: transform 0.3s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; padding-right: 30px; }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
 
-        .final-cta { position: relative; background-image: linear-gradient(to bottom, rgba(19, 30, 43, 0.94) 0%, rgba(19, 30, 43, 0.90) 100%), url('/cta.png'); background-size: cover; background-position: center; color: var(--white); text-align: center; }
-        footer { background-color: var(--navy); color: var(--text-muted-light); padding: 60px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); text-align: center; font-size: 0.9rem; }
+        .final-cta {
+            position: relative; background: linear-gradient(180deg, var(--sky-light) 0%, var(--cream) 100%);
+            color: var(--ink); text-align: center; border-top: 1px solid var(--sky-light);
+        }
+        .final-cta h2 { color: var(--ink); font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .final-cta p.subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--ink-soft); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; font-weight: 400; }
+
+        footer { background-color: var(--ink); color: #8C9BA8; padding: 60px 0; text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -133,17 +155,21 @@
     </div>
 
     <header class="hero">
+        <div class="hero-logo">
+            <img src="/logo-ml.jpg" alt="Miran Let Logo">
+        </div>
+        
         <div class="container">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.2em; display: inline-block; margin-bottom: 20px;">Vodič za roditelje koji lete</span>
+            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: inline-block; margin-bottom: 20px;">VODIČ ZA RODITELJE KOJI LETE</span>
             <h1>Dijete gleda tebe.</h1>
             <p class="lead">Diskretni alati za tvoje tijelo i um u trenutku straha — kako bi tvoj mir na letu postao njihov mir. Bez optuživanja, bez bespomoćnosti.</p>
             
-            <div class="hero-urgency" style="background: var(--gold); color: var(--navy); padding: 12px 24px; border-radius: 8px; font-weight: bold; font-size: 0.85rem; margin: 15px auto 25px auto; display: inline-block; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);">
-                Sljedeći let uskoro? Preuzmi protokol danas i pripremi se na vrijeme.
+            <div style="background: var(--white); color: var(--ink); padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; margin: 15px auto 25px auto; display: inline-block; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid var(--sky-light); box-shadow: 0 4px 15px rgba(22, 35, 47, 0.05);">
+                SLJEDEĆI LET USKORO? PREUZMI PROTOKOL DANAS I PRIPREMI SE NA VRIJEME.
             </div>
             <br>
-            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dijete-gleda" class="btn" style="padding: 20px 40px; font-size: 1rem; letter-spacing: 0.15em; font-weight: 900;">PREUZMI MIRAN LET — 19.99€</a>
-            <p class="trust-line" style="margin-top: 20px;">PDF + MP3 format · Odmah dostupno nakon kupnje · Trajna licenca</p>
+            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dijete-gleda" class="btn">PREUZMI MIRAN LET — 19.99€</a>
+            <p class="trust-line">PDF + MP3 format · Odmah dostupno nakon kupnje · Trajna licenca</p>
             
             <div class="hero-image-container">
                 <img src="/bundle.png" alt="Miran Let Bundle Mockup">
@@ -180,27 +206,29 @@
         </div>
     </section>
 
-    <section class="section-padding bg-navy">
+    <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);">
         <div class="container text-center">
-            <h2 class="section-title" style="color: var(--white);">Tri sustava za roditeljski mir</h2>
-            <p class="section-subtitle" style="color: var(--text-light); margin-left: auto; margin-right: auto; opacity: 0.85;">
+            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">RODITELJSKI MIR</span>
+            <h2 class="section-title">Tri sustava za roditeljski mir</h2>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
                 Diskretan plan za tebe koji ne traži zatvaranje očiju, nego ti daje kontrole u ruke:
             </p>
+            <hr class="divider-gold">
             
             <div class="cards-grid col-3" style="text-align: left; margin-top: 50px;">
-                <div class="dark-card">
+                <div class="card-bright">
                     <span class="card-number">PRIJE LETA</span>
                     <h3>Smirena priprema</h3>
                     <p>Brzi test tipa straha, 30-dnevni plan pripreme i audio vježba disanja koju preslušaš kod kuće kako bi ušao stabilan u avion.</p>
                 </div>
                 
-                <div class="dark-card">
+                <div class="card-bright">
                     <span class="card-number">NA DAN LETA</span>
                     <h3>Takeoff & SOS</h3>
                     <p>Takeoff protokol za prve 10 minute polijetanja i CORE-7 SOS kartica s nevidljivim vježbama smirivanja u sjedalu.</p>
                 </div>
                 
-                <div class="dark-card">
+                <div class="card-bright">
                     <span class="card-number">U ZRAKU</span>
                     <h3>Zvukovi i turbulencija</h3>
                     <p>Avijacijski rječnik s objašnjenjem svakog zvuka (tako da djetetu uvijek imaš spreman odgovor) i turbulencijska kartica.</p>
@@ -209,34 +237,38 @@
         </div>
     </section>
 
-    <section class="section-padding bg-cream" style="background-color: var(--white); border-bottom: 1px solid rgba(0,0,0,0.03);">
-        <div class="container" style="max-width: 760px; margin: 0 auto; padding: 0 20px;">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px; text-align: center;">TKO STOJI IZA PROJEKTA</span>
-            <h2 class="section-title text-center" style="margin-bottom: 40px; color: var(--navy);">Zašto postoji Miran Let</h2>
+    <section class="section-padding bg-white" style="border-bottom: 1px solid var(--sky-light);">
+        <div class="container" style="max-width: 760px; margin: 0 auto;">
+            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px; text-align: center;">TKO STOJI IZA PROJEKTA</span>
+            <h2 class="section-title text-center" style="margin-bottom: 15px;">Zašto postoji Miran Let</h2>
+            <hr class="divider-gold">
             
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 20px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 40px;">
                 <div style="text-align: center;">
-                    <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 4px solid var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid var(--sky-light); box-shadow: 0 10px 25px rgba(22, 35, 47, 0.06);">
                         <img src="/brane.png" alt="Brane - Autor" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <span style="font-weight: 800; font-size: 1.1rem; color: var(--navy); display: block;">Brane</span>
-                    <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 800;">Autor Protokola</span>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: var(--ink); display: block;">Brane</span>
+                    <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 800;">AUTOR PROTOKOLA</span>
                 </div>
                 
-                <div style="font-size: 1.05rem; line-height: 1.8; color: rgba(12, 14, 23, 0.8); font-weight: 300; text-align: left;">
-                    <p style="font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--navy); border-left: 4px solid var(--gold); padding-left: 15px; margin-bottom: 25px;">Ovo nije nastalo iz tečaja. Niti iz diplome.</p>
+                <div style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); text-align: left;">
+                    <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.3rem; color: var(--ink); border-left: 4px solid var(--gold); padding-left: 18px; margin-bottom: 25px;">Ovo nije nastalo iz tečaja. Niti iz diplome.</p>
                     <p style="margin-bottom: 20px;">Nastalo je iz sjedala 14F jer sam i sam tražio praktičan alat koji mi omogućava da ostanem prisutan i staložen bez obzira na buku ili pokrete zrakoplova.</p>
-                    <p style="font-weight: bold; color: var(--navy); margin-top: 20px;">Cilj nije eliminirati strah. Cilj je naučiti letjeti s njim.</p>
+                    <p style="font-weight: 700; color: var(--ink); margin-top: 20px;">Cilj nije eliminirati strah. Cilj je naučiti letjeti s njim.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="kupnja" class="section-padding pricing-section">
+    <section id="kupnja" class="section-padding bg-sky-wash" style="border-bottom: 1px solid var(--sky-light);">
         <div class="container text-center">
+            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">KOMPLETAN PAKET</span>
             <h2 class="section-title">Tvoj komplet za mirniji let</h2>
+            <hr class="divider-gold">
+            
             <div class="pricing-card-wrapper">
-                <span class="badge-promo">Early Bird Ponuda</span>
+                <span class="badge-promo">EARLY BIRD PONUDA</span>
                 <div class="price-container">
                     <span class="price-new">19.99€</span>
                 </div>
@@ -250,44 +282,45 @@
                 </ul>
 
                 <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dijete-gleda" class="btn" style="width: 100%;">PREUZMI MIRAN LET — 19.99€</a>
-                <p class="pricing-subtext">Leti s njim. Ako nakon leta kažeš da nije pomoglo — vraćamo novac, bez pitanja. (14 dana zakonski rok)</p>
+                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--ink-soft);">Leti s njim. Ako nakon leta kažeš da nije pomoglo — vraćamo novac, bez pitanja. (14 dana zakonski rok)</p>
             </div>
         </div>
     </section>
 
-    <section class="section-padding bg-cream" style="background-color: var(--white); border-top: 1px solid rgba(0,0,0,0.03);">
-        <div class="container" style="max-width: 760px; margin: 0 auto; text-align: center; padding: 0 20px;">
-            <div style="background-color: var(--cream); border: 1px solid rgba(0,0,0,0.05); padding: 40px; border-radius: 24px;">
-                <h3 style="font-family: var(--serif); font-size: 1.5rem; font-weight: bold; margin-bottom: 15px; color: var(--navy);">Ovo je novi proizvod — budite među prvima</h3>
-                <p style="color: rgba(12, 14, 23, 0.7); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
+    <section class="section-padding bg-white">
+        <div class="container" style="max-width: 760px; margin: 0 auto; text-align: center;">
+            <div style="background-color: var(--sky-wash); border: 1px solid var(--sky-light); padding: 40px; border-radius: 20px;">
+                <h3 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je novi proizvod — budite među prvima</h3>
+                <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
                     Miran Let pomaže roditeljima da ostanu izvor sigurnosti. Pošalji nam povratnu informaciju nakon leta na podrska@miranlet.com i vraćamo ti novac!
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background-color: var(--navy-sos); color: var(--white);" id="sos-vodic">
+    <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);" id="sos-vodic">
         <div class="container" style="max-width: 640px; margin: 0 auto; text-align: center;">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px;">BESPLATAN SOS VODIČ</span>
-            <h2 style="margin-bottom: 20px; color: var(--white); font-family: var(--serif); font-size: 2.2rem;">Nisi siguran? Počni malo.</h2>
-            <p style="color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 30px; line-height: 1.7;">
+            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px;">BESPLATAN SOS VODIČ</span>
+            <h2 style="margin-bottom: 20px; color: var(--ink); font-family: var(--font-serif); font-size: 2.3rem;">Nisi siguran? Počni malo.</h2>
+            <p style="color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 30px; line-height: 1.7;">
                 Preuzmi besplatni SOS vodič za smirenje prije leta — jednu stranicu s tri tehnike koje možeš isprobati već danas.
             </p>
             
-            <div id="html-email-success" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 30px; border-radius: 16px;">
-                <h4 style="font-weight: bold; color: #34d399; font-size: 1.15rem;">Hvala ti! SOS vodič je poslan na tvoj email.</h4>
+            <div id="html-email-success" style="display: none; background: var(--white); border: 1px solid var(--sky-light); padding: 30px; border-radius: 16px;">
+                <h4 style="font-weight: 700; color: var(--ink); font-size: 1.15rem;">Hvala ti! SOS vodič je poslan na tvoj email.</h4>
             </div>
             
             <form id="html-email-form" onsubmit="submitHtmlEmailForm(event)" style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
-                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 52px; padding: 0 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--white); font-size: 1rem; outline: none;">
-                <button type="submit" style="min-height: 52px; background: var(--gold); border: none; border-radius: 12px; color: var(--navy); font-weight: 800; text-transform: uppercase; cursor: pointer; font-size: 13px; letter-spacing: 0.08em;">POŠALJI MI SOS VODIČ</button>
+                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 52px; padding: 0 20px; border-radius: 12px; border: 1px solid var(--sky-light); background: var(--white); color: var(--ink); font-size: 1rem; outline: none;">
+                <button type="submit" class="btn" style="width: 100%; min-height: 52px;">POŠALJI MI SOS VODIČ</button>
             </form>
         </div>
     </section>
 
     <section class="section-padding bg-cream" id="faq">
         <div class="container" style="max-width: 720px; margin: 0 auto;">
-            <h2 class="section-title text-center" style="margin-bottom: 40px; color: var(--navy);">Česta pitanja za roditelje</h2>
+            <h2 class="section-title text-center" style="margin-bottom: 15px; color: var(--ink);">Česta pitanja za roditelje</h2>
+            <hr class="divider-gold">
             <div class="faq-accordion">
                 <div class="faq-item">
                     <div class="faq-question"><span>Ima li ovdje nešto namijenjeno djetetu?</span><span class="faq-icon">+</span></div>
@@ -321,14 +354,14 @@
         <div class="container">
             <h2>Pripremi se da oni budu mirni.</h2>
             <p class="subtitle" style="margin-bottom: 30px;">Pristup cijelom paketu ostaje trajno tvoj. Čitaš diskretno s mobitela.</p>
-            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dijete-gleda" class="btn" style="padding: 20px 45px;">PREUZMI MIRAN LET — 19.99€</a>
+            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dijete-gleda" class="btn">PREUZMI MIRAN LET — 19.99€</a>
         </div>
     </section>
 
     <footer>
         <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>&copy; 2026 Miran Let. Sva prava pridržana.</p>
-            <p style="color: rgba(255, 255, 255, 0.45); font-size: 0.78rem; font-style: italic; line-height: 1.6; margin-top: 20px;">
+            <p style="color: var(--white); font-weight: 500;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
+            <p style="color: #8C9BA8; font-size: 0.78rem; font-style: italic; line-height: 1.6; margin-top: 20px;">
                 *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
             </p>
         </div>
