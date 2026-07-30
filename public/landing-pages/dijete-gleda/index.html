@@ -75,15 +75,15 @@
             color: var(--ink); text-align: center; overflow: hidden;
         }
         .hero-logo { position: absolute; top: 30px; left: 40px; display: flex; align-items: center; gap: 12px; }
-        .hero-logo img { height: 42px; width: auto; border-radius: 8px; }
+        .hero-logo img { height: 44px; width: auto; border-radius: 8px; }
         @media (max-width: 768px) { .hero-logo { position: relative; top: 0; left: 0; justify-content: center; margin-bottom: 30px; } }
 
         .hero h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.15; color: var(--ink); margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .hero p.lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 750px; margin: 0 auto 40px; font-weight: 400; line-height: 1.65; }
+        .hero p.lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 750px; margin: 0 auto 35px; font-weight: 400; line-height: 1.65; }
         .trust-line { margin-top: 18px; font-size: 0.88rem; color: var(--ink-soft); letter-spacing: 0.05em; }
 
         .hero-image-container {
-            max-width: 650px; margin: 60px auto 0; border-radius: var(--border-radius);
+            max-width: 680px; margin: 50px auto 0; border-radius: var(--border-radius);
             overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08);
             border: 1px solid var(--sky-light); background: var(--white); padding: 8px;
         }
@@ -120,7 +120,7 @@
         .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 16px; }
         .card-bright p { color: var(--ink-soft); font-size: 1rem; line-height: 1.65; }
 
-        .pricing-card-wrapper { max-width: 650px; margin: 50px auto 0; background: var(--white); border: 1px solid var(--sky-light); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); }
+        .pricing-card-wrapper { max-width: 650px; margin: 40px auto 0; background: var(--white); border: 1px solid var(--sky-light); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); }
         .badge-promo { background-color: var(--gold); color: var(--ink); padding: 6px 18px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
         .price-new { font-size: 4.5rem; color: var(--ink); font-weight: 700; font-family: var(--font-serif); line-height: 1; margin-bottom: 30px; }
         .pricing-features-list { text-align: left; max-width: 350px; margin: 0 auto 35px; list-style: none; }
@@ -164,15 +164,12 @@
             <h1>Dijete gleda tebe.</h1>
             <p class="lead">Diskretni alati za tvoje tijelo i um u trenutku straha — kako bi tvoj mir na letu postao njihov mir. Bez optuživanja, bez bespomoćnosti.</p>
             
-            <div style="background: var(--white); color: var(--ink); padding: 12px 24px; border-radius: 8px; font-weight: 700; font-size: 0.85rem; margin: 15px auto 25px auto; display: inline-block; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid var(--sky-light); box-shadow: 0 4px 15px rgba(22, 35, 47, 0.05);">
-                SLJEDEĆI LET USKORO? PREUZMI PROTOKOL DANAS I PRIPREMI SE NA VRIJEME.
-            </div>
-            <br>
             <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dijete-gleda" class="btn">PREUZMI MIRAN LET — 19.99€</a>
             <p class="trust-line">PDF + MP3 format · Odmah dostupno nakon kupnje · Trajna licenca</p>
             
+            <!-- Hero Ad Creative Image (Exact Match with Facebook Ad) -->
             <div class="hero-image-container">
-                <img src="/bundle.png" alt="Miran Let Bundle Mockup">
+                <img src="hero-dijete-gleda.jpg" alt="Dijete gleda tebe - Ad Creative">
             </div>
         </div>
     </header>
@@ -210,7 +207,7 @@
         <div class="container text-center">
             <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">RODITELJSKI MIR</span>
             <h2 class="section-title">Tri sustava za roditeljski mir</h2>
-            <p class="section-subtitle" style="margin-left: auto; margin-right: auto;">
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto; max-width: 700px;">
                 Diskretan plan za tebe koji ne traži zatvaranje očiju, nego ti daje kontrole u ruke:
             </p>
             <hr class="divider-gold">
@@ -258,6 +255,11 @@
                     <p style="font-weight: 700; color: var(--ink); margin-top: 20px;">Cilj nije eliminirati strah. Cilj je naučiti letjeti s njim.</p>
                 </div>
             </div>
+
+            <!-- Fully Readable High-Contrast Disclaimer -->
+            <p style="color: var(--ink-soft); font-size: 0.85rem; font-style: italic; line-height: 1.6; max-width: 680px; margin: 35px auto 0; text-align: center; border-top: 1px solid var(--sky-light); padding-top: 24px;">
+                *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
+            </p>
         </div>
     </section>
 
@@ -267,6 +269,11 @@
             <h2 class="section-title">Tvoj komplet za mirniji let</h2>
             <hr class="divider-gold">
             
+            <!-- Bundle Mockup Relocated Here -->
+            <div style="max-width: 540px; margin: 30px auto 10px auto; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); border: 1px solid var(--sky-light); background: var(--white); padding: 12px;">
+                <img src="/bundle.png" alt="Miran Let Bundle Digital Mockup" style="width: 100%; display: block; border-radius: 8px;">
+            </div>
+
             <div class="pricing-card-wrapper">
                 <span class="badge-promo">EARLY BIRD PONUDA</span>
                 <div class="price-container">
@@ -287,36 +294,19 @@
         </div>
     </section>
 
+    <!-- Honest New Product Notice (NO conditional refund for reviews) -->
     <section class="section-padding bg-white">
         <div class="container" style="max-width: 760px; margin: 0 auto; text-align: center;">
-            <div style="background-color: var(--sky-wash); border: 1px solid var(--sky-light); padding: 40px; border-radius: 20px;">
-                <h3 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je novi proizvod — budite među prvima</h3>
-                <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin-bottom: 20px;">
-                    Miran Let pomaže roditeljima da ostanu izvor sigurnosti. Pošalji nam povratnu informaciju nakon leta na podrska@miranlet.com i vraćamo ti novac!
+            <div style="background-color: var(--sky-wash); border: 1px solid var(--sky-light); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);">
+                <h3 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je nov proizvod</h3>
+                <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin: 0;">
+                    Nema stotine recenzija i neće ih biti dok ih ljudi stvarno ne napišu — izmišljati ih nećemo. Zato jamstvo stoji onako kako piše: leti s njim, i ako kažeš da nije pomoglo, novac se vraća.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);" id="sos-vodic">
-        <div class="container" style="max-width: 640px; margin: 0 auto; text-align: center;">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px;">BESPLATAN SOS VODIČ</span>
-            <h2 style="margin-bottom: 20px; color: var(--ink); font-family: var(--font-serif); font-size: 2.3rem;">Nisi siguran? Počni malo.</h2>
-            <p style="color: var(--ink-soft); font-size: 1.05rem; margin-bottom: 30px; line-height: 1.7;">
-                Preuzmi besplatni SOS vodič za smirenje prije leta — jednu stranicu s tri tehnike koje možeš isprobati već danas.
-            </p>
-            
-            <div id="html-email-success" style="display: none; background: var(--white); border: 1px solid var(--sky-light); padding: 30px; border-radius: 16px;">
-                <h4 style="font-weight: 700; color: var(--ink); font-size: 1.15rem;">Hvala ti! SOS vodič je poslan na tvoj email.</h4>
-            </div>
-            
-            <form id="html-email-form" onsubmit="submitHtmlEmailForm(event)" style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
-                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 52px; padding: 0 20px; border-radius: 12px; border: 1px solid var(--sky-light); background: var(--white); color: var(--ink); font-size: 1rem; outline: none;">
-                <button type="submit" class="btn" style="width: 100%; min-height: 52px;">POŠALJI MI SOS VODIČ</button>
-            </form>
-        </div>
-    </section>
-
+    <!-- FAQ Section (Background: Cream) -->
     <section class="section-padding bg-cream" id="faq">
         <div class="container" style="max-width: 720px; margin: 0 auto;">
             <h2 class="section-title text-center" style="margin-bottom: 15px; color: var(--ink);">Česta pitanja za roditelje</h2>
@@ -350,6 +340,27 @@
         </div>
     </section>
 
+    <!-- Email Capture Section (Relocated Below FAQ, Secondary Style) -->
+    <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);" id="sos-vodic">
+        <div class="container" style="max-width: 580px; margin: 0 auto; text-align: center;">
+            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; display: block; margin-bottom: 15px;">BESPLATAN SOS VODIČ</span>
+            <h3 style="margin-bottom: 15px; color: var(--ink); font-family: var(--font-serif); font-size: 1.8rem;">Nisi siguran? Počni malo.</h3>
+            <p style="color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 25px; line-height: 1.6;">
+                Preuzmi besplatni SOS vodič za smirenje prije leta — jednu stranicu s tri tehnike koje možeš isprobati već danas.
+            </p>
+            
+            <div id="html-email-success" style="display: none; background: var(--white); border: 1px solid var(--sky-light); padding: 24px; border-radius: 12px;">
+                <h4 style="font-weight: 700; color: var(--ink); font-size: 1.05rem;">Hvala ti! SOS vodič je poslan na tvoj email.</h4>
+            </div>
+            
+            <form id="html-email-form" onsubmit="submitHtmlEmailForm(event)" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 48px; padding: 0 18px; border-radius: 10px; border: 1px solid var(--sky-light); background: var(--white); color: var(--ink); font-size: 0.95rem; outline: none;">
+                <button type="submit" class="btn" style="width: 100%; min-height: 48px; padding: 12px 24px; font-size: 0.95rem;">POŠALJI MI SOS VODIČ</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Final CTA Section (Gradient: sky-light to cream) -->
     <section class="section-padding final-cta text-center">
         <div class="container">
             <h2>Pripremi se da oni budu mirni.</h2>
@@ -358,12 +369,10 @@
         </div>
     </section>
 
+    <!-- Footer: Sole dark section on page (--ink) -->
     <footer>
         <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <p style="color: var(--white); font-weight: 500;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
-            <p style="color: #8C9BA8; font-size: 0.78rem; font-style: italic; line-height: 1.6; margin-top: 20px;">
-                *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
-            </p>
         </div>
     </footer>
 
