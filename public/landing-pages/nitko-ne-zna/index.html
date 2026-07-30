@@ -14,9 +14,10 @@
 
     <style>
         :root {
-            --navy: #0C0E17;
-            --navy-light: #161A26;
-            --navy-lighter: #202738;
+            --navy: #131E2B;
+            --navy-light: #1D2A3A;
+            --navy-lighter: #27374C;
+            --navy-sos: #1F3047;
             --gold: #D4AF37;
             --gold-hover: #C5A133;
             --gold-light: #E5C460;
@@ -71,32 +72,33 @@
 
         .hero {
             position: relative; padding: 140px 0 90px;
-            background-image: linear-gradient(to bottom, rgba(12, 14, 23, 0.88) 0%, rgba(12, 14, 23, 0.76) 50%, rgba(12, 14, 23, 0.96) 100%), url('/hero.png');
+            background-image: linear-gradient(to bottom, rgba(19, 30, 43, 0.88) 0%, rgba(19, 30, 43, 0.76) 50%, rgba(19, 30, 43, 0.96) 100%), url('/hero.png');
             background-size: cover; background-position: center 30%; color: var(--white); text-align: center; overflow: hidden;
         }
         .hero h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); line-height: 1.15; color: var(--white); margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto; }
         .hero p.lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--text-light); max-width: 750px; margin: 0 auto 40px; font-weight: 300; line-height: 1.6; }
         .trust-line { margin-top: 16px; font-size: 0.85rem; color: var(--text-muted-light); letter-spacing: 0.05em; }
-        .hero-image-container { max-width: 650px; margin: 60px auto 0; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(22, 26, 38, 0.4); backdrop-filter: blur(10px); }
+        .hero-image-container { max-width: 650px; margin: 60px auto 0; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4); border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(29, 42, 58, 0.5); backdrop-filter: blur(10px); }
         .hero-image-container img { width: 100%; display: block; object-fit: cover; }
 
         .grid-2 { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
         @media (min-width: 768px) { .grid-2 { grid-template-columns: 1.1fr 0.9fr; gap: 60px; } }
-        .section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 24px; line-height: 1.2; }
+        .section-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 28px; line-height: 1.2; }
         .section-subtitle { font-size: clamp(1.1rem, 2vw, 1.25rem); color: var(--text-muted); margin-bottom: 40px; max-width: 700px; }
 
-        .bullet-list { list-style: none; margin-bottom: 35px; }
-        .bullet-list li { position: relative; padding-left: 28px; margin-bottom: 14px; font-weight: 600; font-size: 1.05rem; color: var(--text-dark); }
-        .bullet-list li::before { content: ""; position: absolute; left: 8px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background-color: var(--gold); }
-        .highlight-box { background-color: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--gold); padding: 24px; border-radius: 0 var(--border-radius) var(--border-radius) 0; font-weight: 600; font-size: 1.1rem; color: var(--text-dark); line-height: 1.6; }
-        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .problem-body p { margin-bottom: 24px; color: var(--text-muted); font-size: 1.1rem; line-height: 1.8; }
+        .bullet-list { list-style: none; margin-top: 32px; margin-bottom: 36px; display: flex; flex-direction: column; gap: 16px; }
+        .bullet-list li { position: relative; padding-left: 32px; font-weight: 600; font-size: 1.1rem; color: var(--text-dark); line-height: 1.5; }
+        .bullet-list li::before { content: ""; position: absolute; left: 8px; top: 10px; width: 9px; height: 9px; border-radius: 50%; background-color: var(--gold); }
+        .highlight-box { margin-top: 36px; background-color: rgba(212, 175, 55, 0.08); border-left: 4px solid var(--gold); padding: 28px 32px; border-radius: 0 var(--border-radius) var(--border-radius) 0; font-weight: 600; font-size: 1.15rem; color: var(--text-dark); line-height: 1.7; }
+        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
         .problem-image-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; }
 
         .cards-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
         @media (min-width: 768px) { .cards-grid.col-3 { grid-template-columns: repeat(3, 1fr); } .cards-grid.col-2 { grid-template-columns: repeat(2, 1fr); } }
 
-        .dark-card { background: var(--navy-light); border: 1px solid rgba(255, 255, 255, 0.08); padding: 36px; border-radius: var(--border-radius); transition: var(--transition); position: relative; }
-        .dark-card:hover { border-color: rgba(212, 175, 55, 0.3); transform: translateY(-4px); background: var(--navy-lighter); }
+        .dark-card { background: var(--navy-light); border: 1px solid rgba(255, 255, 255, 0.1); padding: 36px; border-radius: var(--border-radius); transition: var(--transition); position: relative; }
+        .dark-card:hover { border-color: rgba(212, 175, 55, 0.4); transform: translateY(-4px); background: var(--navy-lighter); }
         .card-number { font-size: 2.2rem; font-family: var(--font-serif); color: var(--gold); font-weight: 600; margin-bottom: 20px; display: block; line-height: 1; }
         .dark-card h3 { color: var(--white); font-size: 1.45rem; margin-bottom: 16px; }
         .dark-card p { color: var(--text-light); font-size: 1rem; line-height: 1.6; opacity: 0.9; }
@@ -105,7 +107,7 @@
         .badge-promo { background-color: var(--gold); color: var(--navy); padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
         .price-new { font-size: 4.5rem; color: var(--navy); font-weight: 700; font-family: var(--font-serif); line-height: 1; margin-bottom: 30px; }
         .pricing-features-list { text-align: left; max-width: 350px; margin: 0 auto 35px; list-style: none; }
-        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 12px; font-weight: 600; color: var(--text-dark); font-size: 1.05rem; }
+        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 14px; font-weight: 600; color: var(--text-dark); font-size: 1.05rem; }
         .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 800; }
 
         .faq-accordion { max-width: 750px; margin: 40px auto 0; }
@@ -117,8 +119,8 @@
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
 
-        .final-cta { position: relative; background-image: linear-gradient(to bottom, rgba(12, 14, 23, 0.94) 0%, rgba(12, 14, 23, 0.90) 100%), url('/cta.png'); background-size: cover; background-position: center; color: var(--white); text-align: center; }
-        footer { background-color: var(--navy); color: var(--text-muted-light); padding: 60px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); text-align: center; font-size: 0.9rem; }
+        .final-cta { position: relative; background-image: linear-gradient(to bottom, rgba(19, 30, 43, 0.94) 0%, rgba(19, 30, 43, 0.90) 100%), url('/cta.png'); background-size: cover; background-position: center; color: var(--white); text-align: center; }
+        footer { background-color: var(--navy); color: var(--text-muted-light); padding: 60px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); text-align: center; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -211,7 +213,7 @@
             <span class="text-gold" style="text-transform: uppercase; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px; text-align: center;">TKO STOJI IZA PROJEKTA</span>
             <h2 class="section-title text-center" style="margin-bottom: 40px; color: var(--navy);">Zašto postoji Miran Let</h2>
             
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 40px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-bottom: 20px;">
                 <div style="text-align: center;">
                     <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 4px solid var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
                         <img src="/brane.png" alt="Brane - Autor" style="width: 100%; height: 100%; object-fit: cover;">
@@ -226,12 +228,6 @@
                     <p style="font-weight: bold; color: var(--navy); margin-top: 20px;">Cilj nije eliminirati strah. Cilj je naučiti letjeti s njim.</p>
                 </div>
             </div>
-            
-            <div style="border-top: 1px solid rgba(0,0,0,0.06); padding-top: 25px; margin-top: 35px;">
-                <p style="color: rgba(12, 14, 23, 0.5); font-size: 0.75rem; font-style: italic; line-height: 1.6; text-align: center; max-width: 640px; margin: 0 auto;">
-                    *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
-                </p>
-            </div>
         </div>
     </section>
 
@@ -245,7 +241,7 @@
                 </div>
                 
                 <ul class="pricing-features-list">
-                    <li>PDF E-knjiga (43 stranice)</li>
+                    <li>PDF E-knjiga / Vodič</li>
                     <li>9 SOS bonus kartica za mobitel</li>
                     <li>Vođeni audio protokol (MP3)</li>
                     <li>Trenutačan pristup nakon uplate</li>
@@ -269,21 +265,21 @@
         </div>
     </section>
 
-    <section class="section-padding bg-navy" style="background-color: var(--navy-light); color: var(--white);">
+    <section class="section-padding" style="background-color: var(--navy-sos); color: var(--white);" id="sos-vodic">
         <div class="container" style="max-width: 640px; margin: 0 auto; text-align: center;">
             <span class="text-gold" style="text-transform: uppercase; font-weight: 800; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px;">BESPLATAN SOS VODIČ</span>
-            <h2 style="margin-bottom: 20px; color: var(--white); font-family: var(--serif); font-size: 2rem;">Nisi siguran? Počni malo.</h2>
-            <p style="color: rgba(255,255,255,0.6); font-size: 1.05rem; margin-bottom: 30px;">
+            <h2 style="margin-bottom: 20px; color: var(--white); font-family: var(--serif); font-size: 2.2rem;">Nisi siguran? Počni malo.</h2>
+            <p style="color: rgba(255,255,255,0.75); font-size: 1.05rem; margin-bottom: 30px; line-height: 1.7;">
                 Preuzmi besplatni SOS vodič za smirenje prije leta — jednu stranicu s tri tehnike koje možeš isprobati već danas.
             </p>
             
-            <div id="html-email-success" style="display: none; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 30px; border-radius: 16px;">
+            <div id="html-email-success" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); padding: 30px; border-radius: 16px;">
                 <h4 style="font-weight: bold; color: #34d399; font-size: 1.15rem;">Hvala ti! SOS vodič je poslan na tvoj email.</h4>
             </div>
             
             <form id="html-email-form" onsubmit="submitHtmlEmailForm(event)" style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
-                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 50px; padding: 0 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: var(--white); font-size: 1rem; outline: none;">
-                <button type="submit" style="min-height: 50px; background: var(--gold); border: none; border-radius: 12px; color: var(--white); font-weight: bold; text-transform: uppercase; cursor: pointer; font-size: 13px;">POŠALJI MI SOS VODIČ</button>
+                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 52px; padding: 0 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: var(--white); font-size: 1rem; outline: none;">
+                <button type="submit" style="min-height: 52px; background: var(--gold); border: none; border-radius: 12px; color: var(--navy); font-weight: 800; text-transform: uppercase; cursor: pointer; font-size: 13px; letter-spacing: 0.08em;">POŠALJI MI SOS VODIČ</button>
             </form>
         </div>
     </section>
@@ -304,6 +300,18 @@
                     <div class="faq-question"><span>Radi li ako sam već probao sve?</span><span class="faq-icon">+</span></div>
                     <div class="faq-answer">Fokusiran je na spuštanje tlaka kroz vagusni živac i osjetila, a ne samo na "pozitivno razmišljanje". Uz bezuvjetno jamstvo, nemaš financijski rizik.</div>
                 </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Kako mogu pristupiti materijalima nakon uplate?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Odmah po završetku uplate dobivaš direktan link za preuzimanje na svoj email i ekran. Sve datoteke (PDF i MP3) možeš jednostavno spremiti izravno na mobitel, tablet ili računalo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Trebam li instalirati neku posebnu aplikaciju?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Ne. PDF vodič se otvara u bilo kojem pregledniku ili aplikaciji za dokumente, a MP3 audio zapisi reproduciraju se u standardnom glazbenom igraču tvog mobitela čim ih preuzmeš.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Koliko dugo imam pristup materijalima?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Licenca je trajna i doživotna. Nakon što preuzmeš datoteke, one ostaju zauvijek tvoje bez ikakvih dodatnih pretplata.</div>
+                </div>
             </div>
         </div>
     </section>
@@ -317,8 +325,11 @@
     </section>
 
     <footer>
-        <div class="container">
+        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
             <p>&copy; 2026 Miran Let. Sva prava pridržana.</p>
+            <p style="color: rgba(255, 255, 255, 0.45); font-size: 0.78rem; font-style: italic; line-height: 1.6; margin-top: 20px;">
+                *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
+            </p>
         </div>
     </footer>
 
