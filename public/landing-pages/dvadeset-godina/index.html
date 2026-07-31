@@ -32,14 +32,15 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); color: var(--ink); line-height: 1.7; background-color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--font-sans); color: var(--ink); line-height: 1.7; background-color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; font-size: 1.1rem; }
         h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 1.25; color: var(--ink); }
-        p { font-size: 1.05rem; color: var(--ink-soft); }
+        p { font-size: 1.1rem; color: var(--ink-soft); text-align: left; max-width: 65ch; line-height: 1.7; }
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-        .section-padding { padding: 130px 0; }
-        @media (max-width: 768px) { .section-padding { padding: 90px 0; } }
+        .section-padding { padding: 96px 0; }
+        @media (max-width: 768px) { .section-padding { padding: 64px 0; } }
 
         .text-center { text-align: center; }
+        .text-left { text-align: left; }
         .text-gold { color: var(--gold-deep); }
         .bg-cream { background-color: var(--cream); }
         .bg-sky-wash { background-color: var(--sky-wash); }
@@ -50,27 +51,29 @@
         .btn {
             display: inline-flex; align-items: center; justify-content: center;
             background-color: var(--gold); color: var(--ink) !important;
-            padding: 18px 42px; border-radius: var(--border-radius);
-            text-decoration: none; font-weight: 700; font-size: 1.05rem;
-            text-transform: uppercase; letter-spacing: 0.1em;
+            padding: 18px 42px; min-height: 56px; border-radius: var(--border-radius);
+            text-decoration: none; font-weight: 700; font-size: 1.1rem;
+            text-transform: uppercase; letter-spacing: 0.08em;
             transition: var(--transition); border: none; cursor: pointer;
             box-shadow: 0 8px 25px rgba(200, 168, 74, 0.3); text-align: center; width: fit-content;
         }
         .btn:hover { background-color: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(200, 168, 74, 0.4); }
+        @media (max-width: 768px) { .btn { width: 100%; } }
 
         #sticky-bar {
-            position: fixed; top: 0; left: 0; width: 100%; background-color: var(--white);
-            padding: 14px 0; z-index: 1000; transform: translateY(-100%);
+            position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--white);
+            padding: 12px 20px; z-index: 1000; transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            border-bottom: 1px solid var(--sky-light); box-shadow: 0 4px 20px rgba(22, 35, 47, 0.06);
+            border-top: 1px solid var(--sky-light); box-shadow: 0 -4px 20px rgba(22, 35, 47, 0.08);
+            display: flex; justify-content: space-between; align-items: center; gap: 15px;
         }
         #sticky-bar.visible { transform: translateY(0); }
-        #sticky-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-        #sticky-bar span { color: var(--ink); font-weight: 600; font-size: 0.95rem; }
-        #sticky-bar .btn { padding: 10px 24px; font-size: 0.85rem; border-radius: 6px; box-shadow: none; }
+        #sticky-bar .price-tag { font-family: var(--font-serif); font-weight: 700; font-size: 1.4rem; color: var(--ink); }
+        #sticky-bar .btn { padding: 12px 20px; min-height: 44px; font-size: 0.9rem; width: auto; }
+        @media (min-width: 769px) { #sticky-bar { display: none !important; } }
 
         .hero {
-            position: relative; padding: 160px 0 100px;
+            position: relative; padding: 140px 0 90px;
             background: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-wash) 50%, var(--cream) 100%);
             color: var(--ink); text-align: center; overflow: hidden;
         }
@@ -78,9 +81,14 @@
         .hero-logo img { height: 44px; width: auto; border-radius: 8px; }
         @media (max-width: 768px) { .hero-logo { position: relative; top: 0; left: 0; justify-content: center; margin-bottom: 30px; } }
 
-        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.15; color: var(--ink); margin-bottom: 24px; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .hero p.lead { font-size: clamp(1.1rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 750px; margin: 0 auto 35px; font-weight: 400; line-height: 1.65; }
-        .trust-line { margin-top: 18px; font-size: 0.88rem; color: var(--ink-soft); letter-spacing: 0.05em; }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.15; color: var(--ink); margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto; text-align: center; }
+        .hero p.lead { font-size: clamp(1.15rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 750px; margin: 0 auto 30px; font-weight: 400; line-height: 1.65; text-align: center; }
+        
+        .hero-price { font-family: var(--font-serif); font-size: 2.3rem; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+        .micro-trust { font-size: 0.95rem; color: var(--ink-soft); margin-top: 14px; font-weight: 500; }
+
+        .trust-row { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 25px; font-size: 0.95rem; font-weight: 600; color: var(--ink-soft); flex-wrap: wrap; }
+        .trust-row span.dot { color: var(--gold); }
 
         .hero-image-container {
             max-width: 680px; margin: 50px auto 0; border-radius: var(--border-radius);
@@ -91,17 +99,16 @@
 
         .grid-2 { display: grid; grid-template-columns: 1fr; gap: 50px; align-items: center; }
         @media (min-width: 768px) { .grid-2 { grid-template-columns: 1.1fr 0.9fr; gap: 70px; } }
-        .section-title { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 24px; line-height: 1.2; color: var(--ink); }
+        .section-title { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 24px; line-height: 1.2; color: var(--ink); text-align: center; }
 
-        .problem-body p { margin-bottom: 24px; color: var(--ink-soft); font-size: 1.1rem; line-height: 1.8; }
-        .bullet-list { list-style: none; margin-top: 32px; margin-bottom: 36px; display: flex; flex-direction: column; gap: 16px; }
-        .bullet-list li { position: relative; padding-left: 32px; font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.5; }
+        .bullet-list { list-style: none; margin-top: 28px; margin-bottom: 32px; display: flex; flex-direction: column; gap: 14px; }
+        .bullet-list li { position: relative; padding-left: 32px; font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.5; text-align: left; }
         .bullet-list li::before { content: "✓"; position: absolute; left: 4px; top: -1px; color: var(--gold); font-weight: 800; font-size: 1.1rem; }
 
         .highlight-box {
-            margin-top: 36px; background-color: var(--sky-wash); border-left: 4px solid var(--gold);
-            padding: 28px 32px; border-radius: 0 var(--border-radius) var(--border-radius) 0;
-            font-weight: 600; font-size: 1.15rem; color: var(--ink); line-height: 1.7;
+            margin-top: 32px; background-color: var(--sky-wash); border-left: 4px solid var(--gold);
+            padding: 24px 28px; border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.7; text-align: left;
             border-top: 1px solid var(--sky-light); border-right: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);
         }
         .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08); border: 1px solid var(--sky-light); background: var(--white); padding: 8px; }
@@ -113,26 +120,38 @@
         .card-bright {
             background: var(--white); border: 1px solid var(--sky-light);
             padding: 40px; border-radius: var(--border-radius); transition: var(--transition);
-            box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04); position: relative;
+            box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04); position: relative; text-align: left;
         }
         .card-bright:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 15px 35px rgba(22, 35, 47, 0.08); }
-        .card-number { font-size: 2.2rem; font-family: var(--font-serif); color: var(--gold-deep); font-weight: 600; margin-bottom: 20px; display: block; line-height: 1; }
-        .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 16px; }
-        .card-bright p { color: var(--ink-soft); font-size: 1rem; line-height: 1.65; }
+        .card-number { font-size: 2.2rem; font-family: var(--font-serif); color: var(--gold-deep); font-weight: 600; margin-bottom: 16px; display: block; line-height: 1; }
+        .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 14px; text-align: left; }
+        .card-bright p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; text-align: left; }
 
-        .pricing-card-wrapper { max-width: 650px; margin: 40px auto 0; background: var(--white); border: 1px solid var(--sky-light); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); }
+        .pricing-card-wrapper { max-width: 650px; margin: 35px auto 0; background: var(--white); border: 1px solid var(--sky-light); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); }
         .badge-promo { background-color: var(--gold); color: var(--ink); padding: 6px 18px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
-        .price-new { font-size: 4.5rem; color: var(--ink); font-weight: 700; font-family: var(--font-serif); line-height: 1; margin-bottom: 30px; }
-        .pricing-features-list { text-align: left; max-width: 350px; margin: 0 auto 35px; list-style: none; }
-        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 14px; font-weight: 600; color: var(--ink); font-size: 1.05rem; }
-        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 800; }
+        .price-new { font-size: 4.5rem; color: var(--ink); font-weight: 700; font-family: var(--font-serif); line-height: 1; margin-bottom: 25px; }
+        .pricing-features-list { text-align: left; max-width: 420px; margin: 0 auto 35px; list-style: none; }
+        .pricing-features-list li { position: relative; padding-left: 30px; margin-bottom: 16px; font-weight: 600; color: var(--ink); font-size: 1.1rem; }
+        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 800; font-size: 1.2rem; }
+
+        .guarantee-card {
+            max-width: 650px; margin: 30px auto 0; background: var(--white);
+            border: 2px solid var(--gold); border-radius: 16px; padding: 36px 32px;
+            box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04); text-align: left;
+        }
+        .guarantee-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--gold-deep); margin-bottom: 12px; }
+        .guarantee-card p { font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: 10px; }
+        .guarantee-card p.sub-legal { font-size: 0.95rem; color: var(--ink-soft); font-weight: 400; margin: 0; }
+
+        .price-anchor { max-width: 650px; margin: 30px auto 0; background: rgba(255,255,255,0.7); border: 1px solid var(--sky-light); border-radius: 12px; padding: 24px; text-align: center; }
+        .price-anchor p { font-size: 1.05rem; color: var(--ink-soft); margin: 0 auto; text-align: center; }
 
         .faq-accordion { max-width: 750px; margin: 40px auto 0; }
         .faq-item { border-bottom: 1px solid var(--sky-light); padding: 24px 0; }
-        .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.15rem; color: var(--ink); cursor: pointer; user-select: none; gap: 20px; transition: var(--transition); }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.15rem; color: var(--ink); cursor: pointer; user-select: none; gap: 20px; transition: var(--transition); text-align: left; }
         .faq-question:hover { color: var(--gold-deep); }
         .faq-icon { font-size: 1.5rem; font-family: monospace; color: var(--gold-deep); transition: transform 0.3s ease; }
-        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; padding-right: 30px; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; padding-right: 30px; text-align: left; }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
 
@@ -140,18 +159,18 @@
             position: relative; background: linear-gradient(180deg, var(--sky-light) 0%, var(--cream) 100%);
             color: var(--ink); text-align: center; border-top: 1px solid var(--sky-light);
         }
-        .final-cta h2 { color: var(--ink); font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
-        .final-cta p.subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--ink-soft); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; font-weight: 400; }
+        .final-cta h2 { color: var(--ink); font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; }
+        .final-cta p.subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--ink-soft); margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; text-align: center; }
 
-        footer { background-color: var(--ink); color: #8C9BA8; padding: 60px 0; text-align: center; font-size: 0.9rem; }
+        footer { background-color: var(--ink); color: #8C9BA8; padding: 60px 0; text-align: center; font-size: 0.95rem; line-height: 1.8; }
+        footer a { color: var(--white); text-decoration: none; margin: 0 10px; font-weight: 500; }
+        footer a:hover { color: var(--gold); }
     </style>
 </head>
 <body>
     <div id="sticky-bar">
-        <div class="container">
-            <span>Dvadeset godina autom. Sat i pol avionom. Cijena 19.99€</span>
-            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn">PREUZMI MIRAN LET — 19.99€</a>
-        </div>
+        <span class="price-tag">19,99 €</span>
+        <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn">PREUZMI — 19.99€</a>
     </div>
 
     <header class="hero">
@@ -164,10 +183,18 @@
             <h1>Dvadeset godina autom. Sat i pol zrakoplovom.</h1>
             <p class="lead">Vrati si dane godišnjeg odmora koje gubiš na autocestama i gužvama. Nauči letjeti bez paralizirajućeg straha uz praktičan audio i PDF protokol.</p>
             
+            <div class="hero-price">Samo 19,99 €</div>
             <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn">PREUZMI MIRAN LET — 19.99€</a>
-            <p class="trust-line">PDF + MP3 format · Odmah dostupno nakon kupnje · Trajna licenca</p>
+            <div class="micro-trust">Pristup odmah nakon uplate · Jamstvo do tvog leta</div>
             
-            <!-- Hero Ad Creative Image (Exact Match with Facebook Ad) -->
+            <div class="trust-row">
+                <span>✓ Pristup odmah</span>
+                <span class="dot">·</span>
+                <span>✓ PDF + MP3</span>
+                <span class="dot">·</span>
+                <span>✓ Sigurno plaćanje</span>
+            </div>
+            
             <div class="hero-image-container">
                 <img src="hero-dvadeset-godina.jpg" alt="Dvadeset godina autom. Sat i pol zrakoplovom. - Ad Creative">
             </div>
@@ -178,7 +205,7 @@
         <div class="container">
             <div class="grid-2">
                 <div class="problem-content">
-                    <h2 class="section-title">Koliko ti godišnjeg odnese cesta?</h2>
+                    <h2 class="section-title text-left">Koliko ti godišnjeg odnese cesta?</h2>
                     <div class="problem-body">
                         <p>Godinama biraš 14 ili 18 sati vožnje autom, gužve na granicama i iscrpljenost — samo da izbjegneš zračnu luku. Dok drugi stignu kući za sat i pol, tvoj prvi dan odmora ode u oporavak od vožnje.</p>
                         <p>Znaš da je letenje brže, ali strah od gubitka kontrole na 10.000 metara godinama te drži prikovanim za asfalt.</p>
@@ -203,11 +230,63 @@
         </div>
     </section>
 
+    <!-- Pricing / Offer Section — MOVED UP ABOVE AUTHOR STORY -->
+    <section id="kupnja" class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);">
+        <div class="container text-center">
+            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">KOMPLETAN PAKET</span>
+            <h2 class="section-title">Tvoj komplet za mirniji let</h2>
+            <hr class="divider-gold">
+            
+            <div style="max-width: 540px; margin: 30px auto 20px auto; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); border: 1px solid var(--sky-light); background: var(--white); padding: 12px;">
+                <img src="/bundle.png" alt="Miran Let Bundle Digital Mockup" style="width: 100%; display: block; border-radius: 8px;">
+            </div>
+
+            <div class="price-anchor">
+                <p>Seminari protiv straha od letenja koštaju 300-500 €. Jedan sat kod terapeuta 40-60 €.</p>
+            </div>
+
+            <div class="pricing-card-wrapper">
+                <span class="badge-promo">EARLY BIRD PONUDA</span>
+                <div class="price-container">
+                    <span class="price-new">19,99 €</span>
+                </div>
+                
+                <ul class="pricing-features-list">
+                    <li>PDF vodič (43 stranice)</li>
+                    <li>9 bonus materijala — kartice, planovi, rječnik i audio protokol</li>
+                    <li>Trenutačan pristup nakon uplate</li>
+                    <li>Trajna, doživotna licenca</li>
+                </ul>
+
+                <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn" style="width: 100%;">PREUZMI MIRAN LET — 19.99€</a>
+                <p style="margin-top: 16px; font-size: 0.95rem; color: var(--ink-soft);">Odmah po uplati dobivaš pristup PDF i MP3 datotekama.</p>
+            </div>
+
+            <div class="guarantee-card">
+                <h3>Leti s njim</h3>
+                <p>Leti s njim. Ako nakon leta kažeš da nije pomoglo, novac se vraća — bez pitanja.</p>
+                <p class="sub-legal">Zakonskih 14 dana vrijedi uz to.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honest New Product Notice -->
+    <section class="section-padding bg-white">
+        <div class="container" style="max-width: 760px; margin: 0 auto; text-align: center;">
+            <div style="background-color: var(--sky-wash); border: 1px solid var(--sky-light); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);">
+                <h3 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je nov proizvod</h3>
+                <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin: 0; text-align: center; max-width: 100%;">
+                    Nema stotine recenzija i neće ih biti dok ih ljudi stvarno ne napišu — izmišljati ih nećemo. Zato jamstvo stoji onako kako piše: leti s njim, i ako kažeš da nije pomoglo, novac se vraća.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);">
         <div class="container text-center">
             <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">POVRATAK BRZOM PUTOVANJU</span>
             <h2 class="section-title">Tri sustava za let kući</h2>
-            <p class="section-subtitle" style="margin-left: auto; margin-right: auto; max-width: 700px;">
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto; max-width: 700px; text-align: center;">
                 Jednostavan plan pripreme s kojim zamjenjuješ sate autoceste za sat i pol leta:
             </p>
             <hr class="divider-gold">
@@ -249,64 +328,19 @@
                     <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 800;">AUTOR PROTOKOLA</span>
                 </div>
                 
-                <div style="font-size: 1.05rem; line-height: 1.8; color: var(--ink-soft); text-align: left;">
-                    <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.3rem; color: var(--ink); border-left: 4px solid var(--gold); padding-left: 18px; margin-bottom: 25px;">Ovo nije nastalo iz tečaja. Niti iz diplome.</p>
+                <div style="font-size: 1.1rem; line-height: 1.8; color: var(--ink-soft); text-align: left;">
+                    <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.35rem; color: var(--ink); border-left: 4px solid var(--gold); padding-left: 18px; margin-bottom: 25px;">Ovo nije nastalo iz tečaja. Niti iz diplome.</p>
                     <p style="margin-bottom: 20px;">Nastalo je jer sam i sam birao sate i sate vožnje umjesto zrakoplova. Miran Let donosi praktičan alat koji ti vraća slobodu brzog putovanja kući.</p>
                     <p style="font-weight: 700; color: var(--ink); margin-top: 20px;">Cilj nije eliminirati strah. Cilj je naučiti letjeti s njim.</p>
                 </div>
             </div>
 
-            <!-- Fully Readable High-Contrast Disclaimer -->
-            <p style="color: var(--ink-soft); font-size: 0.85rem; font-style: italic; line-height: 1.6; max-width: 680px; margin: 35px auto 0; text-align: center; border-top: 1px solid var(--sky-light); padding-top: 24px;">
+            <p style="color: var(--ink-soft); font-size: 0.95rem; font-style: italic; line-height: 1.65; max-width: 680px; margin: 35px auto 0; text-align: center; border-top: 1px solid var(--sky-light); padding-top: 24px;">
                 *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
             </p>
         </div>
     </section>
 
-    <section id="kupnja" class="section-padding bg-sky-wash" style="border-bottom: 1px solid var(--sky-light);">
-        <div class="container text-center">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">KOMPLETAN PAKET</span>
-            <h2 class="section-title">Tvoj komplet za mirniji let</h2>
-            <hr class="divider-gold">
-            
-            <!-- Bundle Mockup Relocated Here -->
-            <div style="max-width: 540px; margin: 30px auto 10px auto; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); border: 1px solid var(--sky-light); background: var(--white); padding: 12px;">
-                <img src="/bundle.png" alt="Miran Let Bundle Digital Mockup" style="width: 100%; display: block; border-radius: 8px;">
-            </div>
-
-            <div class="pricing-card-wrapper">
-                <span class="badge-promo">EARLY BIRD PONUDA</span>
-                <div class="price-container">
-                    <span class="price-new">19.99€</span>
-                </div>
-                
-                <ul class="pricing-features-list">
-                    <li>PDF E-knjiga / Vodič</li>
-                    <li>9 SOS bonus kartica za mobitel</li>
-                    <li>Vođeni audio protokol (MP3)</li>
-                    <li>Trenutačan pristup nakon uplate</li>
-                    <li>Trajna, doživotna licenca</li>
-                </ul>
-
-                <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn" style="width: 100%;">PREUZMI MIRAN LET — 19.99€</a>
-                <p style="margin-top: 16px; font-size: 0.85rem; color: var(--ink-soft);">Leti s njim. Ako nakon leta kažeš da nije pomoglo — vraćamo novac, bez pitanja. (14 dana zakonski rok)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Honest New Product Notice (NO conditional refund for reviews) -->
-    <section class="section-padding bg-white">
-        <div class="container" style="max-width: 760px; margin: 0 auto; text-align: center;">
-            <div style="background-color: var(--sky-wash); border: 1px solid var(--sky-light); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);">
-                <h3 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je nov proizvod</h3>
-                <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin: 0;">
-                    Nema stotine recenzija i neće ih biti dok ih ljudi stvarno ne napišu — izmišljati ih nećemo. Zato jamstvo stoji onako kako piše: leti s njim, i ako kažeš da nije pomoglo, novac se vraća.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section (Background: Cream) -->
     <section class="section-padding bg-cream" id="faq">
         <div class="container" style="max-width: 720px; margin: 0 auto;">
             <h2 class="section-title text-center" style="margin-bottom: 15px; color: var(--ink);">Česta pitanja</h2>
@@ -336,12 +370,12 @@
         </div>
     </section>
 
-    <!-- Email Capture Section (Relocated Below FAQ, Secondary Style) -->
+    <!-- Email Capture Section (Relocated Below FAQ) -->
     <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);" id="sos-vodic">
         <div class="container" style="max-width: 580px; margin: 0 auto; text-align: center;">
             <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; display: block; margin-bottom: 15px;">BESPLATAN SOS VODIČ</span>
             <h3 style="margin-bottom: 15px; color: var(--ink); font-family: var(--font-serif); font-size: 1.8rem;">Nisi siguran? Počni malo.</h3>
-            <p style="color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 25px; line-height: 1.6;">
+            <p style="color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 25px; line-height: 1.6; text-align: center; max-width: 100%;">
                 Preuzmi besplatni SOS vodič za smirenje prije leta — jednu stranicu s tri tehnike koje možeš isprobati već danas.
             </p>
             
@@ -356,21 +390,41 @@
         </div>
     </section>
 
-    <!-- Final CTA Section (Gradient: sky-light to cream) -->
+    <!-- Final CTA Section -->
     <section class="section-padding final-cta text-center">
         <div class="container">
-            <h2>Stigni kući za sat i pol, ne za dva dana.</h2>
+            <h2>Sljedeći let ne mora biti isti.</h2>
             <p class="subtitle" style="margin-bottom: 30px;">Pristup cijelom paketu ostaje trajno tvoj. Čitaš diskretno s mobitela.</p>
             <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn">PREUZMI MIRAN LET — 19.99€</a>
         </div>
     </section>
 
-    <!-- Footer: Sole dark section on page (--ink) -->
+    <!-- Footer -->
     <footer>
         <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="color: var(--white); font-weight: 500;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
+            <p style="margin-bottom: 16px;">
+                <a href="/impressum">Impressum</a> · 
+                <a href="/uvjeti-kupnje">Uvjeti kupnje</a> · 
+                <a href="/povrat">Povrat</a> · 
+                <a href="/privatnost">Privatnost</a>
+            </p>
+            <p style="font-size: 0.85rem; color: #8C9BA8;">
+                [POPUNITI Naziv obrta] · OIB: [POPUNITI] · <a href="mailto:podrska@miranlet.com" style="color: var(--white);">podrska@miranlet.com</a>
+            </p>
+            <p style="font-size: 0.85rem; color: #8C9BA8; margin-top: 10px;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
         </div>
     </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 480px; background: var(--white); border: 1px solid var(--sky-light); padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.15); z-index: 9999; display: flex; flex-direction: column; gap: 12px;">
+        <p style="font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; margin: 0; text-align: left;">
+            Koristimo kolačiće za mjerenje učinkovitosti oglasa (Meta Pixel). Možete ih prihvatiti ili odbiti. <a href="/privatnost" style="color: var(--ink); font-weight: 600;">Saznaj više</a>.
+        </p>
+        <div style="display: flex; gap: 10px;">
+            <button onclick="acceptCookies()" class="btn" style="padding: 10px 20px; min-height: 40px; font-size: 0.85rem; border-radius: 6px; flex: 1;">Prihvati</button>
+            <button onclick="rejectCookies()" style="background: transparent; border: 1px solid var(--sky-light); color: var(--ink); padding: 10px 20px; min-height: 40px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; flex: 1;">Odbij</button>
+        </div>
+    </div>
 
     <script>
         document.querySelectorAll('.faq-question').forEach(item => {
@@ -383,7 +437,7 @@
         });
         window.addEventListener('scroll', function() {
             const bar = document.getElementById('sticky-bar');
-            if (window.scrollY > 800) bar.classList.add('visible');
+            if (window.scrollY > 700) bar.classList.add('visible');
             else bar.classList.remove('visible');
         });
         function submitHtmlEmailForm(e) {
@@ -398,6 +452,17 @@
                 document.getElementById('html-email-form').style.display = 'none';
                 document.getElementById('html-email-success').style.display = 'block';
             });
+        }
+        function acceptCookies() {
+            localStorage.setItem('cookie_consent', 'accepted');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        function rejectCookies() {
+            localStorage.setItem('cookie_consent', 'rejected');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        if (localStorage.getItem('cookie_consent')) {
+            document.getElementById('cookie-banner').style.display = 'none';
         }
     </script>
 </body>

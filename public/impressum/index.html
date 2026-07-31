@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | Miran Let</title>
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/jpeg" href="/logo-ml.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sky-wash: #EAF4FD;
+            --cream: #F7F5F0;
+            --sky-light: #A8D4F7;
+            --gold: #C8A84A;
+            --ink: #16232F;
+            --ink-soft: #4A5A68;
+            --white: #FFFFFF;
+            --font-serif: 'Cormorant Garamond', Georgia, serif;
+            --font-sans: 'DM Sans', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; }
+        header { background: var(--white); border-bottom: 1px solid var(--sky-light); padding: 20px 0; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .logo-nav { display: flex; justify-content: space-between; align-items: center; }
+        .logo-nav img { height: 38px; border-radius: 6px; }
+        .back-link { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+        .back-link:hover { color: var(--gold); }
+        main { padding: 60px 0 100px; }
+        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); }
+        .legal-card { background: var(--white); border: 1px solid var(--sky-light); border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(22,35,47,0.04); }
+        .legal-row { display: flex; flex-direction: column; gap: 6px; padding: 14px 0; border-bottom: 1px solid rgba(168,212,247,0.4); }
+        .legal-row:last-child { border-bottom: none; }
+        .label { font-weight: 600; color: var(--ink); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .value { color: var(--ink-soft); font-size: 1.05rem; }
+        footer { background: var(--ink); color: #8C9BA8; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
+        footer a { color: var(--white); text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: var(--gold); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container logo-nav">
+            <a href="/"><img src="/logo-ml.jpg" alt="Miran Let Logo"></a>
+            <a href="/" class="back-link">← Povratak na Miran Let</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>Impressum</h1>
+        <div class="legal-card">
+            <div class="legal-row">
+                <span class="label">Naziv obrta/tvrtke:</span>
+                <span class="value">[POPUNITI]</span>
+            </div>
+            <div class="legal-row">
+                <span class="label">Vlasnik / odgovorna osoba:</span>
+                <span class="value">[POPUNITI]</span>
+            </div>
+            <div class="legal-row">
+                <span class="label">Adresa sjedišta:</span>
+                <span class="value">[POPUNITI]</span>
+            </div>
+            <div class="legal-row">
+                <span class="label">OIB:</span>
+                <span class="value">[POPUNITI]</span>
+            </div>
+            <div class="legal-row">
+                <span class="label">Kontakt Email:</span>
+                <span class="value"><a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a></span>
+            </div>
+            <div class="legal-row">
+                <span class="label">Djelatnost:</span>
+                <span class="value">Prodaja digitalnih sadržaja (e-knjige i audio zapisi)</span>
+            </div>
+            <div class="legal-row">
+                <span class="label">Nadležno tijelo za registraciju:</span>
+                <span class="value">[POPUNITI]</span>
+            </div>
+            <div class="legal-row">
+                <span class="label">Način plaćanja:</span>
+                <span class="value">Kartično plaćanje putem licenciranog procesora Lemon Squeezy</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 15px;">
+                <a href="/impressum">Impressum</a> · 
+                <a href="/uvjeti-kupnje">Uvjeti kupnje</a> · 
+                <a href="/povrat">Povrat</a> · 
+                <a href="/privatnost">Privatnost</a>
+            </p>
+            <p>&copy; 2026 Miran Let. Sva prava pridržana.</p>
+        </div>
+    </footer>
+</body>
+</html>
