@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Miran Let | Bez tableta. Bez rakije.</title>
-    <meta name="description" content="Miran Let je praktičan PDF + audio protokol za trenutke kada se strah pojavi prije leta, na aerodromu ili u turbulenciji.">
+    <meta name="description" content="Miran Let je praktičan PDF i audio protokol za trenutke kada se strah pojavi prije leta, na aerodromu ili u turbulenciji.">
     <link rel="icon" type="image/jpeg" href="/logo-ml.jpg" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +20,10 @@
             --cream:          #F7F5F0;
             --gold:           #C8A84A;
             --gold-hover:     #B8983A;
-            --gold-deep:      #A88832;
             --ink:            #16232F;
             --ink-soft:       #4A5A68;
             --white:          #FFFFFF;
+            --border-light:   #E4E9EF;
             
             --font-serif:     'Cormorant Garamond', Georgia, serif;
             --font-sans:      'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -41,13 +41,9 @@
 
         .text-center { text-align: center; }
         .text-left { text-align: left; }
-        .text-gold { color: var(--gold-deep); }
-        .bg-cream { background-color: var(--cream); }
-        .bg-sky-wash { background-color: var(--sky-wash); }
-        .bg-white { background-color: var(--white); }
+        .eyebrow { font-family: var(--font-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-soft); display: block; margin-bottom: 16px; }
 
-        .divider-gold { width: 60px; height: 1px; background-color: var(--gold); margin: 30px auto; border: none; }
-
+        /* The Gold Color gets ONLY ONE JOB: The main CTA button background */
         .btn {
             display: inline-flex; align-items: center; justify-content: center;
             background-color: var(--gold); color: var(--ink) !important;
@@ -55,9 +51,9 @@
             text-decoration: none; font-weight: 700; font-size: 1.1rem;
             text-transform: uppercase; letter-spacing: 0.08em;
             transition: var(--transition); border: none; cursor: pointer;
-            box-shadow: 0 8px 25px rgba(200, 168, 74, 0.3); text-align: center; width: fit-content;
+            box-shadow: 0 6px 20px rgba(200, 168, 74, 0.25); text-align: center; width: fit-content;
         }
-        .btn:hover { background-color: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(200, 168, 74, 0.4); }
+        .btn:hover { background-color: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(200, 168, 74, 0.35); }
         @media (max-width: 768px) { .btn { width: 100%; } }
 
         /* Mobile-Only Sticky Bar */
@@ -65,11 +61,11 @@
             position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--white);
             padding: 12px 20px; z-index: 1000; transform: translateY(100%);
             transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            border-top: 1px solid var(--sky-light); box-shadow: 0 -4px 20px rgba(22, 35, 47, 0.08);
+            border-top: 1px solid var(--border-light); box-shadow: 0 -4px 20px rgba(22, 35, 47, 0.08);
             display: flex; justify-content: space-between; align-items: center; gap: 15px;
         }
         #sticky-bar.visible { transform: translateY(0); }
-        #sticky-bar .price-tag { font-family: var(--font-serif); font-weight: 700; font-size: 1.4rem; color: var(--ink); }
+        #sticky-bar .price-tag { font-family: var(--font-sans); font-weight: 600; font-size: 1.3rem; color: var(--ink); }
         #sticky-bar .btn { padding: 12px 20px; min-height: 44px; font-size: 0.9rem; width: auto; }
         @media (min-width: 769px) { #sticky-bar { display: none !important; } }
 
@@ -86,16 +82,16 @@
         .hero h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.15; color: var(--ink); margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto; text-align: center; }
         .hero p.lead { font-size: clamp(1.15rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 750px; margin: 0 auto 30px; font-weight: 400; line-height: 1.65; text-align: center; }
         
-        .hero-price { font-family: var(--font-serif); font-size: 2.3rem; font-weight: 700; color: var(--ink); margin-bottom: 12px; }
+        .hero-price { font-family: var(--font-sans); font-size: 2.3rem; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
         .micro-trust { font-size: 0.95rem; color: var(--ink-soft); margin-top: 14px; font-weight: 500; }
 
         .trust-row { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 25px; font-size: 0.95rem; font-weight: 600; color: var(--ink-soft); flex-wrap: wrap; }
-        .trust-row span.dot { color: var(--gold); }
+        .trust-row span.check { color: var(--ink); }
 
         .hero-image-container {
             max-width: 680px; margin: 50px auto 0; border-radius: var(--border-radius);
             overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08);
-            border: 1px solid var(--sky-light); background: var(--white); padding: 8px;
+            border: 1px solid var(--border-light); background: var(--white); padding: 8px;
         }
         .hero-image-container img { width: 100%; display: block; object-fit: cover; border-radius: 8px; }
 
@@ -105,59 +101,61 @@
         .section-title { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 24px; line-height: 1.2; color: var(--ink); text-align: center; }
 
         .bullet-list { list-style: none; margin-top: 28px; margin-bottom: 32px; display: flex; flex-direction: column; gap: 14px; }
-        .bullet-list li { position: relative; padding-left: 32px; font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.5; text-align: left; }
-        .bullet-list li::before { content: "✓"; position: absolute; left: 4px; top: -1px; color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+        .bullet-list li { position: relative; padding-left: 28px; font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.5; text-align: left; }
+        .bullet-list li::before { content: "✓"; position: absolute; left: 0; top: -1px; color: var(--ink); font-weight: 700; font-size: 1.1rem; }
 
         .highlight-box {
-            margin-top: 32px; background-color: var(--sky-wash); border-left: 4px solid var(--gold);
+            margin-top: 32px; background-color: var(--sky-wash); border-left: 4px solid var(--ink);
             padding: 24px 28px; border-radius: 0 var(--border-radius) var(--border-radius) 0;
             font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.7; text-align: left;
-            border-top: 1px solid var(--sky-light); border-right: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);
         }
-        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08); border: 1px solid var(--sky-light); background: var(--white); padding: 8px; }
+        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-light); background: var(--white); padding: 8px; }
         .problem-image-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; border-radius: 8px; }
 
+        /* Three Systems Cards (Allowed Place 1) */
         .cards-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
         @media (min-width: 768px) { .cards-grid.col-3 { grid-template-columns: repeat(3, 1fr); } .cards-grid.col-2 { grid-template-columns: repeat(2, 1fr); } }
 
         .card-bright {
-            background: var(--white); border: 1px solid var(--sky-light);
+            background: var(--white); border: 1px solid var(--border-light);
             padding: 40px; border-radius: var(--border-radius); transition: var(--transition);
-            box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04); position: relative; text-align: left;
+            position: relative; text-align: left;
         }
-        .card-bright:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 15px 35px rgba(22, 35, 47, 0.08); }
-        .card-number { font-size: 2.2rem; font-family: var(--font-serif); color: var(--gold-deep); font-weight: 600; margin-bottom: 16px; display: block; line-height: 1; }
+        .card-number { font-size: 1.2rem; font-family: var(--font-sans); color: var(--ink-soft); font-weight: 600; margin-bottom: 16px; display: block; letter-spacing: 0.08em; }
         .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 14px; text-align: left; }
         .card-bright p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; text-align: left; }
 
-        /* Offer & Pricing Cards */
-        .pricing-card-wrapper { max-width: 650px; margin: 35px auto 0; background: var(--white); border: 1px solid var(--sky-light); border-radius: 16px; padding: 50px 40px; text-align: center; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); }
-        .badge-promo { background-color: var(--gold); color: var(--ink); padding: 6px 18px; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; margin-bottom: 24px; }
-        .price-new { font-size: 4.5rem; color: var(--ink); font-weight: 700; font-family: var(--font-serif); line-height: 1; margin-bottom: 25px; }
-        .pricing-features-list { text-align: left; max-width: 420px; margin: 0 auto 35px; list-style: none; }
-        .pricing-features-list li { position: relative; padding-left: 30px; margin-bottom: 16px; font-weight: 600; color: var(--ink); font-size: 1.1rem; }
-        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 800; font-size: 1.2rem; }
+        /* Offer Card (Allowed Place 2) */
+        .pricing-card-wrapper {
+            max-width: 650px; margin: 35px auto 0; background: var(--white);
+            border: 1px solid var(--border-light); border-radius: 16px;
+            padding: 48px 40px; text-align: center; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);
+        }
+        @media (max-width: 768px) { .pricing-card-wrapper { padding: 28px 20px; } }
+        
+        .price-comparison-inside { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 20px; text-align: center; }
+        .price-new { font-size: 44px; color: var(--ink); font-weight: 600; font-family: var(--font-sans); line-height: 1; margin-bottom: 8px; }
+        .price-subtext { font-size: 15px; color: var(--ink-soft); margin-bottom: 32px; text-align: center; }
+        
+        .pricing-features-list { text-align: left; max-width: 440px; margin: 0 auto 32px; list-style: none; }
+        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 16px; font-weight: 600; color: var(--ink); font-size: 1.1rem; }
+        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--ink); font-weight: 700; font-size: 1.1rem; }
 
-        /* Standalone Guarantee Card */
+        /* Standalone Guarantee Card (Allowed Place 3) */
         .guarantee-card {
             max-width: 650px; margin: 30px auto 0; background: var(--white);
-            border: 2px solid var(--gold); border-radius: 16px; padding: 36px 32px;
-            box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04); text-align: left;
+            border: 1px solid var(--border-light); border-radius: 16px; padding: 36px 32px;
+            text-align: left;
         }
-        .guarantee-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--gold-deep); margin-bottom: 12px; }
+        .guarantee-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--ink); margin-bottom: 12px; }
         .guarantee-card p { font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: 10px; }
         .guarantee-card p.sub-legal { font-size: 0.95rem; color: var(--ink-soft); font-weight: 400; margin: 0; }
 
-        /* Price Anchor Comparison Box */
-        .price-anchor { max-width: 650px; margin: 30px auto 0; background: rgba(255,255,255,0.7); border: 1px solid var(--sky-light); border-radius: 12px; padding: 24px; text-align: center; }
-        .price-anchor p { font-size: 1.05rem; color: var(--ink-soft); margin: 0 auto; text-align: center; }
-
         /* FAQ Accordion */
         .faq-accordion { max-width: 750px; margin: 40px auto 0; }
-        .faq-item { border-bottom: 1px solid var(--sky-light); padding: 24px 0; }
+        .faq-item { border-bottom: 1px solid var(--border-light); padding: 24px 0; }
         .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.15rem; color: var(--ink); cursor: pointer; user-select: none; gap: 20px; transition: var(--transition); text-align: left; }
-        .faq-question:hover { color: var(--gold-deep); }
-        .faq-icon { font-size: 1.5rem; font-family: monospace; color: var(--gold-deep); transition: transform 0.3s ease; }
+        .faq-icon { font-size: 1.5rem; font-family: monospace; color: var(--ink-soft); transition: transform 0.3s ease; }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; padding-right: 30px; text-align: left; }
         .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
         .faq-item.active .faq-icon { transform: rotate(45deg); }
@@ -165,7 +163,7 @@
         /* Final CTA */
         .final-cta {
             position: relative; background: linear-gradient(180deg, var(--sky-light) 0%, var(--cream) 100%);
-            color: var(--ink); text-align: center; border-top: 1px solid var(--sky-light);
+            color: var(--ink); text-align: center;
         }
         .final-cta h2 { color: var(--ink); font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; }
         .final-cta p.subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--ink-soft); margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; text-align: center; }
@@ -173,14 +171,14 @@
         /* Footer */
         footer { background-color: var(--ink); color: #8C9BA8; padding: 60px 0; text-align: center; font-size: 0.95rem; line-height: 1.8; }
         footer a { color: var(--white); text-decoration: none; margin: 0 10px; font-weight: 500; }
-        footer a:hover { color: var(--gold); }
+        footer a:hover { color: var(--sky-light); }
     </style>
 </head>
 <body>
     <!-- Mobile Sticky Bar -->
     <div id="sticky-bar">
         <span class="price-tag">19,99 €</span>
-        <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn">PREUZMI — 19.99€</a>
+        <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn">PREUZMI · 19,99 €</a>
     </div>
 
     <!-- Hero Section -->
@@ -190,23 +188,22 @@
         </div>
         
         <div class="container">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: inline-block; margin-bottom: 20px;">VODIČ ZA SIGURNO PUTOVANJE</span>
+            <span class="eyebrow">VODIČ ZA SIGURNO PUTOVANJE</span>
             <h1>Bez tableta. Bez rakije.</h1>
-            <p class="lead">Audio protokol i vodič koji ti daje konkretne alate za tijelo i um u trenutku straha — bez osude, bez uništenog sljedećeg dana.</p>
+            <p class="lead">Audio protokol i vodič koji ti daje konkretne alate za tijelo i um u trenutku straha, bez osude i bez uništenog sljedećeg dana.</p>
             
             <div class="hero-price">Samo 19,99 €</div>
-            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn">PREUZMI MIRAN LET — 19.99€</a>
+            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn">PREUZMI MIRAN LET · 19,99 €</a>
             <div class="micro-trust">Pristup odmah nakon uplate · Jamstvo do tvog leta</div>
             
             <div class="trust-row">
-                <span>✓ Pristup odmah</span>
-                <span class="dot">·</span>
-                <span>✓ PDF + MP3</span>
-                <span class="dot">·</span>
-                <span>✓ Sigurno plaćanje</span>
+                <span><span class="check">✓</span> Pristup odmah</span>
+                <span>·</span>
+                <span><span class="check">✓</span> PDF + MP3</span>
+                <span>·</span>
+                <span><span class="check">✓</span> Sigurno plaćanje</span>
             </div>
             
-            <!-- Hero Ad Creative Image (Exact Match with Facebook Ad) -->
             <div class="hero-image-container">
                 <img src="/landing-pages/bez-tableta/hero-bez-tableta.jpg" alt="Bez tableta. Bez rakije. Miran Let">
             </div>
@@ -218,17 +215,17 @@
         <div class="container">
             <div class="grid-2">
                 <div class="problem-content">
-                    <h2 class="section-title text-left">Visoka cijena "preživljavanja" leta…</h2>
+                    <h2 class="section-title text-left">Visoka cijena "preživljavanja" leta</h2>
                     <div class="problem-body">
                         <p>Znaš kako to ide. Rano ujutro si na aerodromu. Kako bi uopće preživio ukrcaj, naručuješ piće na šanku ili posežeš za tabletom koju si spremio u džep.</p>
                         <p>I radi. Nekako preguraš ta dva sata. Ali sutradan si iscrpljen, omamljen i prvog dana odmora nemaš energiju za ništa.</p>
                     </div>
                     
                     <ul class="bullet-list">
-                        <li>pospanost i omamljenost sutradan</li>
-                        <li>potreba za sve većim dozama smirenja</li>
-                        <li>strah od polijetanja ostaje isti</li>
-                        <li>osjećaj da nemaš nikakvu kontrolu bez kemije</li>
+                        <li>Pospanost i omamljenost sutradan</li>
+                        <li>Potreba za sve većim dozama smirenja</li>
+                        <li>Strah od polijetanja ostaje isti</li>
+                        <li>Osjećaj da nemaš nikakvu kontrolu bez kemije</li>
                     </ul>
                     
                     <div class="highlight-box">
@@ -241,111 +238,100 @@
                 </div>
             </div>
 
-            <!-- Custom Ad Breakdown Grid -->
+            <!-- Custom Ad Breakdown Grid (No extra cards around it) -->
             <div style="margin-top: 70px;">
-                <hr class="divider-gold">
-                <h3 class="text-center" style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 35px; color: var(--ink);">Zašto brzi "trikovi" ne funkcioniraju?</h3>
+                <h3 class="text-center" style="font-family: var(--font-serif); font-size: 2.2rem; margin-bottom: 35px; color: var(--ink);">Zašto brzi trikovi ne funkcioniraju?</h3>
                 <div class="cards-grid col-2">
-                    <div class="card-bright" style="padding: 24px;">
-                        <div style="border-radius: 8px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--sky-light);">
+                    <div style="text-align: left;">
+                        <div style="border-radius: 8px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--border-light);">
                             <img src="/landing-pages/bez-tableta/rakija-nije-priprema.jpg" alt="Rakija nije priprema" style="width: 100%; height: auto; display: block;">
                         </div>
                         <h4 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 10px; color: var(--ink);">Rakija nije priprema.</h4>
                         <p style="font-size: 1rem; line-height: 1.6; color: var(--ink-soft);">Alkohol na šanku zračne luke naizgled otupljuje osjetila na pola sata, ali ubrzava rad srca u zraku i uzrokuje nagli skok napetosti čim djelovanje popusti.</p>
                     </div>
 
-                    <div class="card-bright" style="padding: 24px;">
-                        <div style="border-radius: 8px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--sky-light);">
+                    <div style="text-align: left;">
+                        <div style="border-radius: 8px; overflow: hidden; margin-bottom: 20px; border: 1px solid var(--border-light);">
                             <img src="/landing-pages/bez-tableta/pola-tablete-nije-plan.jpg" alt="Pola tablete nije plan" style="width: 100%; height: auto; display: block;">
                         </div>
                         <h4 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 10px; color: var(--ink);">Pola tablete nije plan.</h4>
-                        <p style="font-size: 1rem; line-height: 1.6; color: var(--ink-soft);">Spuštanje simptoma kemijom uči tvoj mozak da si preživio let ZATO što si uzeo tabletu. Time strah ostaje prisutan na svakom sljedećem letu.</p>
+                        <p style="font-size: 1rem; line-height: 1.6; color: var(--ink-soft);">Spuštanje simptoma kemijom uči tvoj mozak da si preživio let zato što si uzeo tabletu. Time strah ostaje prisutan na svakom sljedećem letu.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing / Offer Section (Background: Sky-Wash) — MOVED UP ABOVE AUTHOR STORY -->
-    <section id="kupnja" class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);">
+    <!-- Pricing / Offer Section (Background: Sky-Wash) -->
+    <section id="kupnja" class="section-padding bg-sky-wash">
         <div class="container text-center">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">KOMPLETAN PAKET</span>
+            <span class="eyebrow">KOMPLETAN PAKET</span>
             <h2 class="section-title">Tvoj komplet za mirniji let</h2>
-            <hr class="divider-gold">
             
-            <!-- Bundle Mockup Relocated Here -->
-            <div style="max-width: 540px; margin: 30px auto 20px auto; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.06); border: 1px solid var(--sky-light); background: var(--white); padding: 12px;">
+            <!-- Bundle Mockup -->
+            <div style="max-width: 540px; margin: 30px auto 20px auto; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-light); background: var(--white); padding: 12px;">
                 <img src="/bundle.png" alt="Miran Let Bundle Digital Mockup" style="width: 100%; display: block; border-radius: 8px;">
             </div>
 
-            <!-- Price Anchor Comparison -->
-            <div class="price-anchor">
-                <p>Seminari protiv straha od letenja koštaju 300-500 €. Jedan sat kod terapeuta 40-60 €.</p>
-            </div>
-
+            <!-- Offer Card (Restructured) -->
             <div class="pricing-card-wrapper">
-                <span class="badge-promo">EARLY BIRD PONUDA</span>
-                <div class="price-container">
-                    <span class="price-new">19,99 €</span>
-                </div>
+                <p class="price-comparison-inside">Seminari protiv straha od letenja koštaju 300–500 €. Jedan sat kod terapeuta 40–60 €.</p>
+                <div class="price-new">19,99 €</div>
+                <p class="price-subtext">Jednokratno plaćanje. Bez pretplate.</p>
                 
                 <ul class="pricing-features-list">
                     <li>PDF vodič (43 stranice)</li>
-                    <li>9 bonus materijala — kartice, planovi, rječnik i audio protokol</li>
+                    <li>9 bonus materijala: kartice, planovi, rječnik i audio protokol</li>
                     <li>Trenutačan pristup nakon uplate</li>
                     <li>Trajna, doživotna licenca</li>
                 </ul>
 
-                <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn" style="width: 100%;">PREUZMI MIRAN LET — 19.99€</a>
-                <p style="margin-top: 16px; font-size: 0.95rem; color: var(--ink-soft);">Odmah po uplati dobivaš pristup PDF i MP3 datotekama.</p>
+                <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn" style="width: 100%;">PREUZMI MIRAN LET · 19,99 €</a>
             </div>
 
             <!-- Standalone Guarantee Card -->
             <div class="guarantee-card">
                 <h3>Leti s njim</h3>
-                <p>Leti s njim. Ako nakon leta kažeš da nije pomoglo, novac se vraća — bez pitanja.</p>
+                <p>Leti s njim. Ako nakon leta kažeš da nije pomoglo, novac se vraća, bez pitanja.</p>
                 <p class="sub-legal">Zakonskih 14 dana vrijedi uz to.</p>
             </div>
         </div>
     </section>
 
-    <!-- Honest New Product Notice (NO conditional refund for reviews) -->
+    <!-- Honest New Product Notice (Clean Text On White, No Box) -->
     <section class="section-padding bg-white">
         <div class="container" style="max-width: 760px; margin: 0 auto; text-align: center;">
-            <div style="background-color: var(--sky-wash); border: 1px solid var(--sky-light); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);">
-                <h3 style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je nov proizvod</h3>
-                <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin: 0; text-align: center; max-width: 100%;">
-                    Nema stotine recenzija i neće ih biti dok ih ljudi stvarno ne napišu — izmišljati ih nećemo. Zato jamstvo stoji onako kako piše: leti s njim, i ako kažeš da nije pomoglo, novac se vraća.
-                </p>
-            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je nov proizvod</h3>
+            <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin: 0 auto; text-align: center; max-width: 65ch;">
+                Nema stotine recenzija i neće ih biti dok ih ljudi stvarno ne napišu, izmišljati ih nećemo. Zato jamstvo stoji onako kako piše: leti s njim, i ako kažeš da nije pomoglo, novac se vraća.
+            </p>
         </div>
     </section>
 
     <!-- Kako funkcionira protokol (Background: Sky-Wash) -->
-    <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);">
+    <section class="section-padding bg-sky-wash">
         <div class="container text-center">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 15px;">STRUKTURA RJEŠENJA</span>
+            <span class="eyebrow">STRUKTURA RJEŠENJA</span>
             <h2 class="section-title">Tri sustava za let bez kemije</h2>
             <p class="section-subtitle" style="margin-left: auto; margin-right: auto; max-width: 700px; text-align: center;">
                 Kemija otupljuje živčani sustav na dva sata, ali ne uči tijelo sigurnosti. Ovdje dobivaš alate s kojima učiš letjeti sa strahom:
             </p>
-            <hr class="divider-gold">
             
-            <div class="cards-grid col-3" style="text-align: left; margin-top: 50px;">
+            <div class="cards-grid col-3" style="text-align: left; margin-top: 45px;">
                 <div class="card-bright">
-                    <span class="card-number">PRIJE LETA</span>
+                    <span class="card-number">01 / PRIJE LETA</span>
                     <h3>Priprema i disanje</h3>
                     <p>Brzi test tipa straha, 30-dnevni plan pripreme i vođena audio vježba disanja za regulaciju vagusnog živca danima unaprijed.</p>
                 </div>
                 
                 <div class="card-bright">
-                    <span class="card-number">NA DAN LETA</span>
+                    <span class="card-number">02 / NA DAN LETA</span>
                     <h3>CORE-7 SOS i Takeoff</h3>
                     <p>Takeoff protokol za preživljavanje najtežih prvih 10 minuta i CORE-7 SOS kartica s fizičkim alatima za trenutno smanjenje pulsa.</p>
                 </div>
                 
                 <div class="card-bright">
-                    <span class="card-number">U ZRAKU</span>
+                    <span class="card-number">03 / U ZRAKU</span>
                     <h3>Objašnjenje i turbulencija</h3>
                     <p>Avijacijska objašnjenja faza leta, sigurnosna statistika i turbulencijska kartica koja ti daje mir u trenutku kad avion počne podrhtavati.</p>
                 </div>
@@ -353,32 +339,31 @@
         </div>
     </section>
 
-    <!-- Autorova bilješka (Background: White) -->
-    <section class="section-padding bg-white" style="border-bottom: 1px solid var(--sky-light);">
+    <!-- Autorova bilješka (Background: White, Clean Text) -->
+    <section class="section-padding bg-white">
         <div class="container" style="max-width: 760px; margin: 0 auto;">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.25em; display: block; margin-bottom: 20px; text-align: center;">TKO STOJI IZA PROJEKTA</span>
-            <h2 class="section-title text-center" style="margin-bottom: 15px;">Zašto postoji Miran Let</h2>
-            <hr class="divider-gold">
+            <span class="eyebrow text-center">TKO STOJI IZA PROJEKTA</span>
+            <h2 class="section-title text-center" style="margin-bottom: 30px;">Zašto postoji Miran Let</h2>
             
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 40px;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
                 <div style="text-align: center;">
-                    <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 3px solid var(--sky-light); box-shadow: 0 10px 25px rgba(22, 35, 47, 0.06);">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 1px solid var(--border-light);">
                         <img src="/brane.png" alt="Brane - Autor" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <span style="font-weight: 700; font-size: 1.1rem; color: var(--ink); display: block;">Brane</span>
-                    <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 800;">AUTOR PROTOKOLA</span>
+                    <span class="eyebrow" style="margin-bottom: 0;">AUTOR PROTOKOLA</span>
                 </div>
                 
                 <div style="font-size: 1.1rem; line-height: 1.8; color: var(--ink-soft); text-align: left;">
-                    <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.35rem; color: var(--ink); border-left: 4px solid var(--gold); padding-left: 18px; margin-bottom: 25px;">Ovo nije nastalo iz tečaja. Niti iz diplome.</p>
-                    <p style="margin-bottom: 20px;">Nastalo je zato što sam godinama sjedio u sjedalu 14F i posezao za svime što bi mi moglo "utrnuti" osjetila pri polijetanju.</p>
+                    <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.35rem; color: var(--ink); border-left: 4px solid var(--ink); padding-left: 18px; margin-bottom: 25px;">Ovo nije nastalo iz tečaja. Niti iz diplome.</p>
+                    <p style="margin-bottom: 20px;">Nastalo je zato što sam godinama sjedio u sjedalu 14F i posezao za svime što bi mi moglo utrnuti osjetila pri polijetanju.</p>
                     <p style="margin-bottom: 20px;">Shvatio sam da kemija ne rješava problem jer amigdala uči da si preživio let samo zato što si bio pod utjecajem. Želio sam alat s kojim mogu ostati čist, prisutan i miran.</p>
                     <p style="font-weight: 700; color: var(--ink); margin-top: 20px;">Cilj nije eliminirati strah. Cilj je naučiti letjeti s njim.</p>
                 </div>
             </div>
 
-            <!-- Legible High-Contrast Disclaimer (15px+) -->
-            <p style="color: var(--ink-soft); font-size: 0.95rem; font-style: italic; line-height: 1.65; max-width: 680px; margin: 35px auto 0; text-align: center; border-top: 1px solid var(--sky-light); padding-top: 24px;">
+            <!-- Disclaimer -->
+            <p style="color: var(--ink-soft); font-size: 0.95rem; font-style: italic; line-height: 1.65; max-width: 680px; margin: 35px auto 0; text-align: center; border-top: 1px solid var(--border-light); padding-top: 24px;">
                 *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
             </p>
         </div>
@@ -387,12 +372,11 @@
     <!-- FAQ Section (Background: Cream) -->
     <section class="section-padding bg-cream" id="faq">
         <div class="container" style="max-width: 720px; margin: 0 auto;">
-            <h2 class="section-title text-center" style="margin-bottom: 15px; color: var(--ink);">Česta pitanja</h2>
-            <hr class="divider-gold">
+            <h2 class="section-title text-center" style="margin-bottom: 30px; color: var(--ink);">Česta pitanja</h2>
             <div class="faq-accordion">
                 <div class="faq-item">
                     <div class="faq-question"><span>Je li ovo neka terapija?</span><span class="faq-icon">+</span></div>
-                    <div class="faq-answer">Ne. Ovo je praktičan, edukativni vodič iz perspektive putnika sa sjedala 14F. Sadrži tehnike temeljened na CBT praksi i objašnjenja iz avijacije, ali nije zamjena za medicinski tretman.</div>
+                    <div class="faq-answer">Ne. Ovo je praktičan, edukativni vodič iz perspektive putnika sa sjedala 14F. Sadrži tehnike temeljene na CBT praksi i objašnjenja iz avijacije, ali nije zamjena za medicinski tretman.</div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question"><span>Moram li prestati uzimati tablete?</span><span class="faq-icon">+</span></div>
@@ -419,31 +403,31 @@
     </section>
 
     <!-- Email Capture Section (Relocated Below FAQ, Secondary Style) -->
-    <section class="section-padding bg-sky-wash" style="border-top: 1px solid var(--sky-light); border-bottom: 1px solid var(--sky-light);" id="sos-vodic">
+    <section class="section-padding bg-sky-wash" id="sos-vodic">
         <div class="container" style="max-width: 580px; margin: 0 auto; text-align: center;">
-            <span class="text-gold" style="text-transform: uppercase; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em; display: block; margin-bottom: 15px;">BESPLATAN SOS VODIČ</span>
+            <span class="eyebrow">BESPLATAN SOS VODIČ</span>
             <h3 style="margin-bottom: 15px; color: var(--ink); font-family: var(--font-serif); font-size: 1.8rem;">Nisi siguran? Počni malo.</h3>
             <p style="color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 25px; line-height: 1.6; text-align: center; max-width: 100%;">
-                Preuzmi besplatni SOS vodič za smirenje prije leta — jednu stranicu s tri tehnike koje možeš isprobati već danas.
+                Preuzmi besplatni SOS vodič za smirenje prije leta: jednu stranicu s tri tehnike koje možeš isprobati već danas.
             </p>
             
-            <div id="html-email-success" style="display: none; background: var(--white); border: 1px solid var(--sky-light); padding: 24px; border-radius: 12px;">
+            <div id="html-email-success" style="display: none; background: var(--white); border: 1px solid var(--border-light); padding: 24px; border-radius: 12px;">
                 <h4 style="font-weight: 700; color: var(--ink); font-size: 1.05rem;">Hvala ti! SOS vodič je poslan na tvoj email.</h4>
             </div>
             
             <form id="html-email-form" onsubmit="submitHtmlEmailForm(event)" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
-                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 48px; padding: 0 18px; border-radius: 10px; border: 1px solid var(--sky-light); background: var(--white); color: var(--ink); font-size: 0.95rem; outline: none;">
+                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 48px; padding: 0 18px; border-radius: 10px; border: 1px solid var(--border-light); background: var(--white); color: var(--ink); font-size: 0.95rem; outline: none;">
                 <button type="submit" class="btn" style="width: 100%; min-height: 48px; padding: 12px 24px; font-size: 0.95rem;">POŠALJI MI SOS VODIČ</button>
             </form>
         </div>
     </section>
 
-    <!-- Final CTA Section (Gradient: sky-light to cream) -->
+    <!-- Final CTA Section -->
     <section class="section-padding final-cta text-center">
         <div class="container">
             <h2>Sljedeći let ne mora biti isti.</h2>
             <p class="subtitle" style="margin-bottom: 30px;">Dovoljno je da imaš plan za trenutke kada se strah pojavi.</p>
-            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn">PREUZMI MIRAN LET — 19.99€</a>
+            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=bez-tableta" class="btn">PREUZMI MIRAN LET · 19,99 €</a>
         </div>
     </section>
 
@@ -466,14 +450,14 @@
         </div>
     </footer>
 
-    <!-- Cookie Banner (Discrete bottom bar) -->
-    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 480px; background: var(--white); border: 1px solid var(--sky-light); padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.15); z-index: 9999; display: flex; flex-direction: column; gap: 12px;">
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 480px; background: var(--white); border: 1px solid var(--border-light); padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.15); z-index: 9999; display: flex; flex-direction: column; gap: 12px;">
         <p style="font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; margin: 0; text-align: left;">
             Koristimo kolačiće za mjerenje učinkovitosti oglasa (Meta Pixel). Možete ih prihvatiti ili odbiti. <a href="/privatnost" style="color: var(--ink); font-weight: 600;">Saznaj više</a>.
         </p>
         <div style="display: flex; gap: 10px;">
             <button onclick="acceptCookies()" class="btn" style="padding: 10px 20px; min-height: 40px; font-size: 0.85rem; border-radius: 6px; flex: 1;">Prihvati</button>
-            <button onclick="rejectCookies()" style="background: transparent; border: 1px solid var(--sky-light); color: var(--ink); padding: 10px 20px; min-height: 40px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; flex: 1;">Odbij</button>
+            <button onclick="rejectCookies()" style="background: transparent; border: 1px solid var(--border-light); color: var(--ink); padding: 10px 20px; min-height: 40px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; flex: 1;">Odbij</button>
         </div>
     </div>
 

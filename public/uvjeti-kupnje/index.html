@@ -23,21 +23,21 @@
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; text-align: left; }
-        header { background: var(--white); border-bottom: 1px solid var(--sky-light); padding: 20px 0; }
+        header { background: var(--white); border-bottom: 1px solid #E4E9EF; padding: 20px 0; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
         .logo-nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo-nav img { height: 38px; border-radius: 6px; }
+        .logo-nav img { height: 48px; width: auto; border-radius: 8px; }
         .back-link { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-        .back-link:hover { color: var(--gold); }
+        .back-link:hover { color: var(--ink-soft); }
         main { padding: 60px 0 100px; }
         h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); text-align: left; }
-        .legal-card { background: var(--white); border: 1px solid var(--sky-light); border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(22,35,47,0.04); display: flex; flex-direction: column; gap: 24px; }
+        .legal-card { background: var(--white); border: 1px solid #E4E9EF; border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 24px; }
         h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 8px; text-align: left; }
         p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; text-align: left; }
-        .notice-box { background: var(--sky-wash); border-left: 4px solid var(--gold); padding: 20px 24px; border-radius: 0 8px 8px 0; font-weight: 500; text-align: left; }
+        .notice-box { background: var(--sky-wash); border-left: 4px solid var(--ink); padding: 20px 24px; border-radius: 0 8px 8px 0; font-weight: 500; text-align: left; }
         footer { background: var(--ink); color: #8C9BA8; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
         footer a { color: var(--white); text-decoration: none; margin: 0 10px; }
-        footer a:hover { color: var(--gold); }
+        footer a:hover { color: var(--sky-light); }
     </style>
 </head>
 <body>
@@ -60,7 +60,7 @@
                 <h2>2. Cijena i ugovor o kupnji (Merchant of Record)</h2>
                 <p>Cijena proizvoda iznosi 19,99 €. Porez obračunava Lemon Squeezy prema zemlji kupca i prikazan je na checkoutu.</p>
                 <p style="margin-top: 10px;">
-                    Ugovor o kupnji sklapa se između kupca i Lemon Squeezyja kao Merchant of Recorda. Njihovi uvjeti prodaje primjenjuju se na transakciju — <a href="https://www.lemonsqueezy.com/terms" target="_blank" rel="noopener" style="color: var(--ink); text-decoration: underline;">Uvjeti prodavatelja Lemon Squeezy</a>. Račun izdaje Lemon Squeezy i stiže na email automatski nakon uplate.
+                    Ugovor o kupnji sklapa se između kupca i Lemon Squeezyja kao Merchant of Recorda. Njihovi uvjeti prodaje primjenjuju se na transakciju: <a href="https://www.lemonsqueezy.com/terms" target="_blank" rel="noopener" style="color: var(--ink); text-decoration: underline;">Uvjeti prodavatelja Lemon Squeezy</a>. Račun izdaje Lemon Squeezy i stiže na email automatski nakon uplate.
                 </p>
             </div>
 
@@ -88,7 +88,7 @@
                 <a href="/povrat">Povrat</a> · 
                 <a href="/privatnost">Privatnost</a>
             </p>
-            <p style="font-size: 0.85rem; color: #8C9BA8; margin-bottom: 8px;">Prodaju obavlja Lemon Squeezy kao Merchant of Record.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8; margin-bottom: 6px;">Prodaju obavlja Lemon Squeezy kao Merchant of Record.</p>
             <p style="font-size: 0.85rem; color: #8C9BA8;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
         </div>
     </footer>
