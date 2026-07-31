@@ -22,7 +22,7 @@
             --font-sans: 'DM Sans', -apple-system, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; }
+        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; text-align: left; }
         header { background: var(--white); border-bottom: 1px solid var(--sky-light); padding: 20px 0; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
         .logo-nav { display: flex; justify-content: space-between; align-items: center; }
@@ -30,11 +30,11 @@
         .back-link { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .back-link:hover { color: var(--gold); }
         main { padding: 60px 0 100px; }
-        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); }
+        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); text-align: left; }
         .legal-card { background: var(--white); border: 1px solid var(--sky-light); border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(22,35,47,0.04); display: flex; flex-direction: column; gap: 24px; }
-        h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 8px; }
-        p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; }
-        .notice-box { background: var(--sky-wash); border-left: 4px solid var(--gold); padding: 20px 24px; border-radius: 0 8px 8px 0; font-weight: 500; }
+        h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 8px; text-align: left; }
+        p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; text-align: left; }
+        .notice-box { background: var(--sky-wash); border-left: 4px solid var(--gold); padding: 20px 24px; border-radius: 0 8px 8px 0; font-weight: 500; text-align: left; }
         footer { background: var(--ink); color: #8C9BA8; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
         footer a { color: var(--white); text-decoration: none; margin: 0 10px; }
         footer a:hover { color: var(--gold); }
@@ -52,32 +52,30 @@
         <h1>Opći uvjeti kupnje</h1>
         <div class="legal-card">
             <div>
-                <h2>1. Predmet i narav proizvoda</h2>
-                <p>Miran Let je isključivo digitalni proizvod koji se sastoji od PDF priručnika i MP3 audio zapisa. Proizvod ne uključuje nikakvu fizičku isporuku tiskanog materijala niti opreme.</p>
+                <h2>1. Predmet ugovora</h2>
+                <p>Predmet je digitalni proizvod (PDF vodič + MP3 audio zapisi), bez fizičke isporuke tiskanog materijala.</p>
             </div>
             
             <div>
-                <h2>2. Cijena i plaćanje</h2>
-                <p>Cijena digitalnog kompleta iznosi 19,99 € s uključenim pripadajućim porezima (PDV). Obradu plaćanja i naplatu kartica vrši licencirana platforma Lemon Squeezy kao trgovac od povjerenja (Merchant of Record). Prodavatelj proizvoda je [POPUNITI].</p>
+                <h2>2. Cijena i ugovor o kupnji (Merchant of Record)</h2>
+                <p>Cijena proizvoda iznosi 19,99 €. Porez obračunava Lemon Squeezy prema zemlji kupca i prikazan je na checkoutu.</p>
+                <p style="margin-top: 10px;">
+                    Ugovor o kupnji sklapa se između kupca i Lemon Squeezyja kao Merchant of Recorda. Njihovi uvjeti prodaje primjenjuju se na transakciju — <a href="https://www.lemonsqueezy.com/terms" target="_blank" rel="noopener" style="color: var(--ink); text-decoration: underline;">Uvjeti prodavatelja Lemon Squeezy</a>. Račun izdaje Lemon Squeezy i stiže na email automatski nakon uplate.
+                </p>
             </div>
 
             <div>
                 <h2>3. Isporuka i trajanje pristupa</h2>
-                <p>Isporuka digitalnog sadržaja izvršava se trenutačno i automatski nakon uspješno provedene transakcije. Kupac dobiva direktan pristup preuzimanju datoteka na ekranu te putem potvrde poslane na e-mail adresu unesenu prilikom kupnje. Licenca je trajna i doživotna, bez ikakvih pretplata.</p>
+                <p>Isporuka se izvršava odmah nakon uspješne uplate. Poveznica za preuzimanje stiže na email naveden pri kupnji. Trajanje pristupa je doživotno, bez ikakvih pretplata i obnove.</p>
             </div>
 
             <div>
-                <h2>4. Tehnički zahtjevi</h2>
-                <p>Za korištenje materijala kupac mora posjedovati pametni telefon, tablet ili računalo s mogućnošću otvaranja standardnih PDF dokumenta i reprodukcije MP3 zvučnih zapisa.</p>
+                <h2>4. Tehnički zahtjevi i podrška</h2>
+                <p>Tehnički zahtjevi: uređaj koji otvara PDF i MP3 datoteke (pametni telefon, tablet ili računalo). Podrška za autorski sadržaj dostupna je na <a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a>, s rokom odgovora unutar 48 sati.</p>
             </div>
 
             <div class="notice-box">
-                <strong>Važna edukativna napomena:</strong> Miran Let je edukativni materijal baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija niti zamjena za stručnu medicinsku pomoć.
-            </div>
-
-            <div>
-                <h2>5. Reklamacije i kontakt</h2>
-                <p>Za sve upite, podršku ili reklamacije možete se obratiti na e-mail adresu: <a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a>. Nastojimo odgovoriti na sve upite unutar 48 sati. Mjerodavno pravo za ove uvjete je pravo Republike Hrvatske.</p>
+                <strong>Edukativna napomena:</strong> Miran Let je edukativni materijal, nije medicinski tretman niti zamjena za stručnu pomoć. Osobe koje se liječe zbog zdravstvenog stanja neka se posavjetuju sa svojim liječnikom.
             </div>
         </div>
     </main>
@@ -90,7 +88,8 @@
                 <a href="/povrat">Povrat</a> · 
                 <a href="/privatnost">Privatnost</a>
             </p>
-            <p>&copy; 2026 Miran Let. Sva prava pridržana.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8; margin-bottom: 8px;">Prodaju obavlja Lemon Squeezy kao Merchant of Record.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
         </div>
     </footer>
 </body>

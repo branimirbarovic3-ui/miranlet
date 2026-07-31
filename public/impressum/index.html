@@ -22,7 +22,7 @@
             --font-sans: 'DM Sans', -apple-system, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; }
+        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; text-align: left; }
         header { background: var(--white); border-bottom: 1px solid var(--sky-light); padding: 20px 0; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
         .logo-nav { display: flex; justify-content: space-between; align-items: center; }
@@ -30,12 +30,15 @@
         .back-link { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .back-link:hover { color: var(--gold); }
         main { padding: 60px 0 100px; }
-        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); }
-        .legal-card { background: var(--white); border: 1px solid var(--sky-light); border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(22,35,47,0.04); }
-        .legal-row { display: flex; flex-direction: column; gap: 6px; padding: 14px 0; border-bottom: 1px solid rgba(168,212,247,0.4); }
+        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); text-align: left; }
+        .legal-card { background: var(--white); border: 1px solid var(--sky-light); border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(22,35,47,0.04); display: flex; flex-direction: column; gap: 28px; }
+        h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 8px; text-align: left; }
+        p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; text-align: left; }
+        .legal-row { display: flex; flex-direction: column; gap: 4px; padding: 10px 0; border-bottom: 1px solid rgba(168,212,247,0.4); }
         .legal-row:last-child { border-bottom: none; }
-        .label { font-weight: 600; color: var(--ink); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .label { font-weight: 600; color: var(--ink); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
         .value { color: var(--ink-soft); font-size: 1.05rem; }
+        .notice-box { background: var(--sky-wash); border-left: 4px solid var(--gold); padding: 20px 24px; border-radius: 0 8px 8px 0; font-weight: 500; text-align: left; }
         footer { background: var(--ink); color: #8C9BA8; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
         footer a { color: var(--white); text-decoration: none; margin: 0 10px; }
         footer a:hover { color: var(--gold); }
@@ -52,37 +55,54 @@
     <main class="container">
         <h1>Impressum</h1>
         <div class="legal-card">
-            <div class="legal-row">
-                <span class="label">Naziv obrta/tvrtke:</span>
-                <span class="value">[POPUNITI]</span>
+            <div>
+                <h2>Autor i vlasnik stranice</h2>
+                <div class="legal-row">
+                    <span class="label">Ime i prezime:</span>
+                    <span class="value">[IME I PREZIME]</span>
+                </div>
+                <div class="legal-row">
+                    <span class="label">Kontakt:</span>
+                    <span class="value"><a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a></span>
+                </div>
+                <div class="legal-row">
+                    <span class="label">Status:</span>
+                    <span class="value">Fizička osoba, autor digitalnog sadržaja</span>
+                </div>
             </div>
-            <div class="legal-row">
-                <span class="label">Vlasnik / odgovorna osoba:</span>
-                <span class="value">[POPUNITI]</span>
+
+            <div>
+                <h2>Prodaja i naplata</h2>
+                <p style="margin-bottom: 16px;">
+                    Prodaju digitalnog proizvoda obavlja Lemon Squeezy jako Merchant of Record. Lemon Squeezy je prodavatelj prema kupcu, izdaje račun i obračunava porez sukladno propisima zemlje kupca.
+                </p>
+                <div class="legal-row">
+                    <span class="label">Podaci o prodavatelju:</span>
+                    <span class="value">[NAZIV ENTITETA IZ LEMON SQUEEZY]</span>
+                    <span class="value">[ADRESA IZ LEMON SQUEEZY]</span>
+                    <span class="value">[POREZNI BROJ IZ LEMON SQUEEZY]</span>
+                </div>
+                <div class="legal-row" style="margin-top: 10px;">
+                    <span class="label">Uvjeti prodavatelja:</span>
+                    <span class="value"><a href="https://www.lemonsqueezy.com/terms" target="_blank" rel="noopener" style="color: var(--ink); text-decoration: underline;">Uvjeti poslovanja Lemon Squeezy (Merchant Terms)</a></span>
+                </div>
             </div>
-            <div class="legal-row">
-                <span class="label">Adresa sjedišta:</span>
-                <span class="value">[POPUNITI]</span>
+
+            <div class="notice-box">
+                <h2>Sadržaj stranice</h2>
+                <p>
+                    Miran Let je edukativni materijal. Nije medicinski tretman niti zamjena za stručnu pomoć.
+                </p>
+                <p style="margin-top: 10px;">
+                    Kapetan Miran je ilustrirani lik, nije stvarna osoba.
+                </p>
             </div>
-            <div class="legal-row">
-                <span class="label">OIB:</span>
-                <span class="value">[POPUNITI]</span>
-            </div>
-            <div class="legal-row">
-                <span class="label">Kontakt Email:</span>
-                <span class="value"><a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a></span>
-            </div>
-            <div class="legal-row">
-                <span class="label">Djelatnost:</span>
-                <span class="value">Prodaja digitalnih sadržaja (e-knjige i audio zapisi)</span>
-            </div>
-            <div class="legal-row">
-                <span class="label">Nadležno tijelo za registraciju:</span>
-                <span class="value">[POPUNITI]</span>
-            </div>
-            <div class="legal-row">
-                <span class="label">Način plaćanja:</span>
-                <span class="value">Kartično plaćanje putem licenciranog procesora Lemon Squeezy</span>
+
+            <div>
+                <h2>Umjetna inteligencija (AI Act transparentnost)</h2>
+                <p>
+                    Vizualni materijali na ovim stranicama i u oglasima izrađeni su generativnim AI alatima. Ne prikazuju stvarne osobe, stvarne kupce niti stvarne događaje. Kapetan Miran je ilustrirani lik. Tekstualni sadržaj vodiča napisao je autor.
+                </p>
             </div>
         </div>
     </main>
@@ -95,7 +115,8 @@
                 <a href="/povrat">Povrat</a> · 
                 <a href="/privatnost">Privatnost</a>
             </p>
-            <p>&copy; 2026 Miran Let. Sva prava pridržana.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8; margin-bottom: 8px;">Prodaju obavlja Lemon Squeezy kao Merchant of Record.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
         </div>
     </footer>
 </body>

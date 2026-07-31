@@ -22,7 +22,7 @@
             --font-sans: 'DM Sans', -apple-system, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; }
+        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; text-align: left; }
         header { background: var(--white); border-bottom: 1px solid var(--sky-light); padding: 20px 0; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
         .logo-nav { display: flex; justify-content: space-between; align-items: center; }
@@ -30,12 +30,12 @@
         .back-link { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .back-link:hover { color: var(--gold); }
         main { padding: 60px 0 100px; }
-        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); }
+        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); text-align: left; }
         .legal-card { background: var(--white); border: 1px solid var(--sky-light); border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(22,35,47,0.04); display: flex; flex-direction: column; gap: 28px; }
-        h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 10px; }
-        p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; }
-        .guarantee-box { background: var(--sky-wash); border: 2px solid var(--gold); padding: 24px; border-radius: 12px; }
-        .guarantee-box h3 { font-family: var(--font-serif); font-size: 1.35rem; color: #A88832; margin-bottom: 8px; }
+        h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 10px; text-align: left; }
+        p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; text-align: left; }
+        .guarantee-box { background: var(--sky-wash); border: 2px solid var(--gold); padding: 24px; border-radius: 12px; text-align: left; }
+        .guarantee-box h3 { font-family: var(--font-serif); font-size: 1.35rem; color: #A88832; margin-bottom: 8px; text-align: left; }
         footer { background: var(--ink); color: #8C9BA8; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
         footer a { color: var(--white); text-decoration: none; margin: 0 10px; }
         footer a:hover { color: var(--gold); }
@@ -53,23 +53,18 @@
         <h1>Pravila o povratu i jamstvu</h1>
         <div class="legal-card">
             <div>
-                <h2>1. Zakonsko pravo na jednostrani raskid (14 dana)</h2>
-                <p>Prema Zakonu o zaštiti potrošača, kupac ima pravo na raskid ugovora unutar 14 dana. Međutim, kod digitalnih sadržaja koji nisu isporučeni na tjelesnom mediju, to pravo zakonski prestaje u trenutku kada isporuka započne uz izričiti prethodni pristanak kupca i potvrdu da je upoznat s gubitkom prava na raskid. Taj pristanak traži se i potvrdno označava prilikom checkout procesa.</p>
+                <h2>1. Zakonsko pravo na raskid</h2>
+                <p>Kod digitalnog sadržaja pravo na jednostrani raskid u roku od 14 dana prestaje kad kupac izričito pristane na trenutnu isporuku i potvrdi da time gubi to pravo. Taj se pristanak traži na checkoutu. Postupak zakonskog povrata vodi Lemon Squeezy kao prodavatelj.</p>
             </div>
 
             <div class="guarantee-box">
-                <h3>2. Naše jamstvo "Leti s njim" (Šire od zakonskog)</h3>
+                <h3>2. Naše jamstvo, šire od zakonskog</h3>
                 <p style="color: var(--ink); font-weight: 500; font-size: 1.1rem; margin-bottom: 10px;">
                     "Leti s njim. Ako nakon leta kažeš da nije pomoglo, novac se vraća — bez pitanja."
                 </p>
                 <p style="font-size: 0.95rem;">
-                    Ovo jamstvo pruža potpuni mir i nema vremenskog ograničenja vezanog za točno 14 dni od kupnje, već vrijedi sve do tvog sljedećeg leta.
+                    Bez roka vezanog za datum kupnje. Javi se na <a href="mailto:podrska@miranlet.com" style="color: var(--ink); font-weight: 600;">podrska@miranlet.com</a>, povrat se pokreće kroz Lemon Squeezy i vraća na isti način plaćanja, u roku od 14 dni.
                 </p>
-            </div>
-
-            <div>
-                <h2>Postupak ostvarivanja povrata</h2>
-                <p>Za ostvarivanje povrata dovoljno je poslati e-mail na <a href="mailto:podrska@miranlet.com" style="color: var(--ink); font-weight: 600;">podrska@miranlet.com</a> s podacima o svojoj kupnji. Povrat novca izvršava se u roku 14 dana na isti način plaćanja koji je korišten prilikom kupnje.</p>
             </div>
         </div>
     </main>
@@ -82,7 +77,8 @@
                 <a href="/povrat">Povrat</a> · 
                 <a href="/privatnost">Privatnost</a>
             </p>
-            <p>&copy; 2026 Miran Let. Sva prava pridržana.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8; margin-bottom: 8px;">Prodaju obavlja Lemon Squeezy kao Merchant of Record.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
         </div>
     </footer>
 </body>

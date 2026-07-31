@@ -22,7 +22,7 @@
             --font-sans: 'DM Sans', -apple-system, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; }
+        body { font-family: var(--font-sans); color: var(--ink); background-color: var(--cream); line-height: 1.7; font-size: 1.05rem; text-align: left; }
         header { background: var(--white); border-bottom: 1px solid var(--sky-light); padding: 20px 0; }
         .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
         .logo-nav { display: flex; justify-content: space-between; align-items: center; }
@@ -30,10 +30,10 @@
         .back-link { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
         .back-link:hover { color: var(--gold); }
         main { padding: 60px 0 100px; }
-        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); }
+        h1 { font-family: var(--font-serif); font-size: 2.8rem; margin-bottom: 30px; color: var(--ink); text-align: left; }
         .legal-card { background: var(--white); border: 1px solid var(--sky-light); border-radius: 12px; padding: 40px; box-shadow: 0 4px 20px rgba(22,35,47,0.04); display: flex; flex-direction: column; gap: 28px; }
-        h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 10px; }
-        p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; }
+        h2 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--ink); margin-bottom: 10px; text-align: left; }
+        p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.7; text-align: left; }
         footer { background: var(--ink); color: #8C9BA8; padding: 40px 0; text-align: center; font-size: 0.9rem; margin-top: 60px; }
         footer a { color: var(--white); text-decoration: none; margin: 0 10px; }
         footer a:hover { color: var(--gold); }
@@ -51,23 +51,34 @@
         <h1>Pravila privatnosti</h1>
         <div class="legal-card">
             <div>
-                <h2>1. Voditelj obrade podataka</h2>
-                <p>Voditelj obrade osobnih podataka je [POPUNITI]. Kontakt e-mail za sva pitanja u vezi zaštite osobnih podataka: <a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a>.</p>
+                <h2>Voditelj obrade za podatke prikupljene na ovoj stranici</h2>
+                <p>[IME I PREZIME], <a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a></p>
             </div>
 
             <div>
-                <h2>2. Prikupljanje i svrha obrade podataka</h2>
-                <p>Prikupljamo Vašu e-mail adresu u slučaju kupnje proizvoda radi isporuke pristupa i računa, te u slučaju prijave za besplatni SOS vodič. Podatke o kartičnom plaćanju obrađuje isključivo licencirani sustav Lemon Squeezy te se oni ne pohranjuju niti su dostupni na našim poslužiteljima.</p>
+                <h2>Koji se podaci prikupljaju</h2>
+                <p>· Email adresa, ako se korisnik prijavi za besplatni SOS vodič.</p>
+                <p>· Podatke o kupnji i plaćanju obrađuje Lemon Squeezy kao samostalni voditelj obrade; mi ne vidimo niti pohranjujemo podatke o vašoj platnoj kartici.</p>
             </div>
 
             <div>
-                <h2>3. Kolačići i analitika</h2>
-                <p>Naša stranica koristi kolačiće za mjerenje učinkovitosti oglasa (Meta Pixel). Analitički kolačići aktiviraju se isključivo nakon što korisnik dade izričit pristanak u traci za kolačiće.</p>
+                <h2>Svrha obrade</h2>
+                <p>Isporuka materijala na koje se korisnik prijavio i pružanje korisničke podrške.</p>
             </div>
 
             <div>
-                <h2>4. Prava korisnika</h2>
-                <p>U svakom trenutku imate pravo zatražiti pristup svojim osobnim podacima, njihov ispravak, brisanje ("pravo na zaborav") ili prigovor na obradu slanjem zahtjeva na <a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a>.</p>
+                <h2>Kolačići</h2>
+                <p>Meta Pixel, isključivo za mjerenje učinka oglasa. Ne aktivira se dok korisnik ne prihvati kolačiće u traci za privolu.</p>
+            </div>
+
+            <div>
+                <h2>Prava korisnika</h2>
+                <p>Imate pravo na pristup, ispravak, brisanje, ograničenje obrade i prigovor. Zahtjev možete poslati na <a href="mailto:podrska@miranlet.com" style="color: var(--ink);">podrska@miranlet.com</a>.</p>
+            </div>
+
+            <div>
+                <h2>Nadzorno tijelo</h2>
+                <p>Agencija za zaštitu osobnih podataka (AZOP), Zagreb, Hrvatska.</p>
             </div>
         </div>
     </main>
@@ -80,7 +91,8 @@
                 <a href="/povrat">Povrat</a> · 
                 <a href="/privatnost">Privatnost</a>
             </p>
-            <p>&copy; 2026 Miran Let. Sva prava pridržana.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8; margin-bottom: 8px;">Prodaju obavlja Lemon Squeezy kao Merchant of Record.</p>
+            <p style="font-size: 0.85rem; color: #8C9BA8;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
         </div>
     </footer>
 </body>
