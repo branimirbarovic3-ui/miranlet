@@ -33,12 +33,12 @@ export default function Problem() {
             ))}
           </ul>
 
-          <div className="bg-[#EAF4FD] border-l-4 border-[#16232F] p-6 rounded-r-xl font-semibold text-lg text-[#16232F] leading-relaxed">
+          <div className="bg-[#EAF4FD] border-l-4 border-[#C8A84A] p-6 rounded-r-xl font-semibold text-lg text-[#16232F] leading-relaxed">
             Nije problem u tome što se bojiš. Problem je što način na koji rješavaš strah uzima previše od tvog putovanja.
           </div>
         </div>
 
-        <div className="order-2 relative border border-[#E4E9EF] bg-white p-2 rounded-xl shadow-lg">
+        <div className="order-2 relative border-2 border-[#C8A84A] bg-white p-2 rounded-xl shadow-lg">
           <img
             src="/problem.png"
             alt="Iskustvo leta"

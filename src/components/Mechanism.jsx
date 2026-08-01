@@ -33,7 +33,7 @@ export default function Mechanism() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="bg-white border border-[#E4E9EF] p-8 rounded-xl shadow-sm"
+              className="bg-white border border-[#C8A84A] p-8 rounded-xl shadow-sm"
             >
               <h3 className="font-serif text-2xl font-semibold mb-3 text-[#16232F]">
                 {step.title}

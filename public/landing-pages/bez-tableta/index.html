@@ -91,7 +91,7 @@
         .hero-image-container {
             max-width: 680px; margin: 50px auto 0; border-radius: var(--border-radius);
             overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08);
-            border: 1px solid var(--border-light); background: var(--white); padding: 8px;
+            border: 2px solid var(--gold); background: var(--white); padding: 8px;
         }
         .hero-image-container img { width: 100%; display: block; object-fit: cover; border-radius: 8px; }
 
@@ -105,19 +105,19 @@
         .bullet-list li::before { content: "✓"; position: absolute; left: 0; top: -1px; color: var(--ink); font-weight: 700; font-size: 1.1rem; }
 
         .highlight-box {
-            margin-top: 32px; background-color: var(--sky-wash); border-left: 4px solid var(--ink);
+            margin-top: 32px; background-color: var(--sky-wash); border-left: 4px solid var(--gold);
             padding: 24px 28px; border-radius: 0 var(--border-radius) var(--border-radius) 0;
             font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.7; text-align: left;
         }
-        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-light); background: var(--white); padding: 8px; }
+        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; border: 2px solid var(--gold); background: var(--white); padding: 8px; }
         .problem-image-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; border-radius: 8px; }
 
-        /* Three Systems Cards (Allowed Place 1) */
+        /* Three Systems Cards */
         .cards-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
         @media (min-width: 768px) { .cards-grid.col-3 { grid-template-columns: repeat(3, 1fr); } .cards-grid.col-2 { grid-template-columns: repeat(2, 1fr); } }
 
         .card-bright {
-            background: var(--white); border: 1px solid var(--border-light);
+            background: var(--white); border: 1px solid var(--gold);
             padding: 40px; border-radius: var(--border-radius); transition: var(--transition);
             position: relative; text-align: left;
         }
@@ -125,10 +125,10 @@
         .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 14px; text-align: left; }
         .card-bright p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; text-align: left; }
 
-        /* Offer Card (Allowed Place 2) */
+        /* Offer Card */
         .pricing-card-wrapper {
             max-width: 650px; margin: 35px auto 0; background: var(--white);
-            border: 1px solid var(--border-light); border-radius: 16px;
+            border: 2px solid var(--gold); border-radius: 16px;
             padding: 48px 40px; text-align: center; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);
         }
         @media (max-width: 768px) { .pricing-card-wrapper { padding: 28px 20px; } }
@@ -139,12 +139,12 @@
         
         .pricing-features-list { text-align: left; max-width: 440px; margin: 0 auto 32px; list-style: none; }
         .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 16px; font-weight: 600; color: var(--ink); font-size: 1.1rem; }
-        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--ink); font-weight: 700; font-size: 1.1rem; }
+        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; font-size: 1.1rem; }
 
-        /* Standalone Guarantee Card (Allowed Place 3) */
+        /* Standalone Guarantee Card */
         .guarantee-card {
             max-width: 650px; margin: 30px auto 0; background: var(--white);
-            border: 1px solid var(--border-light); border-radius: 16px; padding: 36px 32px;
+            border: 2px solid var(--gold); border-radius: 16px; padding: 36px 32px;
             text-align: left;
         }
         .guarantee-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--ink); margin-bottom: 12px; }

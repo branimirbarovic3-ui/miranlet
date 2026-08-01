@@ -41,7 +41,7 @@ export default function Hero() {
         </div>
 
         {/* Airplane Hero Image */}
-        <div className="max-w-[680px] w-full mt-12 rounded-xl overflow-hidden shadow-xl border border-[#E4E9EF] bg-white p-2">
+        <div className="max-w-[680px] w-full mt-12 rounded-xl overflow-hidden shadow-xl border-2 border-[#C8A84A] bg-white p-2">
           <img src="/hero.png" alt="Miran Let Airplane Hero" className="w-full h-auto block rounded-lg object-cover" />
         </div>
       </div>

@@ -12,12 +12,12 @@ export default function Content() {
         </h2>
 
         {/* Bundle Mockup */}
-        <div className="max-w-[540px] mx-auto my-8 border border-[#E4E9EF] bg-white p-3 rounded-xl shadow-sm">
+        <div className="max-w-[540px] mx-auto my-8 border-2 border-[#C8A84A] bg-white p-3 rounded-xl shadow-sm">
           <img src="/bundle.png" alt="Miran Let Bundle Digital Mockup" className="w-full h-auto block rounded-lg" />
         </div>
 
         {/* Restructured Offer Card */}
-        <div className="max-w-[650px] mx-auto bg-white border border-[#E4E9EF] rounded-2xl p-8 md:p-12 text-center shadow-sm">
+        <div className="max-w-[650px] mx-auto bg-white border-2 border-[#C8A84A] rounded-2xl p-8 md:p-12 text-center shadow-sm">
           <p className="text-sm text-[#4A5A68] mb-5 text-center">
             Seminari protiv straha od letenja koštaju 300–500 €. Jedan sat kod terapeuta 40–60 €.
           </p>
@@ -38,7 +38,7 @@ export default function Content() {
               'Trajna, doživotna licenca'
             ].map((item, idx) => (
               <li key={idx} className="flex gap-3 items-center font-semibold text-[#16232F] text-base md:text-lg">
-                <span className="text-[#16232F] font-bold">✓</span>
+                <span className="text-[#C8A84A] font-bold">✓</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -53,7 +53,7 @@ export default function Content() {
         </div>
 
         {/* Standalone Guarantee Card */}
-        <div className="max-w-[650px] mx-auto mt-8 bg-white border border-[#E4E9EF] rounded-2xl p-8 text-left shadow-sm">
+        <div className="max-w-[650px] mx-auto mt-8 bg-white border-2 border-[#C8A84A] rounded-2xl p-8 text-left shadow-sm">
           <h3 className="font-serif text-2xl font-semibold text-[#16232F] mb-3">
             Leti s njim
           </h3>
