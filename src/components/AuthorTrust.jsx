@@ -21,16 +21,9 @@ export default function AuthorTrust() {
             className="w-full p-6 md:p-8 text-left flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6 hover:bg-[#F7F5F0]/60 transition-colors focus:outline-none"
           >
             <div className="flex items-center gap-5 w-full sm:w-auto">
-              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#C8A84A] shrink-0 shadow-sm">
-                <img 
-                  src="/brane.png" 
-                  alt="Brane - Autor Protokola" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
               <div>
                 <h3 className="text-[#16232F] font-serif text-xl md:text-2xl font-semibold">
-                  Brane <span className="text-sm font-sans font-normal text-[#4A5A68]">· Autor Protokola</span>
+                  Brane Barović <span className="text-sm font-sans font-normal text-[#4A5A68]">· Autor Protokola</span>
                 </h3>
                 <p className="text-[#4A5A68] text-sm italic mt-0.5">
                   "Ovo nije nastalo iz tečaja. Niti iz diplome..."

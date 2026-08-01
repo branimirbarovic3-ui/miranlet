@@ -5,12 +5,12 @@ export default function Hero() {
     <header className="relative pt-32 pb-20 md:pt-40 md:pb-24 px-6 text-center overflow-hidden bg-gradient-to-b from-[#A8D4F7] via-[#EAF4FD] to-[#F7F5F0]">
       {/* Header Logo */}
       <div className="absolute top-8 left-8 md:left-12 flex items-center gap-3">
-        <img src="/logo-ml.jpg" alt="Miran Let Logo" className="h-[52px] w-auto rounded-xl shadow-md" />
+        <img src="/favicon.svg" alt="Miran Let Logo" className="h-[52px] w-auto rounded-xl shadow-md" />
       </div>
 
       <div className="max-w-[1100px] mx-auto flex flex-col items-center">
         <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#4A5A68] mb-4 block">
-          VODIČ ZA SIGURNO PUTOVANJE
+          AUDIO PROTOKOL ZA LET
         </span>
 
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.15] text-[#16232F] mb-5 max-w-[900px] mx-auto text-center">
@@ -18,7 +18,7 @@ export default function Hero() {
         </h1>
 
         <p className="font-sans text-lg sm:text-xl md:text-2xl text-[#4A5A68] max-w-[750px] mx-auto mb-8 font-normal leading-[1.65] text-center">
-          Audio protokol i vodič koji ti normalno objašnjava što se događa u avionu, i daje alat koji koristiš u trenutku straha. Bez tableta. Bez terapije. Bez čekanja.
+          Audio protokol i digitalni vodič s konkretnim alatima za tijelo i um u trenutku straha. Bez osude i bez uništenog sljedećeg dana.
         </p>
 
         <a 
@@ -30,14 +30,6 @@ export default function Hero() {
 
         <div className="text-sm text-[#4A5A68] mt-3.5 font-medium">
           Pristup odmah nakon uplate · Jamstvo do tvog leta
-        </div>
-
-        <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm font-semibold text-[#4A5A68]">
-          <span><span className="text-[#16232F]">✓</span> Pristup odmah</span>
-          <span>·</span>
-          <span><span className="text-[#16232F]">✓</span> Audio protokol + digitalni vodič</span>
-          <span>·</span>
-          <span><span className="text-[#16232F]">✓</span> Diskretno plaćanje</span>
         </div>
 
         {/* Airplane Hero Image */}
