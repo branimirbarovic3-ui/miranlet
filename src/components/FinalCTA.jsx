@@ -14,7 +14,7 @@ export default function FinalCTA() {
           href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" 
           className="inline-flex items-center justify-center bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-lg uppercase tracking-[0.08em] py-5 px-10 md:px-12 rounded-xl transition-all duration-300 shadow-lg shadow-[#C8A84A]/25 hover:-translate-y-0.5 w-full sm:w-auto"
         >
-          PREUZMI MIRAN LET · 19,99 €
+          ZAPOČNI LET S JASNIM PLANOM
         </a>
       </div>
     </section>
