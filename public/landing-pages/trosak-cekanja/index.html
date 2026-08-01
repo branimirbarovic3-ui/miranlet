@@ -120,29 +120,31 @@
         .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 14px; text-align: left; }
         .card-bright p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; text-align: left; }
 
+        /* Offer Card */
         .pricing-card-wrapper {
-            max-width: 650px; margin: 35px auto 0; background: var(--white);
+            max-width: 650px; margin: 20px auto 0; background: var(--white);
             border: 2px solid var(--gold); border-radius: 16px;
             padding: 48px 40px; text-align: center; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);
         }
         @media (max-width: 768px) { .pricing-card-wrapper { padding: 28px 20px; } }
         
-        .price-comparison-inside { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 20px; text-align: center; }
         .price-new { font-size: 44px; color: var(--ink); font-weight: 600; font-family: var(--font-sans); line-height: 1; margin-bottom: 8px; }
-        .price-subtext { font-size: 15px; color: var(--ink-soft); margin-bottom: 32px; text-align: center; }
+        .price-subtext { font-size: 15px; color: var(--ink-soft); margin-bottom: 4px; text-align: center; }
+        .price-subtext-2 { font-size: 15px; color: var(--ink-soft); margin-bottom: 28px; text-align: center; }
         
-        .pricing-features-list { text-align: left; max-width: 440px; margin: 0 auto 32px; list-style: none; }
-        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 16px; font-weight: 600; color: var(--ink); font-size: 1.1rem; }
-        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; font-size: 1.1rem; }
+        .pricing-features-list { text-align: left; max-width: 320px; margin: 0 auto 32px; list-style: none; padding: 0; }
+        .pricing-features-list li { position: relative; padding-left: 26px; margin-bottom: 14px; font-weight: 600; color: var(--ink); font-size: 1.05rem; text-align: left; line-height: 1.4; }
+        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--gold); font-weight: 700; font-size: 1.1rem; line-height: 1.4; }
 
+        /* Standalone Guarantee Card */
         .guarantee-card {
             max-width: 650px; margin: 30px auto 0; background: var(--white);
             border: 2px solid var(--gold); border-radius: 16px; padding: 36px 32px;
             text-align: left;
         }
         .guarantee-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--ink); margin-bottom: 12px; }
-        .guarantee-card p { font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: 10px; }
-        .guarantee-card p.sub-legal { font-size: 0.95rem; color: var(--ink-soft); font-weight: 400; margin: 0; }
+        .guarantee-card p { font-size: 1.05rem; color: var(--ink); font-weight: 500; margin-bottom: 8px; }
+        .guarantee-card p.sub-legal { font-size: 0.9rem; color: var(--ink-soft); font-weight: 400; margin: 0; }
 
         .faq-accordion { max-width: 750px; margin: 40px auto 0; }
         .faq-item { border-bottom: 1px solid var(--border-light); padding: 24px 0; }
@@ -233,20 +235,25 @@
             <span class="eyebrow">KOMPLETAN PAKET</span>
             <h2 class="section-title">Tvoj komplet za mirniji let</h2>
             
-            <div style="max-width: 540px; margin: 30px auto 20px auto; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-light); background: var(--white); padding: 12px;">
+            <div style="max-width: 540px; margin: 30px auto 20px auto; border-radius: var(--border-radius); overflow: hidden; border: 2px solid var(--gold); background: var(--white); padding: 12px;">
                 <img src="/bundle.png" alt="Miran Let Bundle Digital Mockup" style="width: 100%; display: block; border-radius: 8px;">
             </div>
 
+            <p style="font-size: 14px; color: var(--ink-soft); max-width: 580px; margin: 24px auto 16px auto; text-align: center;">
+                Seminari protiv straha od letenja koštaju 300–500 €. Jedan sat kod terapeuta 40–60 €.
+            </p>
+
             <div class="pricing-card-wrapper">
-                <p class="price-comparison-inside">Seminari protiv straha od letenja koštaju 300–500 €. Jedan sat kod terapeuta 40–60 €.</p>
                 <div class="price-new">19,99 €</div>
                 <p class="price-subtext">Jednokratno plaćanje. Bez pretplate.</p>
+                <p class="price-subtext-2">Slušaš u trenutku. Vodič je tu kad te zanima zašto.</p>
                 
                 <ul class="pricing-features-list">
-                    <li>PDF vodič (43 stranice)</li>
-                    <li>9 bonus materijala: kartice, planovi, rječnik i audio protokol</li>
-                    <li>Trenutačan pristup nakon uplate</li>
-                    <li>Trajna, doživotna licenca</li>
+                    <li>Audio protokol za let</li>
+                    <li>Vođena vježba disanja</li>
+                    <li>Digitalni vodič, 43 stranice</li>
+                    <li>9 alata i kartica za mobitel</li>
+                    <li>Trenutačan pristup, doživotna licenca</li>
                 </ul>
 
                 <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=trosak-cekanja" class="btn" style="width: 100%;">PREUZMI MIRAN LET · 19,99 €</a>
@@ -254,7 +261,7 @@
 
             <div class="guarantee-card">
                 <h3>Leti s njim</h3>
-                <p>Leti s njim. Ako nakon leta kažeš da nije pomoglo, novac se vraća, bez pitanja.</p>
+                <p>Ako nakon leta kažeš da nije pomoglo, novac se vraća. Bez pitanja.</p>
                 <p class="sub-legal">Zakonskih 14 dana vrijedi uz to.</p>
             </div>
         </div>
