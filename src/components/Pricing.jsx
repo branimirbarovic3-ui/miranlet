@@ -123,7 +123,7 @@ export default function Pricing() {
                 </div>
                 <div className="flex-1 w-full">
                   <ButtonGold className="w-full text-[13px] md:text-[15px] py-5 tracking-[0.12em] font-black mb-4" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
-                    PREUZMI MIRAN LET — 19.99€
+                    PREUZMI MIRAN LET · 19.99€
                   </ButtonGold>
                   <p className="text-[#060A12]/40 text-[10px] font-bold tracking-widest uppercase text-center sm:text-left">
                     Bez pretplate. Bez dodatnih troškova.

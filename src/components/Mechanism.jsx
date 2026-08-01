@@ -1,322 +1,56 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Wind, Zap, ShieldCheck, Brain, Plane, Users, UserCheck, UserCircle, Play, Pause } from 'lucide-react';
+import React from 'react';
 
 export default function Mechanism() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [audioSeconds, setAudioSeconds] = useState(15);
-  const [audioRef, setAudioRef] = useState(null);
-
-  const handlePlayClick = () => {
-    if (isPlaying) {
-      setIsPlaying(false);
-      if (audioRef) {
-        try { audioRef.close(); } catch(e) {}
-        setAudioRef(null);
-      }
-    } else {
-      setIsPlaying(true);
-      setAudioSeconds(15);
-      
-      // Play Synthesized Calming Bell sound sequence
-      try {
-        const AudioContext = window.AudioContext || window.webkitAudioContext;
-        if (AudioContext) {
-          const ctx = new AudioContext();
-          setAudioRef(ctx);
-          
-          const playChime = (freq, time, duration) => {
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(freq, time);
-            gain.gain.setValueAtTime(0, time);
-            gain.gain.linearRampToValueAtTime(0.12, time + 0.1);
-            gain.gain.exponentialRampToValueAtTime(0.001, time + duration);
-            osc.start(time);
-            osc.stop(time + duration);
-          };
-          
-          const playSequence = () => {
-            const now = ctx.currentTime;
-            playChime(261.63, now, 2);       // C4
-            playChime(329.63, now + 0.5, 2); // E4
-            playChime(392.00, now + 1.0, 2); // G4
-            playChime(523.25, now + 1.5, 3); // C5
-          };
-          
-          playSequence();
-          
-          const seqInterval = setInterval(() => {
-            if (ctx.state === 'running') {
-              playSequence();
-            } else {
-              clearInterval(seqInterval);
-            }
-          }, 4000);
-        }
-      } catch (e) {
-        console.error("Audio Context failed", e);
-      }
-    }
-  };
-
-  useEffect(() => {
-    let timer;
-    if (isPlaying) {
-      timer = setInterval(() => {
-        setAudioSeconds(prev => {
-          if (prev <= 1) {
-            setIsPlaying(false);
-            if (audioRef) {
-              try { audioRef.close(); } catch(e) {}
-              setAudioRef(null);
-            }
-            return 15;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-    return () => {
-      clearInterval(timer);
-    };
-  }, [isPlaying, audioRef]);
-
   const steps = [
     {
-      title: "Smiruješ tijelo",
-      desc: "Ne pokušavaš na silu smiriti sebe. Prvo spustaš fizičku napetost kroz disanje, ritam i vođeni fokus.",
-      icon: Wind
+      num: "01 / PRIJE LETA",
+      title: "Priprema i disanje",
+      desc: "Brzi test tipa straha, 30-dnevni plan pripreme i vođena audio vježba disanja za regulaciju vagusnog živca danima unaprijed."
     },
     {
-      title: "Prekidaš spiralu misli",
-      desc: "Kad krene \"što ako...\", protokol ti daje sljedeći konkretan korak umjesto da ostaneš zarobljen u vlastitim mislima.",
-      icon: Zap
+      num: "02 / NA DAN LETA",
+      title: "CORE-7 SOS i Takeoff",
+      desc: "Takeoff protokol za preživljavanje najtežih prvih 10 minuta i CORE-7 SOS kartica s fizičkim alatima za trenutno smanjenje pulsa."
     },
     {
-      title: "Vraćaš kontrolu",
-      desc: "Dobivaš jednostavnu rutinu koju pratiš prije polijetanja, tokom leta i kad osjetiš da napetost raste.",
-      icon: ShieldCheck
-    }
-  ];
-
-  const pillars = [
-    {
-      tag: "Biologija",
-      title: "Smiruješ tijelo u samom trenutku",
-      desc: "Prvo radiš s tijelom, ne logikom. Nema čekanja da te netko 'uvjeri' da je sve u redu.",
-      icon: Brain
-    },
-    {
-      tag: "Logika",
-      title: "Imaš jasan i fiksan plan koraka",
-      desc: "Ne moraš improvizirati u avionu. Samo pratiš protokol i jasan plan korak po korak.",
-      icon: Plane
-    },
-    {
-      tag: "Praksa",
-      title: "Koristiš posve nevidljive alate",
-      desc: "Kratke mentalne upute i disanje. Radiš ih na sjedalu, bez da itko išta primijeti.",
-      icon: UserCheck
-    },
-    {
-      tag: "Rezultat",
-      title: "Testirano u stvarnim letovima",
-      desc: "Sada te ništa ne može iznenaditi: od ukrcaja i polijetanja do turbulencije i rasta napetosti.",
-      icon: UserCircle
+      num: "03 / U ZRAKU",
+      title: "Objašnjenje i turbulencija",
+      desc: "Avijacijska objašnjenja faza leta, sigurnosna statistika i turbulencijska kartica koja ti daje mir u trenutku kad avion počne podrhtavati."
     }
   ];
 
   return (
-    <>
-    <section className="py-24 md:py-36 px-6 lg:px-16 w-full bg-[#060A12] text-white overflow-hidden">
-      <div className="max-w-[1140px] mx-auto text-center">
-        
-        {/* HOW IT WORKS PART */}
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8 }}
-           viewport={{ once: true }}
-           className="mb-16 md:mb-24"
-        >
-          <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-black mb-4 block">KRAĆI PUT DO MIRA</span>
-          <h2 className="font-serif text-3xl md:text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
-            Kako točno<br /><span className="text-gold italic font-light">funkcionira protokol</span>
-          </h2>
-          <p className="text-white/60 text-lg md:text-xl font-light max-w-2xl mx-auto italic">
-            Ne moraš razmišljati što trebaš napraviti. Imaš jasan slijed koji te vodi.
-          </p>
-        </motion.div>
+    <section className="py-20 md:py-28 px-6 w-full bg-[#EAF4FD]">
+      <div className="max-w-[1100px] mx-auto text-center">
+        <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#4A5A68] mb-4 block">
+          STRUKTURA RJEŠENJA
+        </span>
+        <h2 className="font-serif text-3xl md:text-5xl font-semibold mb-6 text-[#16232F]">
+          Tri sustava za let bez straha
+        </h2>
+        <p className="text-[#4A5A68] text-lg max-w-2xl mx-auto mb-12 text-center">
+          Protokol koji uči tvoje tijelo sigurnosti i daje ti jasne korake za svaku fazu putovanja:
+        </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 text-center lg:text-left mb-20 md:mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
           {steps.map((step, i) => (
-            <motion.div
-              key={`step-${i}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white/5 border border-white/10 p-10 rounded-[40px] relative group hover:bg-white/[0.08] transition-all duration-500 flex flex-col items-center lg:items-start"
+            <div
+              key={i}
+              className="bg-white border border-[#E4E9EF] p-8 rounded-xl shadow-sm"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <step.icon className="w-8 h-8 text-gold" strokeWidth={1.5} />
-              </div>
-              
-              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-white">
+              <span className="text-[#4A5A68] font-sans font-semibold text-xs tracking-wider block mb-4">
+                {step.num}
+              </span>
+              <h3 className="font-serif text-2xl font-semibold mb-3 text-[#16232F]">
                 {step.title}
               </h3>
-              
-              <p className="text-white/50 text-sm md:text-base leading-relaxed">
+              <p className="text-[#4A5A68] text-base leading-relaxed">
                 {step.desc}
               </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    {/* SREDNJA SEKCIJA - ŠTO DOBIVAŠ */}
-    <section 
-      className="py-20 md:py-32 px-4 md:px-16 w-full relative overflow-hidden border-y border-gray-100/50 shadow-inner bg-[#FAFAF8]"
-    >
-      <div className="max-w-[1140px] mx-auto relative z-10 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#060A12] mb-12 md:mb-16 font-bold leading-[1.1] tracking-tight">
-          Tvoj komplet za mirniji let
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 md:mb-20 items-stretch">
-          {[
-            { 
-              title: "📖 PDF vodič", 
-              text: "Razumiješ što se događa u tijelu kad krene strah i kako se pripremiti prije nego sjedneš u avion." 
-            },
-            { 
-              title: "🎧 Audio protokol", 
-              text: "Vođeno slušanje koje pratiš u avionu kad osjetiš napetost, ubrzane misli ili potrebu da se smiriš.",
-              isAudio: true
-            },
-            { 
-              title: "🫁 Vježbe disanja", 
-              text: "Kratke tehnike koje možeš koristiti na sjedalu, bez da itko oko tebe primijeti." 
-            }
-          ].map((card, idx) => (
-            <div key={idx} className="bg-white p-8 md:p-10 rounded-[32px] shadow-xl border border-gray-100 text-center lg:text-left transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl flex flex-col items-center lg:items-start w-full">
-              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-5 text-[#060A12] leading-tight">
-                {card.title}
-              </h3>
-              <p className="text-[#060A12]/60 text-base md:text-lg leading-relaxed mb-6 flex-grow">
-                {card.text}
-              </p>
-              
-              {card.isAudio && (
-                <div className="mt-auto w-full pt-6 border-t border-gray-100 flex flex-col items-center lg:items-start gap-4">
-                  <button 
-                    onClick={handlePlayClick}
-                    className="flex items-center gap-3 bg-[#D4AF37]/10 hover:bg-[#D4AF37]/20 text-[#c5a133] px-5 py-3 rounded-full transition-all duration-300 group/btn"
-                  >
-                    <div className="w-8 h-8 rounded-full bg-[#D4AF37] flex items-center justify-center text-white shadow-md group-hover/btn:scale-105 transition-transform duration-300">
-                      {isPlaying ? <Pause className="w-4 h-4 fill-white" /> : <Play className="w-4 h-4 fill-white translate-x-[1px]" />}
-                    </div>
-                    <span className="text-xs font-black uppercase tracking-wider">
-                      {isPlaying ? `Slušaš uzorak (0:${audioSeconds.toString().padStart(2, '0')})` : "15s pregled — poslušaj kako zvuči"}
-                    </span>
-                  </button>
-                  <p className="text-[#060A12]/40 text-[10px] md:text-[11px] font-bold uppercase tracking-wider text-center lg:text-left">
-                    Umirujući glas koji te vodi kroz svaku fazu leta — od polijetanja do slijetanja.
-                  </p>
-                </div>
-              )}
             </div>
           ))}
         </div>
-
-        <div className="flex flex-col items-center">
-          <p className="text-[#060A12]/40 text-sm md:text-lg font-bold tracking-tight mb-8">
-            Dobivaš odmah nakon kupnje. Koristiš na mobitelu, prije i tokom leta.
-          </p>
-
-          <div className="mb-10 flex flex-col items-center gap-1.5">
-            <span className="bg-[#D4AF37]/10 text-[#c5a133] text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
-              Rani Pristup (Early Bird)
-            </span>
-            <span className="text-[#060A12] text-5xl md:text-6xl font-serif font-black tracking-tight mt-1">
-              19.99€
-            </span>
-            <span className="text-[#c5a133] text-[10px] font-black tracking-[0.2em] uppercase mt-1">jednokratna uplata</span>
-          </div>
-          
-          <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" className="group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-14 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 text-[14px] md:text-base">
-            <span>PREUZMI MIRAN LET — 19.99€</span>
-          </a>
-        </div>
       </div>
     </section>
-
-    {/* NASTAVAK - METODOLOGIJA */}
-    <section className="py-24 md:py-36 px-6 lg:px-16 w-full bg-[#060A12] text-white overflow-hidden">
-      <div className="max-w-[1140px] mx-auto text-center">
-
-        {/* METHODOLOGY PART */}
-        <motion.div
-           initial={{ opacity: 0, y: 20 }}
-           whileInView={{ opacity: 1, y: 0 }}
-           transition={{ duration: 0.8 }}
-           viewport={{ once: true }}
-           className="mb-12 md:mb-16"
-        >
-          <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-black mb-4 block">ZAŠTO POMAŽE</span>
-          <h2 className="font-serif text-3xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight tracking-tight">
-            Zašto ovaj pristup <span className="text-gold italic font-light">stvarno pomaže</span>
-          </h2>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 text-center mb-16 md:mb-20 items-stretch">
-          {pillars.map((pillar, i) => (
-            <motion.div
-              key={`pillar-${i}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-[40px] relative group hover:bg-white/[0.08] transition-all duration-500 flex flex-col items-center h-full"
-            >
-              <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-gold/10 flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500 shrink-0">
-                <pillar.icon className="w-7 h-7 md:w-8 md:h-8 text-gold" strokeWidth={1.5} />
-              </div>
-              
-              <span className="text-gold text-[10px] font-black tracking-[0.25em] uppercase mb-4 leading-none">
-                {pillar.tag}
-              </span>
-              
-              <h3 className="font-serif text-2xl md:text-3xl font-bold mb-4 text-white leading-tight">
-                {pillar.title}
-              </h3>
-              
-              <p className="text-white/50 text-sm md:text-base leading-relaxed mt-auto">
-                {pillar.desc}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-           initial={{ opacity: 0 }}
-           whileInView={{ opacity: 1 }}
-           transition={{ delay: 0.4 }}
-           viewport={{ once: true }}
-           className="mt-8 md:mt-16 p-8 md:p-12 bg-gold/5 rounded-[40px] border border-gold/20 inline-block"
-        >
-          <p className="text-gold text-lg md:text-2xl font-bold italic leading-relaxed text-center">
-            Zato djeluje i kada ti obični savjeti već ne pomažu.
-          </p>
-        </motion.div>
-
-      </div>
-    </section>
-    </>
   );
 }

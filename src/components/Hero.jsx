@@ -1,71 +1,53 @@
 import React from 'react';
-import { Check } from 'lucide-react';
-import { motion } from 'framer-motion';
-
-const ButtonGold = ({ children, className = '', href = 'https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97' }) => (
-  <a href={href} className={`group inline-flex items-center justify-center bg-[#D4AF37] text-white font-bold uppercase tracking-[0.08em] py-5 px-10 md:px-12 rounded-xl transition-all duration-500 shadow-lg shadow-gold/25 hover:shadow-2xl hover:shadow-gold/40 hover:bg-[#c5a133] hover:-translate-y-1 ${className}`}>
-    <span>{children}</span>
-  </a>
-);
 
 export default function Hero() {
   return (
-    <section
-      className="relative min-h-[95vh] md:min-h-[100vh] flex flex-col items-center px-4 md:px-6 text-center overflow-hidden"
-      style={{
-        backgroundImage: `
-          linear-gradient(to bottom, rgba(6,10,18,0.72) 0%, rgba(6,10,18,0.58) 40%, rgba(6,10,18,0.85) 100%),
-          url(/hero.png)
-        `,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center 40%',
-      }}
-    >
-      <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        className="relative z-10 w-full max-w-4xl flex-1 flex flex-col items-center justify-between pt-24 md:pt-40 pb-12 md:pb-20"
-      >
-        {/* TOP BLOCK */}
-        <div className="flex flex-col items-center mb-auto">
-          <span className="text-gold uppercase tracking-[0.25em] md:tracking-[0.35em] text-[10px] md:text-[12px] font-black mb-10 md:mb-12 inline-block">
-            MIRAN LET PROTOKOL
-          </span>
+    <header className="relative pt-32 pb-20 md:pt-40 md:pb-24 px-6 text-center overflow-hidden bg-gradient-to-b from-[#A8D4F7] via-[#EAF4FD] to-[#F7F5F0]">
+      {/* Header Logo */}
+      <div className="absolute top-8 left-8 md:left-12 flex items-center gap-3">
+        <img src="/logo-ml.jpg" alt="Miran Let Logo" className="h-[52px] w-auto rounded-xl shadow-md" />
+      </div>
 
-          <div className="flex flex-col gap-10 md:gap-12 max-w-3xl mx-auto text-center px-2">
-            <h1 className="font-serif text-white text-3xl md:text-5xl lg:text-7xl font-bold leading-[1.3] md:leading-[1.15] tracking-tight drop-shadow-xl max-w-[320px] md:max-w-none mx-auto">
-              Uđi u avion s osjećajem kontrole.<br />
-              <span className="text-gold text-lg md:text-2xl font-light italic mt-8 md:mt-8 block tracking-wide normal-case drop-shadow-none leading-relaxed">
-                Audio protokol i vodič koji ti normalno objašnjava što se događa u avionu — i daje alat koji koristiš u trenutku straha. Bez tableta. Bez terapije. Bez čekanja.
-              </span>
-            </h1>
-          </div>
+      <div className="max-w-[1100px] mx-auto flex flex-col items-center">
+        <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#4A5A68] mb-4 block">
+          VODIČ ZA SIGURNO PUTOVANJE
+        </span>
+
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.15] text-[#16232F] mb-5 max-w-[900px] mx-auto text-center">
+          Uđi u avion s osjećajem kontrole.
+        </h1>
+
+        <p className="font-sans text-lg sm:text-xl md:text-2xl text-[#4A5A68] max-w-[750px] mx-auto mb-8 font-normal leading-[1.65] text-center">
+          Audio protokol i vodič koji ti normalno objašnjava što se događa u avionu, i daje alat koji koristiš u trenutku straha. Bez tableta. Bez terapije. Bez čekanja.
+        </p>
+
+        <div className="font-sans text-3xl md:text-4xl font-semibold text-[#16232F] mb-4">
+          Samo 19,99 €
         </div>
 
-        {/* BOTTOM BLOCK */}
-        <div className="flex flex-col items-center w-full max-w-[320px] md:max-w-none mt-12 md:mt-24">
-          {/* Urgency Bar */}
-          <div className="w-full sm:w-auto bg-[#D4AF37] text-[#060A12] text-[11px] md:text-xs font-bold py-3 px-6 md:px-10 rounded-lg mb-5 text-center shadow-lg uppercase tracking-wider">
-            Sljedeći let uskoro? Preuzmi protokol danas i pripremi se na vrijeme.
-          </div>
-          <ButtonGold className="w-full sm:w-auto text-[14px] md:text-[16px] py-6 px-12 md:px-20 uppercase tracking-[0.15em] font-black" href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97">
-            PREUZMI MIRAN LET — 19.99€
-          </ButtonGold>
-          
-          <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-white/60 text-[10px] md:text-[11px] font-bold tracking-widest uppercase">
-            <span className="flex items-center gap-3">
-              <span className="text-gold text-lg">✔</span> Koristiš čim osjetiš da napetost raste
-            </span>
-            <span className="flex items-center gap-3">
-              <span className="text-gold text-lg">✔</span> Smiruje tijelo bez forsiranja
-            </span>
-            <span className="flex items-center gap-3">
-              <span className="text-gold text-lg">✔</span> Pristup odmah na mobitel
-            </span>
-          </div>
+        <a 
+          href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" 
+          className="inline-flex items-center justify-center bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-lg uppercase tracking-[0.08em] py-5 px-10 md:px-12 rounded-xl transition-all duration-300 shadow-lg shadow-[#C8A84A]/25 hover:-translate-y-0.5 w-full sm:w-auto"
+        >
+          PREUZMI MIRAN LET · 19,99 €
+        </a>
+
+        <div className="text-sm text-[#4A5A68] mt-3.5 font-medium">
+          Pristup odmah nakon uplate · Jamstvo do tvog leta
         </div>
-      </motion.div>
-    </section>
+
+        <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm font-semibold text-[#4A5A68]">
+          <span><span className="text-[#16232F]">✓</span> Pristup odmah</span>
+          <span>·</span>
+          <span><span className="text-[#16232F]">✓</span> PDF + MP3</span>
+          <span>·</span>
+          <span><span class="text-[#16232F]">✓</span> Sigurno plaćanje</span>
+        </div>
+
+        <div className="max-w-[680px] w-full mt-12 rounded-xl overflow-hidden shadow-xl border border-[#E4E9EF] bg-white p-2">
+          <img src="/landing-pages/bez-tableta/hero-bez-tableta.jpg" alt="Miran Let Hero" className="w-full h-auto block rounded-lg object-cover" />
+        </div>
+      </div>
+    </header>
   );
 }

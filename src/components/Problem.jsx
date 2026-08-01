@@ -1,58 +1,51 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 export default function Problem() {
   return (
-    <section className="py-16 md:py-36 px-6 lg:px-16 w-full bg-white relative">
-      <div className="max-w-[1140px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <section className="py-20 md:py-28 px-6 w-full bg-[#F7F5F0]">
+      <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <div className="order-1 text-left">
+          <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#4A5A68] mb-4 block">
+            PROBLEM I PRITISAK
+          </span>
 
-        {/* Image - Moved to left on desktop */}
-        <motion.div 
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="order-2 lg:order-1 relative"
-        >
-          <div className="rounded-3xl overflow-hidden shadow-2xl shadow-navy/15 relative aspect-[3/4] max-h-[500px]">
-            <img
-              src="/problem.png"
-              alt="Intimno, emocionalno iskustvo leta"
-              className="w-full h-full object-cover grayscale-[30%] contrast-[1.05]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/30 via-transparent to-navy/10" />
-          </div>
-        </motion.div>
-
-        {/* Text */}
-        <div className="order-1 lg:order-2 text-center lg:text-left">
-          <h2 className="font-serif text-3xl md:text-5xl text-[#060A12] mb-10 font-bold leading-[1.15] tracking-tight">
+          <h2 className="font-serif text-3xl md:text-5xl text-[#16232F] mb-6 font-semibold leading-[1.2]">
             Ako te strah uhvati čim se vrata zatvore...
           </h2>
 
-          <p className="text-[#060A12]/80 text-xl font-medium mb-12 italic border-l-0 lg:border-l-4 lg:pl-6 leading-relaxed">
-            Tijelo se napne, misli krenu ubrzano, a ti pokušavaš ostati smiren iako znaš da je let siguran.
-          </p>
+          <div className="space-y-4 text-[#4A5A68] text-lg leading-relaxed mb-6">
+            <p>Tijelo se napne, misli krenu ubrzano, a ti pokušavaš ostati smiren iako znaš da je let siguran.</p>
+            <p>Iscrpljujuće je glumiti staloženost dok iznutra proživljavaš unutrašnju oluju i brojiš minute do slijetanja.</p>
+          </div>
 
-          <div className="space-y-8 flex flex-col items-center lg:items-start">
-            <div className="w-full">
-              <span className="text-gold uppercase tracking-[0.25em] text-[11px] font-black mb-6 block text-center lg:text-left">VJEROJATNO TI JE POZNATO:</span>
-              <ul className="space-y-4 flex flex-col items-center lg:items-start">
-                {['pratiš svaki zvuk u avionu', 'teško se opuštaš u sjedalu', 'stalno tražiš znak da je sve u redu', 'želiš samo da let što prije završi'].map((item, idx) => (
-                  <li key={idx} className="flex gap-4 items-center text-[#060A12]/80 text-lg font-bold">
-                    <div className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <ul className="space-y-3 mb-8">
+            {[
+              'Pratiš svaki nepoznati zvuk u avionu',
+              'Teško se opuštaš u sjedalu',
+              'Stalno tražiš znak da je sve u redu',
+              'Želiš samo da let što prije završi'
+            ].map((item, idx) => (
+              <li key={idx} className="flex gap-3 items-center text-[#16232F] font-semibold text-lg">
+                <span className="text-[#16232F] font-bold">✓</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
 
-            <p className="text-[#060A12] text-xl md:text-2xl leading-relaxed font-bold mt-12 bg-gold/10 p-8 rounded-2xl border border-gold/20 w-full text-center lg:text-left">
-              Ali to nije znak slabosti.<br />
-              <span className="text-gold italic underline decoration-1 underline-offset-8">Znači da tvoje tijelo treba jasan signal sigurnosti u pravom trenutku.</span>
-            </p>
+          <div className="bg-[#EAF4FD] border-l-4 border-[#16232F] p-6 rounded-r-xl font-semibold text-lg text-[#16232F] leading-relaxed">
+            Nije problem u tome što se bojiš. Problem je što način na koji rješavaš strah uzima previše od tvog putovanja.
           </div>
         </div>
+
+        <div className="order-2 relative border border-[#E4E9EF] bg-white p-2 rounded-xl shadow-lg">
+          <img
+            src="/problem.png"
+            alt="Iskustvo leta"
+            className="w-full h-auto object-cover rounded-lg block"
+          />
+        </div>
+
       </div>
     </section>
   );

@@ -4,18 +4,18 @@ function FaqItem({ question, answer, last = false }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className={`group ${!last ? 'border-b border-gray-100' : ''}`}>
+    <div className={`group ${!last ? 'border-b border-[#E4E9EF]' : ''}`}>
       <button
-        className="w-full flex justify-between items-center py-6 px-7 text-left focus:outline-none"
+        className="w-full flex justify-between items-center py-5 px-6 text-left focus:outline-none"
         onClick={() => setOpen(!open)}
       >
-        <span className="font-serif text-[16px] md:text-[17px] text-[#060A12] group-hover:text-gold transition-colors pr-6 font-bold leading-snug">{question}</span>
-        <span className={`text-2xl text-[#D4AF37] font-light transition-transform duration-300 shrink-0 leading-none select-none ${open ? 'rotate-45' : ''}`}>
+        <span className="font-sans text-[17px] text-[#16232F] font-semibold pr-6">{question}</span>
+        <span className={`text-xl text-[#4A5A68] transition-transform duration-300 shrink-0 select-none ${open ? 'rotate-45' : ''}`}>
           +
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-500 ease-in-out ${open ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
-        <p className="text-[#060A12]/65 leading-relaxed font-light text-[15px] px-7 pr-12">{answer}</p>
+      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-96 opacity-100 pb-5 px-6' : 'max-h-0 opacity-0'}`}>
+        <p className="text-[#4A5A68] leading-relaxed text-[15px]">{answer}</p>
       </div>
     </div>
   );
@@ -24,46 +24,42 @@ function FaqItem({ question, answer, last = false }) {
 export default function FAQ() {
   const questions = [
     {
-      question: "Da li je audio na hrvatskom/srpskom/bosanskom?",
-      answer: "Da, cijeli audio protokol je snimljen na hrvatskom jeziku, razumljiv svim govornicima hrvatskog, srpskog i bosanskog."
+      question: "Je li audio na hrvatskom jeziku?",
+      answer: "Da, cijeli audio protokol je snimljen na hrvatskom jeziku, razumljiv svim govornicima u regiji."
     },
     {
       question: "Treba li mi internet u avionu?",
-      answer: "Ne. Sve materijale preuzimaš prije leta — PDF vodič i audio protokol rade offline, bez interneta, bez WiFi-a."
+      answer: "Ne. Sve materijale preuzimaš prije leta. PDF vodič i audio protokol rade offline na tvom mobitelu, bez interneta i bez WiFi mreže."
     },
     {
       question: "Koliko traje audio protokol?",
-      answer: "Glavni audio protokol traje oko 20 minuta, što odgovara duljini većine letova na Balkanu. Dodatni audio materijali pokrivaju specifične situacije (turbulencija, slijetanje, čekanje na pisti)."
+      answer: "Glavni audio protokol traje oko 20 minuta. Dodatni audio materijali pokrivaju specifične situacije kao što su turbulencija, polijetanje i čekanje na pisti."
     },
     {
       question: "Pomaže li ovo kod teške fobije?",
-      answer: "Miran Let je dizajniran za ljude koji se boje letenja — od blage nelagode do izraženog straha. Nije zamjena za stručnu psihološku pomoć. Ako tvoj strah sprječava svakodnevno funkcioniranje, preporučujemo da se posavjetuješ s licenciranim terapeutom."
+      answer: "Miran Let je dizajniran za ljude koji se boje letenja, od blage nelagode do izraženog straha. Nije zamjena za stručnu psihološku pomoć. Ako tvoj strah sprječava svakodnevno funkcioniranje, preporučujemo posjet licenciranom terapeutu."
     },
     {
       question: "Što ako ne pomogne?",
-      answer: "Postoji garancija povrata novca. Ako nakon sljedećeg leta ne osjećaš nikakvo poboljšanje, javi se i vraćamo ti novac — bez pitanja."
+      answer: "Postoji jamstvo povrata novca. Ako nakon sljedećeg leta kažeš da ti nije pomoglo, javi se i novac se vraća, bez pitanja."
     },
     {
       question: "Mogu li slušati s običnim slušalicama u avionu?",
-      answer: "Da. Bilo koje žične ili bežične slušalice rade savršeno. Preporučujemo slušalice koje pokrivaju uši za bolje izoliranje od buke motora."
-    },
-    {
-      question: "Radi li ovo za djecu?",
-      answer: "Audio protokol je namijenjen odraslima. Djeca mogu slušati uz pratnju roditelja, ali vodič je pisan jezikom i tonom prilagođenim odraslima."
+      answer: "Da. Bilo koje žične ili bežične slušalice rade savršeno čim preuzmeš MP3 zvučne zapise."
     }
   ];
 
   return (
-    <section className="py-24 md:py-32 px-6 w-full bg-[#FAFAF8]" id="faq">
+    <section className="py-20 md:py-28 px-6 w-full bg-[#F7F5F0]" id="faq">
       <div className="max-w-[720px] mx-auto text-left">
-        <div className="text-center mb-14">
-          <span className="text-[#D4AF37] uppercase tracking-[0.25em] text-[10px] font-bold mb-5 block">ČESTA PITANJA</span>
-          <h2 className="font-serif text-3xl md:text-4xl text-[#060A12] font-bold leading-[1.15]">
+        <div className="text-center mb-10">
+          <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#4A5A68] mb-3 block">ČESTA PITANJA</span>
+          <h2 className="font-serif text-3xl md:text-4xl text-[#16232F] font-semibold">
             Često postavljana pitanja
           </h2>
         </div>
 
-        <div className="bg-white rounded-[24px] border border-gray-100 shadow-sm overflow-hidden">
+        <div className="bg-white rounded-xl border border-[#E4E9EF] overflow-hidden">
           {questions.map((q, idx) => (
             <FaqItem
               key={idx}

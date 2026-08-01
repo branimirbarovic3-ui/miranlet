@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="hr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Miran Let | Dvadeset godina autom. Sat i pol zrakoplovom.</title>
+    <meta name="description" content="Miran Let je praktičan PDF i audio protokol koji vam vraća slobodu brzog i ugodnog putovanja avionom bez straha i iscrpljujućih vožnji autom.">
+    <link rel="icon" type="image/jpeg" href="/logo-ml.jpg" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --sky-primary:    #4DA6F0;
+            --sky-light:      #A8D4F7;
+            --sky-wash:       #EAF4FD;
+            --cream:          #F7F5F0;
+            --gold:           #C8A84A;
+            --gold-hover:     #B8983A;
+            --ink:            #16232F;
+            --ink-soft:       #4A5A68;
+            --white:          #FFFFFF;
+            --border-light:   #E4E9EF;
+            
+            --font-serif:     'Cormorant Garamond', Georgia, serif;
+            --font-sans:      'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --border-radius:  12px;
+            --transition:     all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-sans); color: var(--ink); line-height: 1.7; background-color: var(--cream); overflow-x: hidden; -webkit-font-smoothing: antialiased; font-size: 1.1rem; }
+        h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 1.25; color: var(--ink); }
+        p { font-size: 1.1rem; color: var(--ink-soft); text-align: left; max-width: 65ch; line-height: 1.7; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        .section-padding { padding: 96px 0; }
+        @media (max-width: 768px) { .section-padding { padding: 64px 0; } }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .eyebrow { font-family: var(--font-sans); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-soft); display: block; margin-bottom: 16px; }
+
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            background-color: var(--gold); color: var(--ink) !important;
+            padding: 18px 42px; min-height: 56px; border-radius: var(--border-radius);
+            text-decoration: none; font-weight: 700; font-size: 1.1rem;
+            text-transform: uppercase; letter-spacing: 0.08em;
+            transition: var(--transition); border: none; cursor: pointer;
+            box-shadow: 0 6px 20px rgba(200, 168, 74, 0.25); text-align: center; width: fit-content;
+        }
+        .btn:hover { background-color: var(--gold-hover); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(200, 168, 74, 0.35); }
+        @media (max-width: 768px) { .btn { width: 100%; } }
+
+        #sticky-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--white);
+            padding: 12px 20px; z-index: 1000; transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            border-top: 1px solid var(--border-light); box-shadow: 0 -4px 20px rgba(22, 35, 47, 0.08);
+            display: flex; justify-content: space-between; align-items: center; gap: 15px;
+        }
+        #sticky-bar.visible { transform: translateY(0); }
+        #sticky-bar .price-tag { font-family: var(--font-sans); font-weight: 600; font-size: 1.3rem; color: var(--ink); }
+        #sticky-bar .btn { padding: 12px 20px; min-height: 44px; font-size: 0.9rem; width: auto; }
+        @media (min-width: 769px) { #sticky-bar { display: none !important; } }
+
+        .hero {
+            position: relative; padding: 140px 0 90px;
+            background: linear-gradient(180deg, var(--sky-light) 0%, var(--sky-wash) 50%, var(--cream) 100%);
+            color: var(--ink); text-align: center; overflow: hidden;
+        }
+        .hero-logo { position: absolute; top: 30px; left: 40px; display: flex; align-items: center; gap: 12px; }
+        .hero-logo img { height: 52px; width: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(22, 35, 47, 0.08); }
+        @media (max-width: 768px) { .hero-logo { position: relative; top: 0; left: 0; justify-content: center; margin-bottom: 30px; } }
+
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.4rem); line-height: 1.15; color: var(--ink); margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto; text-align: center; }
+        .hero p.lead { font-size: clamp(1.15rem, 2vw, 1.35rem); color: var(--ink-soft); max-width: 750px; margin: 0 auto 30px; font-weight: 400; line-height: 1.65; text-align: center; }
+        
+        .hero-price { font-family: var(--font-sans); font-size: 2.3rem; font-weight: 600; color: var(--ink); margin-bottom: 12px; }
+        .micro-trust { font-size: 0.95rem; color: var(--ink-soft); margin-top: 14px; font-weight: 500; }
+
+        .trust-row { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 25px; font-size: 0.95rem; font-weight: 600; color: var(--ink-soft); flex-wrap: wrap; }
+        .trust-row span.check { color: var(--ink); }
+
+        .hero-image-container {
+            max-width: 680px; margin: 50px auto 0; border-radius: var(--border-radius);
+            overflow: hidden; box-shadow: 0 15px 40px rgba(22, 35, 47, 0.08);
+            border: 1px solid var(--border-light); background: var(--white); padding: 8px;
+        }
+        .hero-image-container img { width: 100%; display: block; object-fit: cover; border-radius: 8px; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 50px; align-items: center; }
+        @media (min-width: 768px) { .grid-2 { grid-template-columns: 1.1fr 0.9fr; gap: 70px; } }
+        .section-title { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 24px; line-height: 1.2; color: var(--ink); text-align: center; }
+
+        .bullet-list { list-style: none; margin-top: 28px; margin-bottom: 32px; display: flex; flex-direction: column; gap: 14px; }
+        .bullet-list li { position: relative; padding-left: 28px; font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.5; text-align: left; }
+        .bullet-list li::before { content: "✓"; position: absolute; left: 0; top: -1px; color: var(--ink); font-weight: 700; font-size: 1.1rem; }
+
+        .highlight-box {
+            margin-top: 32px; background-color: var(--sky-wash); border-left: 4px solid var(--ink);
+            padding: 24px 28px; border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-weight: 600; font-size: 1.1rem; color: var(--ink); line-height: 1.7; text-align: left;
+        }
+        .problem-image-wrapper { position: relative; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-light); background: var(--white); padding: 8px; }
+        .problem-image-wrapper img { width: 100%; height: auto; display: block; object-fit: cover; border-radius: 8px; }
+
+        .cards-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+        @media (min-width: 768px) { .cards-grid.col-3 { grid-template-columns: repeat(3, 1fr); } .cards-grid.col-2 { grid-template-columns: repeat(2, 1fr); } }
+
+        .card-bright {
+            background: var(--white); border: 1px solid var(--border-light);
+            padding: 40px; border-radius: var(--border-radius); transition: var(--transition);
+            position: relative; text-align: left;
+        }
+        .card-number { font-size: 1.2rem; font-family: var(--font-sans); color: var(--ink-soft); font-weight: 600; margin-bottom: 16px; display: block; letter-spacing: 0.08em; }
+        .card-bright h3 { color: var(--ink); font-size: 1.45rem; margin-bottom: 14px; text-align: left; }
+        .card-bright p { color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; text-align: left; }
+
+        .pricing-card-wrapper {
+            max-width: 650px; margin: 35px auto 0; background: var(--white);
+            border: 1px solid var(--border-light); border-radius: 16px;
+            padding: 48px 40px; text-align: center; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.04);
+        }
+        @media (max-width: 768px) { .pricing-card-wrapper { padding: 28px 20px; } }
+        
+        .price-comparison-inside { font-size: 0.95rem; color: var(--ink-soft); margin-bottom: 20px; text-align: center; }
+        .price-new { font-size: 44px; color: var(--ink); font-weight: 600; font-family: var(--font-sans); line-height: 1; margin-bottom: 8px; }
+        .price-subtext { font-size: 15px; color: var(--ink-soft); margin-bottom: 32px; text-align: center; }
+        
+        .pricing-features-list { text-align: left; max-width: 440px; margin: 0 auto 32px; list-style: none; }
+        .pricing-features-list li { position: relative; padding-left: 28px; margin-bottom: 16px; font-weight: 600; color: var(--ink); font-size: 1.1rem; }
+        .pricing-features-list li::before { content: "✓"; position: absolute; left: 0; color: var(--ink); font-weight: 700; font-size: 1.1rem; }
+
+        .guarantee-card {
+            max-width: 650px; margin: 30px auto 0; background: var(--white);
+            border: 1px solid var(--border-light); border-radius: 16px; padding: 36px 32px;
+            text-align: left;
+        }
+        .guarantee-card h3 { font-family: var(--font-serif); font-size: 1.8rem; color: var(--ink); margin-bottom: 12px; }
+        .guarantee-card p { font-size: 1.1rem; color: var(--ink); font-weight: 500; margin-bottom: 10px; }
+        .guarantee-card p.sub-legal { font-size: 0.95rem; color: var(--ink-soft); font-weight: 400; margin: 0; }
+
+        .faq-accordion { max-width: 750px; margin: 40px auto 0; }
+        .faq-item { border-bottom: 1px solid var(--border-light); padding: 24px 0; }
+        .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1.15rem; color: var(--ink); cursor: pointer; user-select: none; gap: 20px; transition: var(--transition); text-align: left; }
+        .faq-icon { font-size: 1.5rem; font-family: monospace; color: var(--ink-soft); transition: transform 0.3s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease; color: var(--ink-soft); font-size: 1.05rem; line-height: 1.65; padding-right: 30px; text-align: left; }
+        .faq-item.active .faq-answer { max-height: 500px; padding-top: 16px; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+        .final-cta {
+            position: relative; background: linear-gradient(180deg, var(--sky-light) 0%, var(--cream) 100%);
+            color: var(--ink); text-align: center;
+        }
+        .final-cta h2 { color: var(--ink); font-size: clamp(2.2rem, 5vw, 3.5rem); margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; }
+        .final-cta p.subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--ink-soft); margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; text-align: center; }
+
+        footer { background-color: var(--ink); color: #8C9BA8; padding: 60px 0; text-align: center; font-size: 0.95rem; line-height: 1.8; }
+        footer a { color: var(--white); text-decoration: none; margin: 0 10px; font-weight: 500; }
+        footer a:hover { color: var(--sky-light); }
+    </style>
+</head>
+<body>
+    <div id="sticky-bar">
+        <span class="price-tag">19,99 €</span>
+        <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn">PREUZMI · 19,99 €</a>
+    </div>
+
+    <header class="hero">
+        <div class="hero-logo">
+            <img src="/logo-ml.jpg" alt="Miran Let Logo">
+        </div>
+        
+        <div class="container">
+            <span class="eyebrow">VODIČ ZA POVRATAK SLOBODE PUTOVANJA</span>
+            <h1>Dvadeset godina autom. Sat i pol zrakoplovom.</h1>
+            <p class="lead">Praktičan vodič koji ti daje konkretne alate da prevladaš dvadesetogodišnje izbjegavanje letenja i ponovno otkriješ brzinu i udobnost putovanja.</p>
+            
+            <div class="hero-price">Samo 19,99 €</div>
+            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn">PREUZMI MIRAN LET · 19,99 €</a>
+            <div class="micro-trust">Pristup odmah nakon uplate · Jamstvo do tvog leta</div>
+            
+            <div class="trust-row">
+                <span><span class="check">✓</span> Pristup odmah</span>
+                <span>·</span>
+                <span><span class="check">✓</span> PDF + MP3</span>
+                <span>·</span>
+                <span><span class="check">✓</span> Sigurno plaćanje</span>
+            </div>
+            
+            <div class="hero-image-container">
+                <img src="/landing-pages/dvadeset-godina/hero-dvadeset-godina.jpg" alt="Dvadeset godina autom. Sat i pol zrakoplovom. - Ad Creative">
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding bg-cream">
+        <div class="container">
+            <div class="grid-2">
+                <div class="problem-content">
+                    <h2 class="section-title text-left">Navika izbjegavanja</h2>
+                    <div class="problem-body">
+                        <p>Već godinama biraš cestu umjesto zraka. Voziš 14 sati do Italije ili Njemačke umjesto leta od sat i pol. Nagovaraš obitelj da se ide autom i pronalaziš opravdanja u 'volim vidjeti krajolik'.</p>
+                        <p>Ali duboko u sebi znaš da izbjegavaš letenje samo zbog osjećaja gubitka kontrole u zraku. To ograničava tvoje vrijeme, odmor i životne prilike.</p>
+                    </div>
+                    
+                    <ul class="bullet-list">
+                        <li>Duga, iscrpljujuća putovanja automobilom</li>
+                        <li>Ograničen izbor destinacija za odmor</li>
+                        <li>Osjećaj da te strah spriječava da putuješ slobodno</li>
+                        <li>Postupni gubitak samopouzdanja prije svakog putovanja</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        Izbjegavanje utvrđuje strah. Kada jednom prođeš kroz strukturirani protokol smirivanja, shvatit ćeš da je letenje ugodan i brz izbor.
+                    </div>
+                </div>
+                
+                <div class="problem-image-wrapper">
+                    <img src="/problem.png" alt="Driving vs Flying comparison">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Offer Section (Background: Sky-Wash) -->
+    <section id="kupnja" class="section-padding bg-sky-wash">
+        <div class="container text-center">
+            <span class="eyebrow">KOMPLETAN PAKET</span>
+            <h2 class="section-title">Tvoj komplet za mirniji let</h2>
+            
+            <div style="max-width: 540px; margin: 30px auto 20px auto; border-radius: var(--border-radius); overflow: hidden; border: 1px solid var(--border-light); background: var(--white); padding: 12px;">
+                <img src="/bundle.png" alt="Miran Let Bundle Digital Mockup" style="width: 100%; display: block; border-radius: 8px;">
+            </div>
+
+            <div class="pricing-card-wrapper">
+                <p class="price-comparison-inside">Seminari protiv straha od letenja koštaju 300–500 €. Jedan sat kod terapeuta 40–60 €.</p>
+                <div class="price-new">19,99 €</div>
+                <p class="price-subtext">Jednokratno plaćanje. Bez pretplate.</p>
+                
+                <ul class="pricing-features-list">
+                    <li>PDF vodič (43 stranice)</li>
+                    <li>9 bonus materijala: kartice, planovi, rječnik i audio protokol</li>
+                    <li>Trenutačan pristup nakon uplate</li>
+                    <li>Trajna, doživotna licenca</li>
+                </ul>
+
+                <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn" style="width: 100%;">PREUZMI MIRAN LET · 19,99 €</a>
+            </div>
+
+            <div class="guarantee-card">
+                <h3>Leti s njim</h3>
+                <p>Leti s njim. Ako nakon leta kažeš da nije pomoglo, novac se vraća, bez pitanja.</p>
+                <p class="sub-legal">Zakonskih 14 dana vrijedi uz to.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honest New Product Notice -->
+    <section class="section-padding bg-white">
+        <div class="container" style="max-width: 760px; margin: 0 auto; text-align: center;">
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 600; margin-bottom: 15px; color: var(--ink);">Ovo je nov proizvod</h3>
+            <p style="color: var(--ink-soft); font-size: 1.05rem; line-height: 1.8; margin: 0 auto; text-align: center; max-width: 65ch;">
+                Nema stotine recenzija i neće ih biti dok ih ljudi stvarno ne napišu, izmišljati ih nećemo. Zato jamstvo stoji onako kako piše: leti s njim, i ako kažeš da nije pomoglo, novac se vraća.
+            </p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-sky-wash">
+        <div class="container text-center">
+            <span class="eyebrow">SUSTAV ZA POVRATAK</span>
+            <h2 class="section-title">Tri sustava za novi početak</h2>
+            <p class="section-subtitle" style="margin-left: auto; margin-right: auto; max-width: 700px; text-align: center;">
+                Protokol osmišljen da postupno obnovi povjerenje u zrakoplov i tvoju reakciju:
+            </p>
+            
+            <div class="cards-grid col-3" style="text-align: left; margin-top: 45px;">
+                <div class="card-bright">
+                    <span class="card-number">01 / PRIJE LETA</span>
+                    <h3>Mentalna rekonekcija</h3>
+                    <p>Brzi test tipa straha, 30-dnevna priprema i vođeni audio zapisi disanja za razbijanje starih obrazaca panike.</p>
+                </div>
+                
+                <div class="card-bright">
+                    <span class="card-number">02 / NA DAN LETA</span>
+                    <h3>CORE-7 i Takeoff</h3>
+                    <p>Takeoff protokol i CORE-7 SOS kartica s fizičkim tehnikama smirivanja pulsa u trenutku ukrcaja i polijetanja.</p>
+                </div>
+                
+                <div class="card-bright">
+                    <span class="card-number">03 / U ZRAKU</span>
+                    <h3>Sigurnost i statistika</h3>
+                    <p>Avijacijska objašnjenja faza leta, fizika letenja i turbulencijska kartica za potpuni unutrašnji mir na 10.000 metara.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container" style="max-width: 760px; margin: 0 auto;">
+            <span class="eyebrow text-center">TKO STOJI IZA PROJEKTA</span>
+            <h2 class="section-title text-center" style="margin-bottom: 30px;">Zašto postoji Miran Let</h2>
+            
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+                <div style="text-align: center;">
+                    <div style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto 15px auto; border: 1px solid var(--border-light);">
+                        <img src="/brane.png" alt="Brane - Autor" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <span style="font-weight: 700; font-size: 1.1rem; color: var(--ink); display: block;">Brane</span>
+                    <span class="eyebrow" style="margin-bottom: 0;">AUTOR PROTOKOLA</span>
+                </div>
+                
+                <div style="font-size: 1.1rem; line-height: 1.8; color: var(--ink-soft); text-align: left;">
+                    <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.35rem; color: var(--ink); border-left: 4px solid var(--ink); padding-left: 18px; margin-bottom: 25px;">Ovo nije nastalo iz tečaja. Niti iz diplome.</p>
+                    <p style="margin-bottom: 20px;">Nastalo je zato što sam se i sam borio s odgađanjem i biranjem ceste. Želio sam praktičan alat koji vraća slobodu brzog putovanja bez straha.</p>
+                    <p style="font-weight: 700; color: var(--ink); margin-top: 20px;">Cilj nije eliminirati strah. Cilj je naučiti letjeti s njim.</p>
+                </div>
+            </div>
+
+            <p style="color: var(--ink-soft); font-size: 0.95rem; font-style: italic; line-height: 1.65; max-width: 680px; margin: 35px auto 0; text-align: center; border-top: 1px solid var(--border-light); padding-top: 24px;">
+                *Napomena: Miran Let je edukativni alat baziran na osobnom istraživanju i iskustvu autora. Nije medicinski tretman, psihološka terapija ni zamjena za stručnu pomoć. Ako tvoj strah značajno utječe na svakodnevni život, preporučujemo da se posavjetuješ s licenciranim stručnjakom.*
+            </p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-cream" id="faq">
+        <div class="container" style="max-width: 720px; margin: 0 auto;">
+            <h2 class="section-title text-center" style="margin-bottom: 30px; color: var(--ink);">Česta pitanja</h2>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question"><span>Nisam letio 10+ godina, hoće li mi ovo pomoći?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Da. Vodič započinje sa 30-dnevnim planom pripreme koji postupno navikava živčani sustav na misao o letenju i smanjuje iznenadnu paniku.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Što ako uđem u avion i poželim izaći?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">CORE-7 SOS kartica ti daje točno 7 koraka koje radiš čim sedneš u sjedalo kako bi zadržao staloženost i kontrolu nad pulsom.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Kako mogu pristupiti materijalima nakon uplate?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Odmah po završetku uplate dobivaš direktan link za preuzimanje na svoj email i ekran. Sve datoteke (PDF i MP3) možeš jednostavno spremiti izravno na mobitel, tablet ili računalo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Trebam li instalirati neku posebnu aplikaciju?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Ne. PDF vodič se otvara u bilo kojem pregledniku ili aplikaciji za dokumente, a MP3 audio zapisi reproduciraju se u standardnom glazbenom igraču tvog mobitela čim ih preuzmeš.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span>Koliko dugo imam pristup materijalima?</span><span class="faq-icon">+</span></div>
+                    <div class="faq-answer">Licenca je trajna i doživotna. Nakon što preuzmeš datoteke, one ostaju zauvijek tvoje bez ikakvih dodatnih pretplata.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Capture Section (Relocated Below FAQ) -->
+    <section class="section-padding bg-sky-wash" id="sos-vodic">
+        <div class="container" style="max-width: 580px; margin: 0 auto; text-align: center;">
+            <span class="eyebrow">BESPLATAN SOS VODIČ</span>
+            <h3 style="margin-bottom: 15px; color: var(--ink); font-family: var(--font-serif); font-size: 1.8rem;">Nisi siguran? Počni malo.</h3>
+            <p style="color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 25px; line-height: 1.6; text-align: center; max-width: 100%;">
+                Preuzmi besplatni SOS vodič za smirenje prije leta: jednu stranicu s tri tehnike koje možeš isprobati već danas.
+            </p>
+            
+            <div id="html-email-success" style="display: none; background: var(--white); border: 1px solid var(--border-light); padding: 24px; border-radius: 12px;">
+                <h4 style="font-weight: 700; color: var(--ink); font-size: 1.05rem;">Hvala ti! SOS vodič je poslan na tvoj email.</h4>
+            </div>
+            
+            <form id="html-email-form" onsubmit="submitHtmlEmailForm(event)" style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
+                <input type="email" id="html-email-input" required placeholder="Unesi svoj email..." style="width: 100%; min-height: 48px; padding: 0 18px; border-radius: 10px; border: 1px solid var(--border-light); background: var(--white); color: var(--ink); font-size: 0.95rem; outline: none;">
+                <button type="submit" class="btn" style="width: 100%; min-height: 48px; padding: 12px 24px; font-size: 0.95rem;">POŠALJI MI SOS VODIČ</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section-padding final-cta text-center">
+        <div class="container">
+            <h2>Sljedeći let ne mora biti isti.</h2>
+            <p class="subtitle" style="margin-bottom: 30px;">Započni pripremu već danas i oslobodi svoje vrijeme i putovanja.</p>
+            <a href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97?utm_source=dvadeset-godina" class="btn">PREUZMI MIRAN LET · 19,99 €</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 0.9rem; color: #8C9BA8; margin-bottom: 16px; line-height: 1.5;">
+                Fotografije na ovoj stranici izrađene su pomoću umjetne inteligencije. Kapetan Miran je ilustrirani lik, nije stvarna osoba.
+            </p>
+            <p style="margin-bottom: 14px;">
+                <a href="/impressum">Impressum</a> · 
+                <a href="/uvjeti-kupnje">Uvjeti kupnje</a> · 
+                <a href="/povrat">Povrat</a> · 
+                <a href="/privatnost">Privatnost</a>
+            </p>
+            <p style="font-size: 0.85rem; color: #8C9BA8; margin-bottom: 6px;">
+                Prodaju obavlja Lemon Squeezy kao Merchant of Record.
+            </p>
+            <p style="font-size: 0.85rem; color: #8C9BA8;">&copy; 2026 Miran Let. Sva prava pridržana.</p>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" style="position: fixed; bottom: 20px; left: 20px; right: 20px; max-width: 480px; background: var(--white); border: 1px solid var(--border-light); padding: 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(22, 35, 47, 0.15); z-index: 9999; display: flex; flex-direction: column; gap: 12px;">
+        <p style="font-size: 0.9rem; color: var(--ink-soft); line-height: 1.5; margin: 0; text-align: left;">
+            Koristimo kolačiće za mjerenje učinkovitosti oglasa (Meta Pixel). Možete ih prihvatiti ili odbiti. <a href="/privatnost" style="color: var(--ink); font-weight: 600;">Saznaj više</a>.
+        </p>
+        <div style="display: flex; gap: 10px;">
+            <button onclick="acceptCookies()" class="btn" style="padding: 10px 20px; min-height: 40px; font-size: 0.85rem; border-radius: 6px; flex: 1;">Prihvati</button>
+            <button onclick="rejectCookies()" style="background: transparent; border: 1px solid var(--border-light); color: var(--ink); padding: 10px 20px; min-height: 40px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; flex: 1;">Odbij</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                const isActive = parent.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+                if (!isActive) parent.classList.add('active');
+            });
+        });
+        window.addEventListener('scroll', function() {
+            const bar = document.getElementById('sticky-bar');
+            if (window.scrollY > 700) bar.classList.add('visible');
+            else bar.classList.remove('visible');
+        });
+        function submitHtmlEmailForm(e) {
+            e.preventDefault();
+            const email = document.getElementById('html-email-input').value;
+            if(!email) return;
+            fetch('https://hooks.zapier.com/hooks/catch/28397556/44vco84/', {
+                method: 'POST', mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email: email, timestamp: new Date().toISOString(), source: 'miran_let_dvadeset_godina' })
+            }).then(() => {
+                document.getElementById('html-email-form').style.display = 'none';
+                document.getElementById('html-email-success').style.display = 'block';
+            });
+        }
+        function acceptCookies() {
+            localStorage.setItem('cookie_consent', 'accepted');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        function rejectCookies() {
+            localStorage.setItem('cookie_consent', 'rejected');
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+        if (localStorage.getItem('cookie_consent')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

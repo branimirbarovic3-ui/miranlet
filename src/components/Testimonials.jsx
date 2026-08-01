@@ -18,7 +18,7 @@ export default function Testimonials() {
           </div>
           
           <h3 className="font-serif text-xl md:text-2xl font-bold mb-4 text-[#060A12]">
-            Ovo je novi proizvod — budite među prvima
+            Ovo je novi proizvod · budite među prvima
           </h3>
           
           <p className="text-[#060A12]/60 text-base md:text-lg leading-relaxed max-w-xl mb-8 font-light">

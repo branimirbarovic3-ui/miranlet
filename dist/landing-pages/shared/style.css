@@ -1,0 +1,287 @@
+/* ==========================================================================
+   Shared CSS for Miran Let Landing Pages
+   ========================================================================== */
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap');
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --color-bg-primary: #F5F3EF;     /* Krem pozadina */
+  --color-bg-secondary: #E9E4DC;   /* Nešto tamnija krem za sekcije */
+  --color-accent-gold: #C8A84A;    /* Zlatni akcent */
+  --color-text-main: #1C2733;      /* Tamno plava (gotovo crna) za tekst */
+  --color-text-muted: #4A5568;     /* Zagasito plavo/siva za sporedni tekst */
+  --color-navy: #111A24;           /* Duboka plava za posebne blokove (Hero, Garancija) */
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Spacing (Mobile First) */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+
+  /* Borders & Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* Base Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-primary);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-navy);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.text-center { text-align: center; }
+.text-muted { color: var(--color-text-muted); }
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: 800px; /* Narrow readable width for copy */
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-alt {
+  background-color: var(--color-bg-secondary);
+}
+
+.section-navy {
+  background-color: var(--color-navy);
+  color: var(--color-bg-primary);
+}
+
+.section-navy h1, .section-navy h2, .section-navy h3 {
+  color: var(--color-bg-primary);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--color-accent-gold);
+  color: var(--color-navy);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #D4B65B;
+  transform: translateY(-2px);
+}
+
+.btn-wrapper {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+/* Cards & Bonuses */
+.card {
+  background-color: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 6px rgba(17, 26, 36, 0.05);
+}
+
+.bonus-list {
+  list-style: none;
+  margin-top: var(--spacing-md);
+}
+
+.bonus-list li {
+  margin-bottom: var(--spacing-sm);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.bonus-list li::before {
+  content: '✓';
+  color: var(--color-accent-gold);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* Three Systems (Prije, Na Dan, U Zraku) */
+.system-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.system-item {
+  background: var(--color-white);
+  padding: var(--spacing-md);
+  border-left: 4px solid var(--color-accent-gold);
+  border-radius: var(--radius-sm);
+}
+
+.system-item h3 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-accent-gold);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* FAQ Accordion */
+.faq-item {
+  margin-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  padding: 1rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--color-accent-gold);
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding-bottom: 1rem;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+/* Disclaimer & Footer */
+.disclaimer {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.footer {
+  padding: var(--spacing-md) 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.footer a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+/* Desktop Enhancements */
+@media (min-width: 768px) {
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.5rem; }
+  
+  .hero-image {
+    aspect-ratio: 16/9;
+    max-width: 700px;
+  }
+  
+  .btn {
+    width: auto;
+    min-width: 300px;
+  }
+  
+  .system-grid {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+  }
+  
+  .system-item {
+    flex: 1;
+  }
+}
