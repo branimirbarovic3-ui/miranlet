@@ -29,7 +29,7 @@ export default function FAQ() {
     },
     {
       question: "Treba li mi internet u avionu?",
-      answer: "Ne. Sve materijale preuzimaš prije leta. PDF vodič i audio protokol rade offline na tvom mobitelu, bez interneta i bez WiFi mreže."
+      answer: "Ne. Sve materijale preuzimaš prije leta. digitalni vodič i audio protokol rade offline na tvom mobitelu, bez interneta i bez WiFi mreže."
     },
     {
       question: "Koliko traje audio protokol?",

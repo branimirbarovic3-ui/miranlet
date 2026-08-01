@@ -35,7 +35,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-4 mt-6 text-sm font-semibold text-[#4A5A68]">
           <span><span className="text-[#16232F]">✓</span> Pristup odmah</span>
           <span>·</span>
-          <span><span className="text-[#16232F]">✓</span> PDF + MP3</span>
+          <span><span className="text-[#16232F]">✓</span> Audio protokol + digitalni vodič</span>
           <span>·</span>
           <span><span className="text-[#16232F]">✓</span> Diskretno plaćanje</span>
         </div>

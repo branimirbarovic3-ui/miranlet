@@ -36,7 +36,7 @@ export default function Content() {
           </p>
 
           {/* 1. POPIS & 2. NEW ORDER */}
-          <ul className="text-left max-w-[320px] mx-auto mb-8 space-y-[14px] p-0 list-none">
+          <ul className="text-left max-w-[320px] mx-auto mb-6 space-y-[14px] p-0 list-none">
             {[
               'Audio protokol za let',
               'Vođena vježba disanja',
@@ -50,6 +50,10 @@ export default function Content() {
               </li>
             ))}
           </ul>
+
+          <p className="text-[13px] text-[#4A5A68] mb-8 text-center font-medium">
+            Skini prije leta · audio radi bez interneta.
+          </p>
 
           <a 
             href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" 
