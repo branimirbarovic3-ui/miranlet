@@ -21,10 +21,6 @@ export default function Hero() {
           Audio protokol i vodič koji ti normalno objašnjava što se događa u avionu, i daje alat koji koristiš u trenutku straha. Bez tableta. Bez terapije. Bez čekanja.
         </p>
 
-        <div className="font-sans text-3xl md:text-4xl font-semibold text-[#16232F] mb-4">
-          Samo 19,99 €
-        </div>
-
         <a 
           href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97" 
           className="inline-flex items-center justify-center bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-lg uppercase tracking-[0.08em] py-5 px-10 md:px-12 rounded-xl transition-all duration-300 shadow-lg shadow-[#C8A84A]/25 hover:-translate-y-0.5 w-full sm:w-auto"
@@ -41,11 +37,12 @@ export default function Hero() {
           <span>·</span>
           <span><span className="text-[#16232F]">✓</span> PDF + MP3</span>
           <span>·</span>
-          <span><span class="text-[#16232F]">✓</span> Sigurno plaćanje</span>
+          <span><span className="text-[#16232F]">✓</span> Diskretno plaćanje</span>
         </div>
 
+        {/* Airplane Hero Image */}
         <div className="max-w-[680px] w-full mt-12 rounded-xl overflow-hidden shadow-xl border border-[#E4E9EF] bg-white p-2">
-          <img src="/landing-pages/bez-tableta/hero-bez-tableta.jpg" alt="Miran Let Hero" className="w-full h-auto block rounded-lg object-cover" />
+          <img src="/hero.png" alt="Miran Let Airplane Hero" className="w-full h-auto block rounded-lg object-cover" />
         </div>
       </div>
     </header>
