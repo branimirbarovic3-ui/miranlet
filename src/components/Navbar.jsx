@@ -31,18 +31,18 @@ export default function Navbar() {
     <header 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#16232F]/95 backdrop-blur-md shadow-md py-3' 
-          : 'bg-gradient-to-b from-[#16232F]/30 to-transparent py-4 md:py-6'
+          ? 'bg-[#16232F]/95 backdrop-blur-md shadow-md py-2.5 sm:py-3' 
+          : 'bg-gradient-to-b from-[#16232F]/30 to-transparent py-3.5 sm:py-5'
       }`}
     >
-      <div className="max-w-[1100px] mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Brand Logo */}
         <a 
           href="/" 
-          className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#C8A84A] rounded-lg p-1"
+          className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-[#C8A84A] rounded-lg p-1 shrink-0"
           aria-label="Miran Let Početna"
         >
-          <div className="w-10 h-10 rounded-xl bg-[#16232F] border-2 border-[#C8A84A] flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#16232F] border-2 border-[#C8A84A] flex items-center justify-center p-1.5 shadow-sm group-hover:scale-105 transition-transform">
             <svg viewBox="0 0 48 48" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M24 4 L38 9 V22 C38 31 32 38 24 41 C16 38 10 31 10 22 V9 Z" fill="#C8A84A" />
               <path d="M24 6.5 L36 10.8 V22 C36 29.5 31 35.8 24 38.5 C17 35.8 12 29.5 12 22 V10.8 Z" fill="#16232F" />
@@ -51,10 +51,10 @@ export default function Navbar() {
             </svg>
           </div>
           <div className="flex flex-col text-left">
-            <span className="font-serif text-lg md:text-xl font-bold tracking-wide text-[#16232F] group-hover:text-[#C8A84A] transition-colors leading-tight">
+            <span className="font-serif text-base sm:text-xl font-bold tracking-wide text-[#16232F] group-hover:text-[#C8A84A] transition-colors leading-tight">
               MIRAN LET
             </span>
-            <span className="font-sans text-[10px] font-semibold tracking-widest text-[#4A5A68] uppercase">
+            <span className="font-sans text-[9px] sm:text-[10px] font-semibold tracking-widest text-[#4A5A68] uppercase">
               Audio protokol
             </span>
           </div>
@@ -81,10 +81,10 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Nav Button */}
-        <div className="flex md:hidden items-center gap-3">
+        <div className="flex md:hidden items-center gap-2 sm:gap-3">
           <a
             href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97"
-            className="bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-[11px] uppercase tracking-wider py-2 px-3.5 rounded-lg shadow-sm"
+            className="bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-[11px] uppercase tracking-wider py-2 px-3 rounded-lg shadow-sm"
           >
             PREUZMI
           </a>
@@ -107,8 +107,8 @@ export default function Navbar() {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#16232F] text-white border-t border-white/10 px-6 py-5 shadow-2xl animate-in slide-in-from-top">
-          <div className="flex flex-col gap-4">
+        <div className="md:hidden bg-[#16232F] text-white border-t border-white/10 px-5 py-5 shadow-2xl animate-in slide-in-from-top">
+          <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -121,7 +121,7 @@ export default function Navbar() {
             ))}
             <a
               href="https://miranlet.lemonsqueezy.com/checkout/buy/63565eee-96d4-4d01-b339-ecfbe56cab97"
-              className="bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-sm uppercase tracking-wider py-3.5 px-6 rounded-xl text-center transition-all mt-2"
+              className="min-h-[52px] bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-sm uppercase tracking-wider py-3.5 px-6 rounded-xl text-center transition-all mt-2 flex items-center justify-center"
             >
               PREUZMI MIRAN LET · 19,99 €
             </a>

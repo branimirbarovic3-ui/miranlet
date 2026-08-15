@@ -20,15 +20,15 @@ export default function Problem() {
   ];
 
   return (
-    <section className="py-20 md:py-28 px-6 w-full bg-[#F7F5F0]">
+    <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 w-full bg-[#F7F5F0]">
       <div className="max-w-[1100px] mx-auto text-left">
         
         {/* Section Header */}
-        <div className="max-w-[800px] mb-12 md:mb-16">
-          <span className="font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.14em] text-[#4A5A68] mb-3 block">
+        <div className="max-w-[800px] mb-8 sm:mb-12">
+          <span className="font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.14em] text-[#4A5A68] mb-2.5 block">
             TRENUTAK KADA KRENE
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#16232F] font-semibold leading-[1.2] mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#16232F] font-semibold leading-[1.2] mb-4">
             Let ne postaje težak tek kad sjedneš u avion.
           </h2>
           <p className="font-sans text-base md:text-lg text-[#4A5A68] leading-relaxed">
@@ -36,18 +36,18 @@ export default function Problem() {
           </p>
         </div>
 
-        {/* 3 Problem Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {/* 3 Problem Cards - Stacked Vertically on Mobile */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {cards.map((card) => (
             <div 
               key={card.number} 
-              className="bg-white border-2 border-[#C8A84A] rounded-2xl p-7 md:p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
+              className="bg-white border-2 border-[#C8A84A] rounded-2xl p-6 sm:p-7 md:p-8 shadow-sm flex flex-col justify-between"
             >
               <div>
-                <div className="text-xs font-mono font-bold text-[#C8A84A] tracking-wider mb-4">
+                <div className="text-xs font-mono font-bold text-[#C8A84A] tracking-wider mb-3">
                   FAZA {card.number}
                 </div>
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-[#16232F] mb-3 leading-snug">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#16232F] mb-2.5 leading-snug">
                   {card.title}
                 </h3>
                 <p className="text-[#4A5A68] text-base leading-relaxed">

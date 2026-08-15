@@ -39,21 +39,21 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 md:py-28 px-6 w-full bg-[#F7F5F0]">
+    <section id="faq" className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 w-full bg-[#F7F5F0]">
       <div className="max-w-[850px] mx-auto">
         
         {/* Section Header */}
-        <div className="text-center mb-12 md:mb-16">
-          <span className="font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.14em] text-[#4A5A68] mb-3 block">
+        <div className="text-center mb-8 sm:mb-12">
+          <span className="font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.14em] text-[#4A5A68] mb-2.5 block">
             ODGOVORI NA PITANJA
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-[#16232F]">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-[#16232F]">
             Česta pitanja
           </h2>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-3.5 sm:space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -63,19 +63,19 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-[#C8A84A]"
+                  className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-3 focus:outline-none focus:ring-2 focus:ring-[#C8A84A]"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg md:text-xl font-bold text-[#16232F]">
+                  <span className="font-serif text-base sm:text-lg md:text-xl font-bold text-[#16232F] leading-snug">
                     {faq.q}
                   </span>
-                  <div className={`w-8 h-8 rounded-full bg-[#EAF4FD] text-[#16232F] flex items-center justify-center shrink-0 text-xl font-bold transition-transform duration-200 ${isOpen ? 'rotate-180 bg-[#C8A84A]' : ''}`}>
+                  <div className={`w-8 h-8 rounded-full bg-[#EAF4FD] text-[#16232F] flex items-center justify-center shrink-0 text-lg font-bold transition-transform duration-200 ${isOpen ? 'rotate-180 bg-[#C8A84A]' : ''}`}>
                     {isOpen ? '−' : '+'}
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-[#4A5A68] text-base leading-relaxed border-t border-[#E4E9EF]/60">
+                  <div className="px-4 sm:px-6 pb-5 pt-1 text-[#4A5A68] text-base leading-relaxed border-t border-[#E4E9EF]/60">
                     <p>{faq.a}</p>
                   </div>
                 )}
