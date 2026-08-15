@@ -7,18 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: '#0B1321', // Vrlo tamna plava iz slike
-        cream: '#F9F8F6', // Topla krem bijela pozadina
-        gold: '#D4AF37', // Elegantna zlatna
-        goldHover: '#C4A030', // Tamnija zlatna za hover
-        textDark: '#1E293B',
-        paleRed: '#FEF2F2',
-        paleGreen: '#F0FDF4',
-        borderCream: '#E5E5E5',
+        navy: '#0B1C2E',
+        'aviation-blue': '#176EA6',
+        'sky-blue': '#E8F0FA',
+        'light-sky': '#F2F8FC',
+        gold: '#D4AF37',
+        'gold-border': '#B99122',
+        'gold-hover': '#B8983A',
+        'off-white': '#F5F5F2',
+        'muted-text': '#526579',
+        'border-light': '#E1EAF2',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
       }
     },
   },

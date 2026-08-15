@@ -1,19 +1,12 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Problem from './components/Problem';
-import Mechanism from './components/Mechanism';
-import AudioPreview from './components/AudioPreview';
-import Content from './components/Content';
-import DownloadSteps from './components/DownloadSteps';
-import ProductProof from './components/ProductProof';
-import HonestNotice from './components/HonestNotice';
-import AuthorTrust from './components/AuthorTrust';
-import FAQ from './components/FAQ';
-import EmailCapture from './components/EmailCapture';
-import Pricing from './components/Pricing';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
+import ProblemSolution from './components/ProblemSolution';
+import AudioDemo from './components/AudioDemo';
+import ProductDeliverables from './components/ProductDeliverables';
+import TrustGuarantee from './components/TrustGuarantee';
+import OfferPricing from './components/OfferPricing';
+import FaqFooter from './components/FaqFooter';
 import CookieConsent from './components/CookieConsent';
 import { trackInitiateCheckout, trackViewContent } from './utils/metaPixel';
 import { Analytics } from '@vercel/analytics/react';
@@ -38,53 +31,32 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-[#F7F5F0] min-h-screen font-sans text-[#16232F] antialiased relative overflow-x-hidden">
+    <div className="bg-white min-h-screen font-sans text-[#0B1C2E] antialiased relative overflow-x-hidden">
       {/* 0. NAVIGATION */}
       <Navbar />
 
       {/* 1. HERO */}
       <Hero />
 
-      {/* 2. PROBLEM */}
-      <Problem />
+      {/* 2. PROBLEM I RJEŠENJE (MERGED) */}
+      <ProblemSolution />
 
-      {/* 3. KAKO RADI (MECHANISM) */}
-      <Mechanism />
+      {/* 3. AUDIO DEMONSTRACIJA */}
+      <AudioDemo />
 
-      {/* 4. AUDIO PREVIEW */}
-      <AudioPreview />
+      {/* 4. ŠTO KUPAC DOBIJA + UVID U MATERIJALE (MERGED) */}
+      <ProductDeliverables />
 
-      {/* 5. SADRŽAJ PROIZVODA */}
-      <Content />
+      {/* 5. ZAŠTO JE NASTAO MIRAN LET, JAMSTVO I TRANSPARENTNOST (MERGED TRUST BLOCK) */}
+      <TrustGuarantee />
 
-      {/* 6. KAKO PREUZIMANJE RADI */}
-      <DownloadSteps />
+      {/* 6. PONUDA I CIJENA */}
+      <OfferPricing />
 
-      {/* 7. DOKAZ PROIZVODA */}
-      <ProductProof />
+      {/* 7. SKRAĆENI FAQ I FOOTER */}
+      <FaqFooter />
 
-      {/* 8. NOV PROIZVOD (HONEST NOTICE) */}
-      <HonestNotice />
-
-      {/* 9. AUTOR */}
-      <AuthorTrust />
-
-      {/* 10. ČESTA PITANJA */}
-      <FAQ />
-
-      {/* 11. BESPLATNI KORAK / EMAIL CAPTURE */}
-      <EmailCapture />
-
-      {/* 12. PONUDA & JAMSTVO */}
-      <Pricing />
-
-      {/* 13. ZAVRŠNA SEKCIJA */}
-      <FinalCTA />
-
-      {/* 14. FOOTER */}
-      <Footer />
-
-      {/* 15. COOKIE CONSENT & PIXEL */}
+      {/* GDPR COOKIE BANNER & META PIXEL */}
       <CookieConsent />
 
       <Analytics />

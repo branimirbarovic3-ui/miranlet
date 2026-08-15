@@ -1,71 +1,36 @@
 /* ==========================================================================
-   Design Tokens - Miran Let Single Source of Truth
+   Design Tokens - Miran Let Aviation Brand Single Source of Truth
    ========================================================================== */
 
 :root {
-  /* Brand Palette */
-  --sky-primary:    #4DA6F0;    /* Nebeski plava iz loga */
-  --sky-light:      #A8D4F7;    /* Svijetla nebesko plava za gradijente */
-  --sky-wash:       #EAF4FD;    /* Jedva plava pozadina za sekcije */
-  --cream:          #F7F5F0;    /* Glavna krem pozadina */
-  --gold:           #C8A84A;    /* Akcent iz loga - ISKLJUČIVO ZA GLAVNI CTA GUMB I OKVIRE */
-  --gold-hover:     #B8983A;    /* Tamnija zlatna na preletu */
-  --ink:            #16232F;    /* Glavni tekst, tamno plavo-siva */
-  --ink-soft:       #4A5A68;    /* Sporedni tekst i nadnaslovi */
-  --white:          #FFFFFF;    /* Čista bijela za kartice */
-  --border-light:   #E4E9EF;    /* Hladna siva za suptilne rubove */
-  --border-gold:    #C8A84A;    /* Zlatni rub za istaknute kartice i slike */
+  /* Brand Palette - Premium Aviation */
+  --navy: #0B1C2E;
+  --aviation-blue: #176EA6;
+  --sky-blue: #E8F0FA;
+  --light-sky: #F2F8FC;
+  --gold: #D4AF37;
+  --gold-hover: #B8983A;
+  --gold-border: #B99122;
+  --off-white: #F5F5F2;
+  --white: #FFFFFF;
+  --text: #0B1C2E;
+  --muted-text: #526579;
+  --border-light: #E1EAF2;
 
-  /* Typography Families */
-  --font-serif:     'Cormorant Garamond', Georgia, serif;
-  --font-sans:      'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 
-  /* Typography Scale */
-  --font-size-h1:         clamp(2.4rem, 5vw, 4.2rem);
-  --font-size-h2:         clamp(2.0rem, 4vw, 3.2rem);
-  --font-size-h3:         1.8rem;
-  --font-size-h4:         1.4rem;
-  --font-size-body:       1.1rem;
-  --font-size-body-sm:    1.05rem;
-  --font-size-subtext:    15px;
-  --font-size-eyebrow:    12px;
-  --font-size-btn:        1.1rem;
-  --font-size-price:      44px;
+  /* Spacing */
+  --container-max: 1120px;
+  --text-max: 620px;
 
-  /* Font Weights */
-  --weight-normal:   400;
-  --weight-medium:   500;
-  --weight-semibold: 600;
-  --weight-bold:     700;
-
-  /* Letter Spacings & Line Heights */
-  --letter-spacing-eyebrow: 0.12em;
-  --letter-spacing-btn:     0.08em;
-  --line-height-heading:    1.2;
-  --line-height-body:       1.7;
-
-  /* Section Spacing */
-  --section-padding-desktop: 96px 0;
-  --section-padding-mobile:  64px 0;
-  --container-max-width:     1100px;
-  --narrative-max-width:     780px;
-  --card-max-width:          650px;
-  --form-max-width:          580px;
-  --list-max-width:          320px;
-
-  /* Borders & Shadows */
-  --border-radius-card: 16px;
-  --border-radius-sm:   12px;
-  --border-radius-lg:   24px;
-  --border-radius-full: 9999px;
-
-  --border-width-gold:  2px;
-  --border-width-light: 1px;
-
-  --shadow-card:   0 10px 30px rgba(22, 35, 47, 0.04);
-  --shadow-button: 0 6px 20px rgba(200, 168, 74, 0.25);
-  --shadow-hover:  0 10px 25px rgba(200, 168, 74, 0.35);
-
-  --transition-fast: all 0.2s ease-in-out;
-  --transition-normal: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Standard CTA Button Style */
+  --btn-gold-bg: #D4AF37;
+  --btn-gold-color: #0B1C2E;
+  --btn-gold-border: #B99122;
+  --btn-hover-bg: #176EA6;
+  --btn-hover-color: #FFFFFF;
+  --btn-radius: 8px;
 }
