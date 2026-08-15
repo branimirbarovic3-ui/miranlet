@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" fill="none">
+  <rect width="600" height="800" rx="16" fill="#16232F"/>
+  <rect x="2" y="2" width="596" height="796" rx="14" stroke="#C8A84A" stroke-width="2"/>
+  
+  <rect x="40" y="40" width="520" height="3" fill="#C8A84A"/>
+  <text x="40" y="70" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A" letter-spacing="2">MIRAN LET · BRZI ALAT ZA MOBITEL</text>
+  
+  <text x="40" y="125" font-family="Georgia, serif" font-size="34" font-weight="600" fill="#FFFFFF">SOS KARTICA ZA SJEDALO</text>
+  <text x="40" y="155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#A8D4F7">Četiri koraka za trenutak kada osjetiš da napetost naglo raste</text>
+  
+  <rect x="40" y="185" width="520" height="1" fill="rgba(200, 168, 74, 0.3)"/>
+  
+  <!-- Step 1 -->
+  <rect x="40" y="210" width="520" height="105" rx="10" fill="#1E3142" stroke="rgba(200, 168, 74, 0.4)" stroke-width="1"/>
+  <text x="60" y="240" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A">KORAK 1 · FIZIČKO UZEMLJENJE</text>
+  <text x="60" y="265" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Spusti stopala ravno na pod i osloni leđa na naslon</text>
+  <text x="60" y="290" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#8C9BA8">Nemoj se grčiti prema naprijed. Daj tijelu čvrstu i stabilnu podlogu.</text>
+
+  <!-- Step 2 -->
+  <rect x="40" y="330" width="520" height="105" rx="10" fill="#1E3142" stroke="rgba(200, 168, 74, 0.4)" stroke-width="1"/>
+  <text x="60" y="360" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A">KORAK 2 · PROTOKOL DISANJA 4-6</text>
+  <text x="60" y="385" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Udah 4 sekunde kroz nos · Izdisaj 6 sekundi kroz usta</text>
+  <text x="60" y="410" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#8C9BA8">Dulji izdisaj automatski aktivira parasimpatički sustav i usporava puls.</text>
+
+  <!-- Step 3 -->
+  <rect x="40" y="450" width="520" height="105" rx="10" fill="#1E3142" stroke="rgba(200, 168, 74, 0.4)" stroke-width="1"/>
+  <text x="60" y="480" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A">KORAK 3 · FOKUSIRANJE PAŽNJE</text>
+  <text x="60" y="505" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Uoči 3 neutralna predmeta u kabini</text>
+  <text x="60" y="530" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#8C9BA8">Prekini unutrašnji monolog imenovanjem konkretnih stvari oko sebe.</text>
+
+  <!-- Step 4 -->
+  <rect x="40" y="570" width="520" height="105" rx="10" fill="#1E3142" stroke="rgba(200, 168, 74, 0.4)" stroke-width="1"/>
+  <text x="60" y="600" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A">KORAK 4 · SLUŠANJE VODIČA</text>
+  <text x="60" y="625" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#FFFFFF">Uključi audio zapis i prepusti vođenje glasu</text>
+  <text x="60" y="650" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#8C9BA8">Samo prati sljedeću uputu bez razmišljanja o ostatku leta.</text>
+
+  <rect x="40" y="695" width="520" height="40" rx="8" fill="rgba(200, 168, 74, 0.15)"/>
+  <text x="55" y="720" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#C8A84A">SPREMI OVU KARTICU U FOTOGRAFIJE MOBITELA ZA TRENUTNI PRISTUP BEZ INTERNETA</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" fill="none">
+  <rect width="600" height="800" rx="16" fill="#FFFFFF"/>
+  <rect x="2" y="2" width="596" height="796" rx="14" stroke="#E4E9EF" stroke-width="2"/>
+  <rect x="40" y="40" width="520" height="3" fill="#C8A84A"/>
+  <text x="40" y="70" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600" fill="#4A5A68" letter-spacing="1.5">MIRAN LET · DIGITALNI VODIČ · PROTOKOL POLIJETANJA</text>
+  
+  <text x="40" y="130" font-family="Georgia, serif" font-size="32" font-weight="600" fill="#16232F">Prvih 10 minuta u zraku</text>
+  <text x="40" y="165" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" fill="#4A5A68" font-style="italic">Strukturirani koraci od zatvaranja vrata do penjanja na visinu krstarenja</text>
+  
+  <rect x="40" y="200" width="520" height="1" fill="#E4E9EF"/>
+  
+  <!-- Checkpoints list -->
+  <g transform="translate(40, 230)">
+    <circle cx="20" cy="20" r="16" fill="#EAF4FD" stroke="#C8A84A" stroke-width="1.5"/>
+    <text x="16" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#16232F">1</text>
+    <text x="50" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#16232F">Zatvaranje vrata i rulanja (Taxi)</text>
+    <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#4A5A68">Zvukovi hidraulike i podešavanje zakrilaca. Započni vježbu disanja 4-4.</text>
+  </g>
+
+  <g transform="translate(40, 320)">
+    <circle cx="20" cy="20" r="16" fill="#EAF4FD" stroke="#C8A84A" stroke-width="1.5"/>
+    <text x="16" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#16232F">2</text>
+    <text x="50" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#16232F">Puni potisak i ubrzanje na pisti</text>
+    <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#4A5A68">Normalan pritisak u leđima. Usmjeri pogled na stabilnu točku u kabini.</text>
+  </g>
+
+  <g transform="translate(40, 410)">
+    <circle cx="20" cy="20" r="16" fill="#EAF4FD" stroke="#C8A84A" stroke-width="1.5"/>
+    <text x="16" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#16232F">3</text>
+    <text x="50" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#16232F">Odvajanje kotača i uvlačenje stajnog trapa</text>
+    <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#4A5A68">Tupi zvuk ispod poda: uvlačenje kotača i zatvaranje vrata stajnog trapa.</text>
+  </g>
+
+  <g transform="translate(40, 500)">
+    <circle cx="20" cy="20" r="16" fill="#EAF4FD" stroke="#C8A84A" stroke-width="1.5"/>
+    <text x="16" y="25" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#16232F">4</text>
+    <text x="50" y="20" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="600" fill="#16232F">Smanjenje buke motora (Climb thrust)</text>
+    <text x="50" y="40" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#4A5A68">Avion ne propada: piloti prebacuju motore sa startnog na stabilni usponski režim.</text>
+  </g>
+
+  <!-- Summary Box -->
+  <rect x="40" y="610" width="520" height="90" rx="10" fill="#F7F5F0" stroke="#E4E9EF"/>
+  <text x="60" y="645" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#C8A84A">PRAKTIČAN SAVJET:</text>
+  <text x="60" y="670" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#4A5A68">Slušaj vođeni audio s uključenim slušalicama prije nego što avion izađe na pistu.</text>
+
+  <text x="530" y="760" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8C9BA8">Strana 24</text>
+</svg>

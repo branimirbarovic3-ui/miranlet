@@ -2,14 +2,16 @@ import React from 'react';
 
 export default function HonestNotice() {
   return (
-    <section className="py-16 md:py-24 px-6 w-full bg-white text-center">
-      <div className="max-w-[760px] mx-auto">
-        <h3 className="font-serif text-2xl md:text-3xl font-semibold mb-4 text-[#16232F]">
-          Ovo je nov proizvod
-        </h3>
-        <p className="text-[#4A5A68] text-base md:text-lg leading-relaxed mx-auto max-w-[65ch]">
-          Nema stotine recenzija i neće ih biti dok ih ljudi stvarno ne napišu, izmišljati ih nećemo. Zato jamstvo stoji onako kako piše: leti s njim, i ako kažeš da nije pomoglo, novac se vraća.
-        </p>
+    <section className="py-12 px-6 w-full bg-[#F7F5F0]">
+      <div className="max-w-[780px] mx-auto">
+        <div className="bg-white border-2 border-[#C8A84A] rounded-2xl p-6 md:p-8 text-center shadow-sm">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-[0.14em] text-[#C8A84A] mb-2 block">
+            TRANSPARENTNOST
+          </span>
+          <p className="font-sans text-sm md:text-base text-[#4A5A68] leading-relaxed">
+            Miran Let je nov proizvod. Ne koristimo izmišljena iskustva kupaca. Zato možeš poslušati isječak, vidjeti što dobivaš i odlučiti na temelju samog proizvoda.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,49 +1,61 @@
 import React from 'react';
 
 export default function Problem() {
+  const cards = [
+    {
+      title: 'PRATIŠ SVE OKO SEBE',
+      desc: 'Svaki zvuk i pokret postaju nešto što moraš provjeriti.',
+      number: '01'
+    },
+    {
+      title: 'POKUŠAVAŠ SE SMIRITI NA SILU',
+      desc: 'Što se više trudiš zaustaviti reakciju, to više pažnje daješ upravo njoj.',
+      number: '02'
+    },
+    {
+      title: 'ČEKAŠ DA LET ZAVRŠI',
+      desc: 'Ne putuješ, samo izdržavaš dok ponovno ne budeš na zemlji.',
+      number: '03'
+    }
+  ];
+
   return (
     <section className="py-20 md:py-28 px-6 w-full bg-[#F7F5F0]">
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1100px] mx-auto text-left">
         
-        <div className="order-1 text-left">
-          <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#4A5A68] mb-4 block">
-            PROBLEM I PRITISAK
+        {/* Section Header */}
+        <div className="max-w-[800px] mb-12 md:mb-16">
+          <span className="font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.14em] text-[#4A5A68] mb-3 block">
+            TRENUTAK KADA KRENE
           </span>
-
-          <h2 className="font-serif text-3xl md:text-5xl text-[#16232F] mb-6 font-semibold leading-[1.2]">
-            Ako te strah uhvati čim se vrata zatvore...
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#16232F] font-semibold leading-[1.2] mb-6">
+            Let ne postaje težak tek kad sjedneš u avion.
           </h2>
-
-          <div className="space-y-4 text-[#4A5A68] text-lg leading-relaxed mb-6">
-            <p>Tijelo se napne, misli krenu ubrzano, a ti pokušavaš ostati smiren iako znaš da je let siguran.</p>
-            <p>Iscrpljujuće je glumiti staloženost dok iznutra proživljavaš unutrašnju oluju i brojiš minute do slijetanja.</p>
-          </div>
-
-          <ul className="space-y-3 mb-8">
-            {[
-              'Pratiš svaki nepoznati zvuk u avionu',
-              'Teško se opuštaš u sjedalu',
-              'Stalno tražiš znak da je sve u redu',
-              'Želiš samo da let što prije završi'
-            ].map((item, idx) => (
-              <li key={idx} className="flex gap-3 items-center text-[#16232F] font-semibold text-lg">
-                <span className="text-[#16232F] font-bold">✓</span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="bg-[#EAF4FD] border-l-4 border-[#C8A84A] p-6 rounded-r-xl font-semibold text-lg text-[#16232F] leading-relaxed">
-            Nije problem u tome što se bojiš. Problem je što način na koji rješavaš strah uzima previše od tvog putovanja.
-          </div>
+          <p className="font-sans text-base md:text-lg text-[#4A5A68] leading-relaxed">
+            Možda počne nekoliko dana ranije. Možda tek kad se vrata zatvore ili avion počne tresti. Problem nije u tome što ne znaš dovoljno o avionima. Problem je što u tom trenutku nemaš jasan sljedeći korak.
+          </p>
         </div>
 
-        <div className="order-2 relative border-2 border-[#C8A84A] bg-white p-2 rounded-xl shadow-lg">
-          <img
-            src="/problem.png"
-            alt="Iskustvo leta"
-            className="w-full h-auto object-cover rounded-lg block"
-          />
+        {/* 3 Problem Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {cards.map((card) => (
+            <div 
+              key={card.number} 
+              className="bg-white border-2 border-[#C8A84A] rounded-2xl p-7 md:p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
+            >
+              <div>
+                <div className="text-xs font-mono font-bold text-[#C8A84A] tracking-wider mb-4">
+                  FAZA {card.number}
+                </div>
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-[#16232F] mb-3 leading-snug">
+                  {card.title}
+                </h3>
+                <p className="text-[#4A5A68] text-base leading-relaxed">
+                  {card.desc}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
 
       </div>

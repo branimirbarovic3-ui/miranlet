@@ -1,75 +1,31 @@
 <!DOCTYPE html>
-<html lang="hr" class="scroll-smooth bg-background text-primary">
+<html lang="hr" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/logo-ml.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- SEO Primary -->
-    <title>Miran Let | Putuj slobodno i zaboravi na strah od letenja</title>
-    <meta name="description" content="Savladaj strah od letenja uz Miran Let digitalni protokol. Klinički provjerene tehnike avijacijske psihologije, audio vježbe i vodič za mirno putovanje zrakoplovom." />
-    <meta name="keywords" content="strah od letenja, miran let, strah od aviona, anksioznost let, turbulencija, psihologija letenja, hrvatska, regija" />
-    <link rel="canonical" href="https://www.miranlet.com" />
+    <title>Miran Let | Vođeni audio za mirniji let</title>
+    <meta name="description" content="Vođeni audio protokol, digitalni vodič i praktični alati koje koristiš prije polijetanja, tijekom leta i kada osjetiš da gubiš kontrolu." />
+    <link rel="canonical" href="https://www.miranlet.com/" />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.miranlet.com" />
-    <meta property="og:title" content="Miran Let | Putuj slobodno i zaboravi na strah od letenja" />
-    <meta property="og:description" content="Vrati kontrolu u svoje ruke. Kompletan audio i PDF vodič za putnike koji žele mir na 10.000 metara." />
-    <meta property="og:image" content="/logo-ml.jpg" />
+    <meta property="og:url" content="https://www.miranlet.com/" />
+    <meta property="og:title" content="Miran Let | Vođeni audio za mirniji let" />
+    <meta property="og:description" content="Vođeni audio protokol, digitalni vodič i praktični alati koje koristiš prije polijetanja, tijekom leta i kada osjetiš da gubiš kontrolu." />
+    <meta property="og:image" content="https://www.miranlet.com/images/miran-let-hero-bundle.png" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Miran Let Digitalni Protokol",
-      "image": "https://www.miranlet.com/bundle.png",
-      "description": "Metodologija za nadvladavanje straha od letenja utemeljena na avijacijskoj psihologiji.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Miran Let"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.miranlet.com",
-        "priceCurrency": "EUR",
-        "price": "27",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "124"
-      }
-    }
-    </script>
-    
-    <!-- Fonts -->
+    <!-- Fonts: Cormorant Garamond & DM Sans with latin-ext -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500&subset=latin,latin-ext&display=swap" rel="stylesheet">
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '4543408365938248');
-    fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&subset=latin,latin-ext&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/styles/shared.css">
   </head>
-  <body>
-    <!-- Meta Pixel Noscript -->
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=4543408365938248&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Noscript -->
+  <body class="bg-[#F7F5F0] text-[#16232F] font-sans antialiased overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

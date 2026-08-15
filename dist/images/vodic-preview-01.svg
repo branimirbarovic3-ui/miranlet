@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" fill="none">
+  <rect width="600" height="800" rx="16" fill="#FFFFFF"/>
+  <rect x="2" y="2" width="596" height="796" rx="14" stroke="#E4E9EF" stroke-width="2"/>
+  <!-- Header Bar -->
+  <rect x="40" y="40" width="520" height="3" fill="#C8A84A"/>
+  <text x="40" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#4A5A68" letter-spacing="1.5">MIRAN LET · DIGITALNI VODIČ · POGLAVLJE 01</text>
+  
+  <text x="40" y="130" font-family="Georgia, serif" font-size="32" font-weight="600" fill="#16232F">Fiziologija i regulacija reakcije</text>
+  <text x="40" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#4A5A68" font-style="italic">Zašto pokušaj smirivanja na silu stvara veći pritisak</text>
+  
+  <!-- Content Blocks -->
+  <rect x="40" y="200" width="520" height="1" fill="#E4E9EF"/>
+  
+  <rect x="40" y="230" width="480" height="12" rx="4" fill="#F0F4F8"/>
+  <rect x="40" y="255" width="510" height="12" rx="4" fill="#F0F4F8"/>
+  <rect x="40" y="280" width="440" height="12" rx="4" fill="#F0F4F8"/>
+  <rect x="40" y="305" width="490" height="12" rx="4" fill="#F0F4F8"/>
+  
+  <!-- Highlight Box -->
+  <rect x="40" y="350" width="520" height="130" rx="12" fill="#EAF4FD" stroke="#C8A84A" stroke-width="1.5"/>
+  <text x="70" y="390" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#16232F">KLJUČNO PRAVILO REGULACIJE:</text>
+  <text x="70" y="420" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#16232F">"Tijelo ne odgovara na statistiku. Odgovara na ritam i fokus."</text>
+  <text x="70" y="450" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#4A5A68">Prvi korak nije uvjeravanje uma, već spuštanje fizičke napetosti kroz dah.</text>
+  
+  <!-- Step Diagram -->
+  <rect x="40" y="520" width="160" height="180" rx="8" fill="#F7F5F0" stroke="#E4E9EF"/>
+  <text x="55" y="550" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A">01 · PREPOZNAJ</text>
+  <text x="55" y="580" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#16232F">Uoči prve znakove</text>
+  <rect x="55" y="600" width="130" height="8" rx="3" fill="#E4E9EF"/>
+  <rect x="55" y="618" width="110" height="8" rx="3" fill="#E4E9EF"/>
+
+  <rect x="220" y="520" width="160" height="180" rx="8" fill="#F7F5F0" stroke="#E4E9EF"/>
+  <text x="235" y="550" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A">02 · USMJERI</text>
+  <text x="235" y="580" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#16232F">Primijeni protokol</text>
+  <rect x="235" y="600" width="130" height="8" rx="3" fill="#E4E9EF"/>
+  <rect x="235" y="618" width="110" height="8" rx="3" fill="#E4E9EF"/>
+
+  <rect x="400" y="520" width="160" height="180" rx="8" fill="#F7F5F0" stroke="#E4E9EF"/>
+  <text x="415" y="550" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#C8A84A">03 · STABILIZIRAJ</text>
+  <text x="415" y="580" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#16232F">Zadrži ritam pažnje</text>
+  <rect x="415" y="600" width="130" height="8" rx="3" fill="#E4E9EF"/>
+  <rect x="415" y="618" width="110" height="8" rx="3" fill="#E4E9EF"/>
+
+  <!-- Footer -->
+  <text x="530" y="760" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#8C9BA8">Strana 12</text>
+</svg>

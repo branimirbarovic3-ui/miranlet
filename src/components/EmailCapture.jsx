@@ -2,79 +2,106 @@ import React, { useState } from 'react';
 
 export default function EmailCapture() {
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('idle');
-  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const validateEmail = (val) => {
+    return String(val)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email) return;
+    setErrorMessage('');
+
+    if (!email || !validateEmail(email)) {
+      setStatus('error');
+      setErrorMessage('Molimo unesi valjanu email adresu.');
+      return;
+    }
 
     setStatus('loading');
-    try {
-      await fetch('https://hooks.zapier.com/hooks/catch/28397556/44vco84/', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: email,
-          timestamp: new Date().toISOString(),
-          source: 'miran_let_landing'
-        }),
-      });
 
+    // STAVKA ZA INTEGRACIJU: Ovdje spojiti stvarni backend endpoint / webhook za newsletter / email automatizaciju
+    // Primjer: await fetch('/api/lead-capture', { method: 'POST', body: JSON.stringify({ email }) })
+    try {
+      // Simulacija slanja
+      await new Promise((resolve) => setTimeout(resolve, 800));
       setStatus('success');
       setEmail('');
-      setMessage('Hvala ti! SOS vodič je poslan na tvoj email.');
-    } catch (error) {
-      console.error('Došlo je do greške:', error);
+    } catch {
       setStatus('error');
-      setMessage('Došlo je do greške. Molimo pokušaj ponovno kasnije.');
+      setErrorMessage('Došlo je do greške pri slanju. Pokušaj ponovno.');
     }
   };
 
   return (
-    <section className="py-20 md:py-28 px-6 w-full bg-[#EAF4FD]" id="sos-guide">
-      <div className="max-w-[580px] mx-auto text-center">
-        <span className="font-sans text-[12px] font-semibold uppercase tracking-[0.12em] text-[#4A5A68] mb-3 block">
-          BESPLATAN SOS VODIČ
+    <section className="py-20 md:py-28 px-6 w-full bg-[#EAF4FD]">
+      <div className="max-w-[700px] mx-auto text-center">
+        
+        {/* Section Header */}
+        <span className="font-sans text-xs md:text-sm font-semibold uppercase tracking-[0.14em] text-[#4A5A68] mb-3 block">
+          BESPLATNA VJEŽBA
         </span>
-        
-        <h3 className="font-serif text-3xl font-semibold mb-4 text-[#16232F]">
-          Nisi siguran? Počni malo.
-        </h3>
-        
-        <p className="text-[#4A5A68] text-base mb-6 leading-relaxed">
-          Preuzmi besplatni SOS vodič za smirenje prije leta: jednu stranicu s tri tehnike koje možeš isprobati već danas.
+        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-semibold text-[#16232F] mb-4">
+          Prvo isprobaj jedan korak.
+        </h2>
+        <p className="font-sans text-base md:text-lg text-[#4A5A68] mb-8 max-w-[580px] mx-auto">
+          Ostavi email i poslat ćemo ti kratku vježbu koju možeš spremiti na telefon prije sljedećeg leta.
         </p>
 
-        {status === 'success' ? (
-          <div className="bg-white border border-[#E4E9EF] rounded-xl p-6 text-center">
-            <p className="font-bold text-[#16232F] text-base">{message}</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full">
-            <input
-              type="email"
-              required
-              placeholder="Unesi svoj email..."
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              disabled={status === 'loading'}
-              className="w-full min-h-[48px] px-4 bg-white border border-[#E4E9EF] rounded-xl text-[#16232F] placeholder-[#4A5A68] outline-none text-base font-normal"
-            />
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="min-h-[48px] bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold px-6 rounded-xl uppercase tracking-wider text-sm transition-all duration-300 shadow-md shadow-[#C8A84A]/25"
-            >
-              {status === 'loading' ? 'Slanje...' : 'POŠALJI MI SOS VODIČ'}
-            </button>
+        {/* Email Form Box */}
+        <div className="bg-white border-2 border-[#C8A84A] rounded-2xl p-6 md:p-8 shadow-sm">
+          {status === 'success' ? (
+            <div className="p-4 bg-[#F7F5F0] border border-[#C8A84A] rounded-xl text-[#16232F]">
+              <div className="font-serif text-xl font-bold mb-1">Vježba je na putu!</div>
+              <p className="text-sm text-[#4A5A68]">
+                Provjeri svoj inbox (i mapu s neželjenom poštom) za nekoliko minuta.
+              </p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-3">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <input
+                  type="email"
+                  name="email"
+                  id="lead-email-input"
+                  autoComplete="email"
+                  placeholder="Upiši svoju email adresu..."
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={status === 'loading'}
+                  className="flex-1 px-4 py-4 rounded-xl border border-[#E4E9EF] focus:outline-none focus:ring-2 focus:ring-[#C8A84A] text-base text-[#16232F] bg-[#F7F5F0]"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="bg-[#C8A84A] hover:bg-[#B8983A] text-[#16232F] font-bold text-sm uppercase tracking-wider py-4 px-8 rounded-xl transition-all shadow-md shadow-[#C8A84A]/25 disabled:opacity-50 shrink-0"
+                >
+                  {status === 'loading' ? 'Šaljem...' : 'POŠALJI MI VJEŽBU'}
+                </button>
+              </div>
 
-            {status === 'error' && (
-              <p className="text-red-500 text-xs font-semibold mt-1">{message}</p>
-            )}
-          </form>
-        )}
+              {status === 'error' && (
+                <div className="text-sm text-red-600 text-left mt-1 font-medium">
+                  {errorMessage}
+                </div>
+              )}
+
+              <p className="text-xs text-[#4A5A68] mt-3 text-left leading-normal">
+                Slanjem adrese prihvaćaš da ti pošaljemo traženi sadržaj. Odjava je moguća u svakom trenutku.{' '}
+                <a href="/privatnost" className="underline text-[#16232F] hover:text-[#C8A84A]">
+                  Politika privatnosti
+                </a>
+              </p>
+            </form>
+          )}
+        </div>
+
       </div>
     </section>
   );

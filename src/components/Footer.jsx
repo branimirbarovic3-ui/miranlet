@@ -2,28 +2,40 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#16232F] text-[#8C9BA8] py-14 px-6 text-center text-sm leading-relaxed">
-      <div className="max-w-[800px] mx-auto">
-        <p className="text-xs color-[#8C9BA8] mb-4">
-          Fotografije na ovoj stranici izrađene su pomoću umjetne inteligencije. Kapetan Miran je ilustrirani lik, nije stvarna osoba.
-        </p>
+    <footer className="bg-[#121D27] text-white/70 py-12 px-6 text-center text-xs border-t border-white/10">
+      <div className="max-w-[1100px] mx-auto flex flex-col items-center gap-6">
+        
+        {/* Navigation / Legal Links */}
+        <div className="flex flex-wrap justify-center gap-6 text-white/80 font-medium">
+          <a href="/impressum" className="hover:text-[#C8A84A] transition-colors">
+            Impressum
+          </a>
+          <a href="/uvjeti-kupnje" className="hover:text-[#C8A84A] transition-colors">
+            Uvjeti kupnje
+          </a>
+          <a href="/povrat" className="hover:text-[#C8A84A] transition-colors">
+            Politika povrata
+          </a>
+          <a href="/privatnost" className="hover:text-[#C8A84A] transition-colors">
+            Politika privatnosti
+          </a>
+        </div>
 
-        <p className="mb-3 space-x-3">
-          <a href="/impressum" className="text-white hover:text-[#A8D4F7]">Impressum</a>
-          <span>·</span>
-          <a href="/uvjeti-kupnje" className="text-white hover:text-[#A8D4F7]">Uvjeti kupnje</a>
-          <span>·</span>
-          <a href="/povrat" className="text-white hover:text-[#A8D4F7]">Povrat</a>
-          <span>·</span>
-          <a href="/privatnost" className="text-white hover:text-[#A8D4F7]">Privatnost</a>
-        </p>
+        {/* AI Transparency & MoR Notice */}
+        <div className="max-w-[700px] space-y-2 text-[#8C9BA8] leading-relaxed">
+          <p>
+            Prikazi proizvoda su ilustrativni i izrađeni pomoću umjetne inteligencije.
+          </p>
+          <p>
+            Plaćanja i digitalnu isporuku sigurno obrađuje Lemon Squeezy (Merchant of Record).
+          </p>
+        </div>
 
-        <p className="text-xs color-[#8C9BA8] mb-1">
-          Prodaju obavlja Lemon Squeezy kao Merchant of Record.
-        </p>
-        <p className="text-xs color-[#8C9BA8]">
-          &copy; 2026 Miran Let. Sva prava pridržana.
-        </p>
+        {/* Copyright */}
+        <div className="text-[#5A6D7C] text-[11px] pt-4 border-t border-white/5 w-full">
+          © {new Date().getFullYear()} Miran Let. Sva prava pridržana.
+        </div>
+
       </div>
     </footer>
   );
